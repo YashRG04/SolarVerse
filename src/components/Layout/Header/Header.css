@@ -1,0 +1,132 @@
+.NavContainer {
+  font-family: "Belleza", sans-serif;
+  background-color: #f7f7f7;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* align log on left and links on right */
+
+.LeftContainer {
+  display: flex;
+  align-items: center;
+}
+
+.Logo {
+  margin-left: 0.5vmax;
+  width: 4.2rem;
+  cursor: pointer;
+}
+
+.LogoText {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+  margin-left: 1rem;
+}
+
+.RightContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.NavLinks {
+  display: flex;
+  align-items: center;
+}
+
+.NavLinks li {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: 0.25s;
+}
+
+li:last-child {
+  margin-right: 3rem;
+}
+
+li:last-child svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #fdbd59;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* on hover line animation */
+li a:hover {
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #fdbd59;
+  animation: lineanimation 0.3s ease-in-out forwards;
+}
+
+li:last-child a:hover {
+  border-bottom: none;
+}
+
+li:last-child a:hover svg {
+  color: #000;
+  transition: 0.5s;
+}
+
+/* on hover line animation */
+@keyframes lineanimation {
+  0% {
+    border-bottom-width: 0%;
+  }
+  100% {
+    border-bottom-width: 100%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .NavContainer {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .LeftContainer {
+    margin-bottom: 0.2rem;
+  }
+
+  .LogoText {
+    margin-left: 0;
+  }
+
+  .RightContainer {
+    flex-direction: column;
+  }
+
+  .NavLinks {
+    flex-direction: column;
+  }
+
+  .NavLinks li {
+    margin: 0.5rem 0;
+  }
+
+  li:first-child {
+    margin-top: 0;
+  }
+
+  li a {
+    font-size: 1rem;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+}
