@@ -8,6 +8,7 @@ import ContentContainer from "./Content/ContentContainer";
 import ServiceContainer from "./ServiceHome/ServiceContainer";
 import MobileHeader from "../Layout/Header/MobileHeader";
 import Top from "./Top";
+import Footer from "../Layout/Footer/Footer";
 
 const Home = () => {
   const user = "Yash";
@@ -33,6 +34,7 @@ const Home = () => {
           </div>
           <ContentContainer />
           <ServiceContainer />
+          <Footer data={{ User: { user }, Login: { login } }} />
           <Top className="ScrollTop" />
         </div>
       </div>
