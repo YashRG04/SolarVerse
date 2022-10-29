@@ -1,14 +1,15 @@
 .NavContainer {
   font-family: "Belleza", sans-serif;
   background-color: #f7f7f7;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: auto;
+  z-index: 1;
 }
-
-
 
 /* align log on left and links on right */
 
@@ -21,6 +22,7 @@
   margin-left: 0.5vmax;
   width: 4.2rem;
   cursor: pointer;
+  
 }
 
 .LogoText {
@@ -33,53 +35,8 @@
 
 .RightContainer {
   display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-}
-
-.NavLinks {
-  display: flex;
-  align-items: center;
-}
-
-.NavLinks li {
-  list-style: none;
-  margin: 0 1rem;
-}
-
-li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  transition: 0.25s;
-}
-
-li:last-child {
-  margin-right: 3rem;
-}
-
-li:last-child svg {
-  width: 1.4rem;
-  height: 1.4rem;
-  color: #fdbd59;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-/* on hover line animation */
-li a:hover {
-  padding-bottom: 0.3rem;
-  border-bottom: 0.2rem solid #fdbd59;
-  animation: lineanimation 0.3s ease-in-out forwards;
-}
-
-li:last-child a:hover {
-  border-bottom: none;
-}
-
-li:last-child a:hover svg {
-  color: #000;
-  transition: 0.5s;
 }
 
 /* on hover line animation */
@@ -96,6 +53,7 @@ li:last-child a:hover svg {
   .NavContainer {
     flex-direction: column;
     padding: 1rem 0;
+    display: none;
   }
 
   .LeftContainer {
@@ -108,25 +66,5 @@ li:last-child a:hover svg {
 
   .RightContainer {
     flex-direction: column;
-  }
-
-  .NavLinks {
-    flex-direction: column;
-  }
-
-  .NavLinks li {
-    margin: 0.5rem 0;
-  }
-
-  li:first-child {
-    margin-top: 0;
-  }
-
-  li a {
-    font-size: 1rem;
-  }
-
-  li:last-child {
-    margin-right: 0;
   }
 }
