@@ -8,7 +8,10 @@ import ContentContainer from "./Content/ContentContainer";
 import ServiceContainer from "./ServiceHome/ServiceContainer";
 import MobileHeader from "../Layout/Header/MobileHeader";
 import Top from "./Top";
+
+import Slider from "../Layout/Carousel/Slider";
 import Footer from "../Layout/Footer/Footer";
+
 
 const Home = () => {
   const user = "Yash";
@@ -27,9 +30,7 @@ const Home = () => {
         <div className="MainContainer">
           <hr className="hr" />
           <div className="BannerContainer">
-            <div className="Banner">
-              <img src={Banner} className="temp" alt="Banner" />
-            </div>
+            <Slider />
             <hr />
           </div>
           <ContentContainer />
