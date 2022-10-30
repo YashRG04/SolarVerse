@@ -24,7 +24,7 @@ const NavLinks = (props) => {
       <motion.ul className="NavLinks">
         {links.map(({ name, url }) => {
           return (
-            <motion.li initial={animateFrom} animate={animateTo} key={name}>
+            <motion.li className="li2" initial={animateFrom} animate={animateTo} key={name}>
               <Link to={url}>{name}</Link>
             </motion.li>
           );

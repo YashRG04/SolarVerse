@@ -29,17 +29,18 @@ li:last-child {
 }
 
 /* on hover line animation */
-li a:hover {
+.li2 a:hover {
   padding-bottom: 0.3rem;
   border-bottom: 0.2rem solid #fdbd59;
   animation: lineanimation 0.3s ease-in-out forwards;
 }
 
-li:last-child a:hover {
+.li2:last-child a:hover {
   border-bottom: none;
 }
 
 li:last-child a:hover svg {
+  transform: translate3d(0, -0.2rem, 0);
   color: #39b54a;
   transition: 0.5s;
 }

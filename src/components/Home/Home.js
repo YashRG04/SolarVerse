@@ -8,8 +8,11 @@ import ContentContainer from "./Content/ContentContainer";
 import ServiceContainer from "./ServiceHome/ServiceContainer";
 import MobileHeader from "../Layout/Header/MobileHeader";
 import Top from "./Top";
+
 import Slider from "../Layout/Carousel/Slider";
 import Footer from "../Layout/Footer/Footer";
+
+
 const Home = () => {
   const user = "Yash";
   const login = true;
