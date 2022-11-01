@@ -10,12 +10,22 @@
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
   .container-slider {
-    margin: 0rem 0.8rem 0;
+  }
+
+  .SlideArrow{
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .btn-slide,
+  .prev,
+  .next {
+    width: 2.2rem;
+    height: 2.2rem;
   }
 }
-
 
 .slide {
   width: 100%;
@@ -34,44 +44,38 @@
   opacity: 1;
 }
 
-
 .btn-slide {
-  width: 60px;
-  height: 60px;
+  width: 3.4rem;
+  height: 3.4rem;
   border-radius: 50%;
   /* background: #f1f1f1; */
   background: transparent;
-  border: 1px solid rgba(34, 34, 34, 0.287);
+  backdrop-filter: blur(10px);
+  border: 0px solid rgba(34, 34, 34, 0.287);
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.btn-slide :hover{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-    background-color: #f1f1f1;
-    transition: all 0.2s linear;
+.btn-slide :hover {
+  color: #fdbd59;
+
+  transition: all 0.2s linear;
 }
 
-.btn-slide img {
-  width: 25px;
-  height: 25px;
-  pointer-events: none;
-}
 .prev {
+  color: #fff;
   top: 50%;
   left: 20px;
   transform: translateY(-60%);
 }
 .next {
+  color: #fff;
   top: 50%;
   right: 20px;
   transform: translateY(-60%);
 }
-
 
 .container-dots {
   position: absolute;
@@ -109,56 +113,48 @@
 .autoSlide-button:hover {
   opacity: 1;
 }
-.container{
-    position: relative;
+.container {
+  position: relative;
   text-align: center;
   color: rgb(235, 233, 233);
   height: 50rem;
 }
-.center{
-    position: absolute;
+.center {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-
-
-
-
-
 /* //Banner 1 */
-.banner1{
+.banner1 {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-   display: inline-block;
+  display: inline-block;
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-
- 
 }
-.banner1 h1{
-    color: white;
-    align-items: center;
+.banner1 h1 {
+  color: #fdbd59;
+  align-items: center;
 }
-.banner1 div{
-   width: 10rem;
+.banner1 div {
+  width: 10rem;
   height: 5px;
   background: white;
   margin: 1.7rem auto;
-  
 }
 .banner1 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ffdd02;
+  color: #fdbd59;
 }
 .banner1 h4 {
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -179,44 +175,40 @@
   }
 }
 
-
 /* Banner2 */
-.banner2{
+.banner2 {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-   display: inline-block;
+  display: inline-block;
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-
- 
 }
-.banner2 h2{
-    color: white;
-    align-items: center;
+.banner2 h2 {
+  z-index: 500;
+  color: white;
+  align-items: center;
 }
-.banner2 div{
-   width: 10rem;
+.banner2 div {
+  width: 10rem;
   height: 5px;
   background: white;
   margin: 1.7rem auto;
-  
 }
 .banner2 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ffdd02;
+  color: #fdbd59;
 }
 .banner2 h4 {
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
-.banner2 hr{
+.banner2 hr {
   width: 30%;
-
 }
 @media screen and (min-width: 576px) {
   .banner2 {
@@ -236,45 +228,41 @@
 }
 
 /* Banner3 */
-.banner3{
+.banner3 {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-   display: inline-block;
+  display: inline-block;
   /* background: rgba(0, 0, 0, 0.5); */
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-
- 
 }
-.banner3 h2{
-    color: white;
-    align-items: center;
+.banner3 h2 {
+  color: white;
+  align-items: center;
 }
-.banner3 div{
-  display:flex;
-   width: 10rem;
+.banner3 div {
+  display: flex;
+  width: 10rem;
   height: 5px;
   background: white;
   margin: 1.7rem auto;
-  
 }
 .banner3 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ffdd02;
-    text-transform: capitalize;
+  color: #fdbd59;
+  text-transform: capitalize;
 }
 
 .banner3 h4 {
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
-.banner3 hr{
+.banner3 hr {
   width: 30%;
-
 }
 @media screen and (min-width: 576px) {
   .banner3 {
@@ -293,44 +281,39 @@
   }
 }
 
-
 /* Banner4 */
-.banner4{
+.banner4 {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-   display: inline-block;
+  display: inline-block;
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-
- 
 }
-.banner4 h2{
-    color: white;
-    align-items: center;
+.banner4 h2 {
+  color: white;
+  align-items: center;
 }
-.banner4 div{
-   width: 10rem;
+.banner4 div {
+  width: 10rem;
   height: 5px;
   background: white;
   margin: 1.7rem auto;
-  
 }
 .banner4 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ffdd02;
+  color: #fdbd59;
 }
 .banner4 h4 {
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
-.banner4 hr{
+.banner4 hr {
   width: 30%;
-
 }
 @media screen and (min-width: 576px) {
   .banner4 {
@@ -349,44 +332,39 @@
   }
 }
 
-
 /* Banner5 */
-.banner5{
+.banner5 {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-   display: inline-block;
+  display: inline-block;
   /* background: rgba(0, 0, 0, 0.5); */
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-
- 
 }
-.banner5 h2{
-    color: rgb(255, 239, 19);
-    align-items: center;
+.banner5 h2 {
+  color: rgb(255, 239, 19);
+  align-items: center;
 }
-.banner5 div{
-   width: 10rem;
+.banner5 div {
+  width: 10rem;
   height: 5px;
   background: white;
   margin: 1.7rem auto;
-  
 }
 .banner5 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ffdd02;
+  color: #fdbd59;
 }
 .banner5 h4 {
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
-.banner5 hr{
+.banner5 hr {
   width: 30%;
-
 }
 @media screen and (min-width: 576px) {
   .banner5 {
@@ -405,14 +383,9 @@
   }
 }
 
-
-
-
-
-
-.hrb{
+.hrb {
   width: 100%;
-  background-color: #ffdd02;
+  background-color: #fdbd59;
   height: 0.3rem;
   border-bottom: 0;
 }

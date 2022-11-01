@@ -36,7 +36,7 @@ export default function Slider() {
       setSlideIndex((prevCounter) =>
         prevCounter == dataSlider.length ? 1 : prevCounter + 1
       );
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -99,7 +99,7 @@ export default function Slider() {
         <div className="container">
           <img src={dataSlider[4].url} alt="alt" />
 
-          <Banner5 />
+          <Banner1 />
         </div>
       </div>
 

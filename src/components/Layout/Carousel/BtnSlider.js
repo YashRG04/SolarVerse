@@ -7,7 +7,7 @@ export default function BtnSlider({ direction, moveSlide }) {
   return (
     <button
       onClick={moveSlide}
-      className={direction === "next" ? "btn-slide next" : "btn-slide prev"}
+      className={direction === "next" ? "btn-slide next" : "btn-slide prev SlideArrow"}
     >
       {direction === "next" ? (
         <AiOutlineRight size={35} />

@@ -12,7 +12,6 @@ import Top from "./Top";
 import Slider from "../Layout/Carousel/Slider";
 import Footer from "../Layout/Footer/Footer";
 
-
 const Home = () => {
   const user = "Yash";
   const login = true;
@@ -28,7 +27,6 @@ const Home = () => {
           data={{ User: { user }, Login: { login } }}
         />
         <div className="MainContainer">
-          <hr className="hr" />
           <div className="BannerContainer">
             <Slider />
             <hr />
