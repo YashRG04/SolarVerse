@@ -18,14 +18,6 @@ const Home = () => {
   return (
     <Fragment>
       <div className="Container" id="top">
-        <Header
-          className="Navbar"
-          data={{ User: { user }, Login: { login } }}
-        />
-        <MobileHeader
-          className="MobileNavbar"
-          data={{ User: { user }, Login: { login } }}
-        />
         <div className="MainContainer">
           <div className="BannerContainer">
             <Slider />
@@ -33,8 +25,6 @@ const Home = () => {
           </div>
           <ContentContainer />
           <ServiceContainer />
-          <Footer data={{ User: { user }, Login: { login } }} />
-          <Top className="ScrollTop" />
         </div>
       </div>
     </Fragment>
