@@ -29,6 +29,10 @@ const MobileHeader = (props) => {
     />
   );
 
+  const closeMobileMenu=()=>{
+    setOpen(false);
+  }
+
   return (
     <Fragment>
       {open ? CloseIcon : HamBurgerIcon}
@@ -46,7 +50,7 @@ const MobileHeader = (props) => {
         </div>
 
         <div className="RightContainer1">
-          {open && <NavLinks className="ShowNav" data={props.data} />}
+          {open && <NavLinks className="ShowNav" data={props.data} isMobile={true} closeMobile={closeMobileMenu} />}
         </div>
       </nav>
     </Fragment>

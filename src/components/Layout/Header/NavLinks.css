@@ -6,9 +6,18 @@
 .NavLinks li {
   list-style: none;
   margin: 0 1rem;
+  
 }
 
 li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: 0.25s;
+}
+
+.li3 a ,.li4 a{
   text-decoration: none;
   color: #000;
   font-size: 1.1rem;
@@ -25,11 +34,10 @@ li:last-child {
   height: 1.72rem;
   color: #fdbd59;
   cursor: pointer;
-  transition: 0.5s;
 }
 
 /* on hover line animation */
-.li2 a:hover {
+.li2 a:hover,.li4 a:hover {
   padding-bottom: 0.3rem;
   border-bottom: 0.2rem solid #fdbd59;
   animation: lineanimation 0.3s ease-in-out forwards;
@@ -39,11 +47,69 @@ li:last-child {
   border-bottom: none;
 }
 
+
+
 li:last-child a:hover svg {
   transform: translate3d(0, -0.2rem, 0);
   color: #39b54a;
   transition: 0.5s;
 }
+
+.dropbtn {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  
+}
+
+.dropbtn:hover{
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #fdbd59;
+  animation: lineanimation 0.3s ease-in-out forwards;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  
+  display: none;
+  position: absolute;
+  padding-top: 1rem;
+  background-color: #F7F7F7;
+  width: auto;
+  border-radius: 0.2rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1rem 0rem;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+}
+
+/* last child of dropdown */
+.dropdown-content a:last-child {
+  padding-top: 0.2rem;
+  padding-bottom: 0.5rem;
+}
+
+.dropdown-content a:hover {
+  color: #fdbd59;
+} 
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 .ProfileLogo {
   color: #fdbd59;
@@ -66,13 +132,21 @@ li:last-child a:hover svg {
     font-size: 1rem;
   }
 
- /* selecting second last element of list */
-    li:nth-last-child(2) {
-        margin-bottom: 1rem;
-    }
+  .li3 a, .li4 a{
+    font-size: 1rem;
+  }
+
+  .dropbtn{
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* selecting second last element of list */
+  li:nth-last-child(2) {
+    margin-bottom: 1rem;
+  }
 
   .li:last-child {
     display: none;
-    
   }
 }
