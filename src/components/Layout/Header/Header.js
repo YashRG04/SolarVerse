@@ -19,7 +19,7 @@ const Header = (props) => {
               navigate("/");
             }}
           />
-          <h1 className="LogoText">SolarVerse</h1>
+          <Link to="/" className="LogoText">SolarVerse</Link>
         </div>
         <div className="RightContainer">
           <NavLinks data={props.data}/>

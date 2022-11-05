@@ -40,7 +40,6 @@
 
 .ListContainer {
   display: flex;
-  align-items: flex-start;
 }
 
 li {

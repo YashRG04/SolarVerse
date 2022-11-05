@@ -55,7 +55,7 @@ const NavLinks = (props) => {
                   initial={animateFrom}
                   animate={animateTo}
                 >
-                  <Link to="/domestic">Domestic</Link>
+                  <Link to="/services/d1">Domestic</Link>
                 </motion.li>
                 <motion.li
                   onClick={() => props.isMobile && props.closeMobile()}
@@ -63,7 +63,7 @@ const NavLinks = (props) => {
                   initial={animateFrom}
                   animate={animateTo}
                 >
-                  <Link to="/commercial">Commercial</Link>
+                  <Link to="/services/c1">Commercial</Link>
                 </motion.li>
               </motion.ul>
             </div>
@@ -77,7 +77,7 @@ const NavLinks = (props) => {
             initial={animateFrom}
             animate={animateTo}
           >
-            <Link to="/domestic">Domestic Services</Link>
+            <Link to="/services/d1">Domestic Services</Link>
           </motion.li>
         )}
         {props.isMobile && (
@@ -87,7 +87,7 @@ const NavLinks = (props) => {
             initial={animateFrom}
             animate={animateTo}
           >
-            <Link to="/commercial">Commercial Services</Link>
+            <Link to="/services/c1">Commercial Services</Link>
           </motion.li>
         )}
 

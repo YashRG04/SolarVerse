@@ -1,0 +1,43 @@
+.ServiceContentContainer {
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.ServiceContentHeading h1 {
+  font-size: 2.1rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "ABEEZEE", sans-serif;
+  font-weight: 600;
+}
+
+.ServiceContentText {
+  font-family: "Belleza", sans-serif;
+  font-size: 1.15rem;
+  color: #545454;
+  margin: 0rem 3rem 2rem;
+  line-height: 1.5;
+}
+
+.ServiceContentPoint {
+  justify-content: center;
+  margin: 1.5rem;
+}
+
+.ListContainer {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .ServiceContentHeading h1 {
+    font-size: 1.8rem;
+  }
+
+  .ServiceContentText {
+    font-size: 1rem;
+    margin: 0rem 1rem 2rem;
+  }
+}

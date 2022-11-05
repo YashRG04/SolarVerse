@@ -1,0 +1,36 @@
+.Cushion {
+  height: 4.2001rem;
+}
+
+.StepsContainer {
+  margin-top: 3rem;
+}
+
+.RemainingServices {
+  margin-top: 3rem;
+}
+
+.RemainingServices h1 {
+  font-family: "ABEEZEE", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 802px) {
+  .Services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
