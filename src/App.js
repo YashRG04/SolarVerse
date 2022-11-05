@@ -9,6 +9,7 @@ import Top from "./components/Home/Top";
 import DomesticService from "./components/Solarservices/DomesticService/DomesticService";
 import ScrollToTop from "./components/Layout/ScrollToTop";
 import CommercialService from "./components/Solarservices/CommercialService/CommercialService";
+import AboutUs from "./components/About/AboutUs";
 
 function App() {
   const user = "Yash";
@@ -27,6 +28,8 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<AboutUs/>} />
+
         <Route path="/services/d1" element={<DomesticService />} />
         <Route path="/services/d2" element={<DomesticService />} />
         <Route path="/services/d3" element={<DomesticService />} />
@@ -36,7 +39,6 @@ function App() {
         <Route path="/services/c2" element={<CommercialService />} />
         <Route path="/services/c3" element={<CommercialService />} />
         <Route path="/services/c4" element={<CommercialService />} />
-
       </Routes>
 
       <Footer data={{ User: { user }, Login: { login } }} />

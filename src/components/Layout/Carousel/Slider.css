@@ -50,6 +50,7 @@
   border-radius: 50%;
   /* background: #f1f1f1; */
   background: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   border: 0px solid rgba(34, 34, 34, 0.287);
   position: absolute;
@@ -58,9 +59,17 @@
   align-items: center;
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+.btn-slide,
+  .prev,
+  .next {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+  
+}
 .btn-slide :hover {
   color: #fdbd59;
-
   transition: all 0.2s linear;
 }
 
@@ -155,16 +164,32 @@
 }
 .banner1 h4 {
   font-size: 1rem;
+   letter-spacing: 0.05em;
+ /* font-family: "ABEEZEE", sans-serif; */
+ /* font-family: "Belleza", sans-serif; */
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 575px) {
+  .banner1 {
+    width: 100%; 
+    height: 32rem;
+    padding: 2rem 1rem;
+  }
+  .banner1 div{
+     margin: 3.7rem auto;
+  }
+ 
+  
+}
 @media screen and (min-width: 576px) {
   .banner1 {
-    padding: 2rem 3rem;
+    padding: 2rem 3rem;   
   }
   .banner1 h1 {
     font-size: 3rem;
   }
+  
 }
 @media screen and (min-width: 992px) {
   .banner1 {

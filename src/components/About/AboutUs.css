@@ -1,0 +1,90 @@
+.AboutUs  {
+    position: relative;
+  text-align: center;
+  color: rgb(243, 243, 243);
+  /* height: 50rem; */
+}
+.AboutUs .AboutBanner img {
+    margin-top: 4rem;
+    height: 22rem;
+    width: 100%;
+    object-fit: cover;
+}
+.info{
+    position: absolute;
+    top: 10rem;
+    left: 56px;
+    text-transform: capitalize;
+}
+.AboutUsabout{
+     align-items: center;
+}
+.AboutUsabout h1 {
+    font-size: 3rem;
+     font-family: "ABEEZEE", sans-serif;
+     margin-top: 2.5rem;
+     color:rgb(37, 29, 29);
+}
+.AboutUsabout div{
+    width: 15rem;
+  height: 5px;
+  background: #fbdd02;
+  margin: 0.7rem auto;
+}
+
+.AboutUsabout p{
+    font-family: "Belleza", sans-serif;
+    color: #545454;
+    font-size: 1.5rem;
+    line-height: 1.4em;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: left;
+}
+
+/* //countdown */
+.figures{
+    display: flex;
+    gap: 2rem;
+    
+    margin-left: 23rem;
+    margin-top: 2rem;
+}
+.figures div{
+    display: flex;
+    flex-direction: column;
+    
+}
+.figures div .span1{
+    color: black;
+   font-size: 2rem;
+  
+
+}
+.figures div .span2{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4b4b4b;
+    font-family: "Belleza", sans-serif;
+}
+/* Our Team */
+.AOurTeam .Teamoh1{
+
+      font-size: 3rem;
+     font-family: "ABEEZEE", sans-serif;
+     margin-top: 2.5rem;
+     color:rgb(37, 29, 29);
+}
+.AOurTeam .Teamline{
+  width: 15rem;
+  height: 5px;
+  background: #fbdd02;
+  margin: 0.7rem auto;
+
+}
+.ATeamCardContainer{
+
+    display: flex;
+
+}

@@ -28,7 +28,7 @@ const dataSlider = [
     id: 3,
     title: "Lorem ipsum",
     subTitle: "Lorem",
-    url: "https://nrgcleanpower.com/wp-content/uploads/2021/09/panelcleaning.png.webp",
+    url: "https://www.adssolar.com.au/wp-content/uploads/2022/06/012021_solarpanelinstallation.jpg",
     heading: "Hello peter4",
   },
   {
