@@ -28,9 +28,7 @@
   padding-bottom: 2rem;
 }
 
-.ServiceCard{
-  width: 25%;
-}
+
 
 @media screen and (max-width: 802px) {
   .Services {
@@ -38,8 +36,6 @@
     align-items: center;
   }
 
-  .ServiceCard {
-    width: 90%;
-  }
+  
 
 }

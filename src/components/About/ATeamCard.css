@@ -27,13 +27,9 @@
 
 .ATeamCard img {
   width: 100%;
-  height: 10rem;
   object-fit: cover;
-  border-radius: 50%;
-  border : 0.3rem solid #ffdd02;
-  
-  
   transition: all 0.5s ease-in-out;
+  border: 3.5px solid #fdbd59;
 }
 
 .ATeamCard img:hover {
@@ -50,17 +46,16 @@
   padding-top: 1rem;
   margin: 0.5rem 0 1rem;
   text-align: center;
+  font-family: "ABEEZEE", sans-serif;
 }
-.ATeamDesignation
-{
+
+.ATeamDesignation {
   font-size: 0.9rem;
-   color: #000;
-  
-  margin: 0.5rem 0 1rem;
+  color: #000;
+  margin: 0rem 0 1rem;
   text-align: center;
   font-family: "Belleza", sans-serif;
   text-transform: uppercase;
-
 }
 
 .ATeamDescription {
@@ -115,7 +110,7 @@
 }
 
 /* //social media  */
-.ASocialMedia{
+.ASocialMedia {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -123,8 +118,8 @@
   width: 100%;
   margin: 1rem 0.5rem 0rem;
 }
-.ASocialMedia a{
-   color: #bababa;
+.ASocialMedia a {
+  color: #bababa;
   font-size: 1.4rem;
   text-decoration: none;
   transition: all 0.5s ease-in-out;

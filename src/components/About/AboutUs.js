@@ -11,10 +11,14 @@ const AboutUs = () => {
 
   return (
     <div className="AboutUs">
-      <div className="AboutBanner">
-        <img src="https://msolarpower.co.za/wp-content/uploads/2022/01/potential-banner-test.jpg" />
-        <div className="info">
-          <h1>WE ARE SOLARVERSE! </h1>
+      <div
+        className="hero-image AboutBanner"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://greenhouse.solar/wp-content/uploads/2020/09/AdobeStock_325585649-min-scaled.jpeg")`,
+        }}
+      >
+        <div className="hero-text">
+          <h1>WE ARE SOLARVERSE</h1>
         </div>
       </div>
 
@@ -83,7 +87,8 @@ const AboutUs = () => {
             <span className="span1">
               {counterOn && (
                 <CountUp start={0} end={65} duration={1.5} delay={0} />
-              )}+
+              )}
+              +
             </span>
           </ScrollTrigger>
           <span className="span2">Cities</span>
