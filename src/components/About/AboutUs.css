@@ -1,6 +1,7 @@
 .AboutUs {
-  position: relative;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   color: rgb(243, 243, 243);
   /* height: 50rem; */
 }
@@ -11,8 +12,8 @@
   object-fit: cover;
 }
 
-.AboutBanner{
-    height: 30rem;
+.AboutBanner {
+  height: 30rem;
 }
 
 .info {
@@ -52,8 +53,8 @@
 .figures {
   display: flex;
   gap: 2rem;
-  margin-left: 23rem;
   margin-top: 2rem;
+  margin-left: 23rem;
 }
 .figures div {
   display: flex;
@@ -84,7 +85,7 @@
   margin: 0.7rem auto;
 }
 .ATeamCardContainer {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
   display: flex;
 }
 
@@ -94,9 +95,39 @@
     align-items: center;
   }
 
-  .AboutUsabout p{
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
+  @media screen and (max-width: 768px) {
+    .ATeamCardContainer {
+      display: inline;
+    }
 
+    .AboutUsabout p {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+
+    .figures {
+      display: inline;
+      margin-left: 3rem;
+      margin-top: 2rem;
+    }
+    .figures div .span1 {
+      margin-top: 1rem;
+    }
+    .figures div .span2 {
+      margin-top: 1rem;
+    }
+    .AboutUsabout h1 {
+      font-size: 2rem;
+    }
+    .AboutUsabout p {
+      font-size: 1rem;
+    }
+    .AOurTeam .Teamoh1 {
+      font-size: 2rem;
+    }
+    .info h1 {
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+  }
 }
