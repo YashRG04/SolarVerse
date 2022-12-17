@@ -11,6 +11,8 @@ import Top from "./Top";
 
 import Slider from "../Layout/Carousel/Slider";
 import Footer from "../Layout/Footer/Footer";
+import OfferedService from "./OfferedService/OfferedService";
+import GoSolarW from "./GoSolar/GoSolarW";
 
 const Home = () => {
   const user = "Yash";
@@ -25,6 +27,8 @@ const Home = () => {
           </div>
           <ContentContainer />
           <ServiceContainer />
+          <GoSolarW />
+          <OfferedService />
         </div>
       </div>
     </Fragment>

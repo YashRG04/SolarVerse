@@ -23,7 +23,7 @@ const ServiceContainer = () => {
             })}
           </div>
         </div>
-        <div className="CommercialService">
+        {/* <div className="CommercialService">
           <h1 className="ServiceTitle">COMMERCIAL SERVICES</h1>
           <hr className="Underline" />
           <div className="ServiceCardContainer">
@@ -38,7 +38,7 @@ const ServiceContainer = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );
