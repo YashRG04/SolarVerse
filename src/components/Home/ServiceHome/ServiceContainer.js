@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { CommercialServices } from "../../../assets/data/CommercialServices";
 import { DomesticServices } from "../../../assets/data/DomesticServices";
+import { Link } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
 import "./ServiceContainer.css";
 const ServiceContainer = () => {
@@ -25,6 +26,11 @@ const ServiceContainer = () => {
             })}
           </div>
         </div>
+        <div className="ButtonContainer">
+        <Link className="OfferedButton" to="/constactus">
+          CONTACT US
+        </Link>
+      </div>
         {/* <div className="CommercialService">
           <h1 className="ServiceTitle">COMMERCIAL SERVICES</h1>
           <hr className="Underline" />

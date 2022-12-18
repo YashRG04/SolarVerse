@@ -34,9 +34,12 @@ const CommercialService = () => {
             points={serviceData.points}
           />
         </div>
-        <div className="StepsContainer">
+
+        {/*  Steps Container*/}
+        {/* <div className="StepsContainer">
           <StepsContainer stepsData={serviceData.steps} />
-        </div>
+        </div> */}
+
         <div className="RemainingServices">
           <h1>Other Services</h1>
           <div className="Services">

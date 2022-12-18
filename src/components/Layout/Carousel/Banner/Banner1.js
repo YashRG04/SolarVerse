@@ -9,7 +9,7 @@ const banner1 = () => {
       <p>SOLAR MAINTAINANCE SERVICES ON DEMAND</p>
       <h4>Starting ₹100*</h4>
       <div></div>
-      <Link to={`/services`} className="ServiceButton">
+      <Link to={`/services/d1`} className="ServiceButton">
         Explore Now
       </Link>
     </div>

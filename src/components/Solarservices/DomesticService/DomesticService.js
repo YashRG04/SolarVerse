@@ -34,9 +34,12 @@ const DomesticService = () => {
             points={serviceData.points}
           />
         </div>
-        <div className="StepsContainer">
+
+        {/*  Steps Container*/}
+        {/* <div className="StepsContainer">
           <StepsContainer stepsData={serviceData.steps} />
-        </div>
+        </div> */}
+
         <div className="RemainingServices">
           <h1>Other Services</h1>
           <div className="Services">
@@ -45,7 +48,7 @@ const DomesticService = () => {
               ({ name, id, description, image }) => {
                 return (
                   <ServiceCard
-                  className="ServiceCard"
+                    className="ServiceCard"
                     name={name}
                     id={id}
                     description={description}

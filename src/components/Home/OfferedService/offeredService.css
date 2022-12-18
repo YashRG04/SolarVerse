@@ -29,7 +29,7 @@
   text-decoration: none;
   font-family: "Belleza", sans-serif;
   padding: 0.8rem 1.6rem;
-  background-color: #fdbd59;
+  background-color: #ffdd02;
 
   /* background-color: #39b54a; */
 
@@ -39,7 +39,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   cursor: pointer;
   justify-content: center;
   transition: 0.5s;

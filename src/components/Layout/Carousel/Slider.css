@@ -69,7 +69,7 @@
   
 }
 .btn-slide :hover {
-  color: #fdbd59;
+  color: #ffdd02;
   transition: all 0.2s linear;
 }
 
@@ -148,7 +148,7 @@
   text-transform: capitalize;
 }
 .banner1 h1 {
-  color: #fdbd59;
+  color: #ffdd02;
   align-items: center;
 }
 .banner1 div {
@@ -160,7 +160,7 @@
 .banner1 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #fdbd59;
+  color: #ffdd02;
 }
 .banner1 h4 {
   font-size: 1rem;
@@ -226,7 +226,7 @@
 .banner2 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #fdbd59;
+  color: #ffdd02;
 }
 .banner2 h4 {
   font-size: 1rem;
@@ -278,7 +278,7 @@
 .banner3 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #fdbd59;
+  color: #ffdd02;
   text-transform: capitalize;
 }
 
@@ -331,7 +331,7 @@
 .banner4 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #fdbd59;
+  color: #ffdd02;
 }
 .banner4 h4 {
   font-size: 1rem;
@@ -382,7 +382,7 @@
 .banner5 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #fdbd59;
+  color: #ffdd02;
 }
 .banner5 h4 {
   font-size: 1rem;
@@ -410,7 +410,7 @@
 
 .hrb {
   width: 100%;
-  background-color: #fdbd59;
+  background-color: #ffdd02;
   height: 0.3rem;
   border-bottom: 0;
 }

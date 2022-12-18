@@ -35,10 +35,10 @@ function App() {
         <Route path="/services/d3" element={<DomesticService />} />
         <Route path="/services/d4" element={<DomesticService />} />
 
-        <Route path="/services/c1" element={<CommercialService />} />
+        {/* <Route path="/services/c1" element={<CommercialService />} />
         <Route path="/services/c2" element={<CommercialService />} />
         <Route path="/services/c3" element={<CommercialService />} />
-        <Route path="/services/c4" element={<CommercialService />} />
+        <Route path="/services/c4" element={<CommercialService />} /> */}
       </Routes>
 
       <Footer data={{ User: { user }, Login: { login } }} />

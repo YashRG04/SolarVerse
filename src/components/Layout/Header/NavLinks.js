@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 const NavLinks = (props) => {
   const links = [
     { name: "Home", url: "/" },
-    { name: "About Us", url: "/about" },
-    // { name: "Services", url: "/services" },
+    { name: "Services", url: "/services/d1" },
     { name: "My Bookings", url: "/bookings" },
+    { name: "About Us", url: "/about" },
     {
       name: props.data.Login.login ? `Hello ${props.data.User.user}` : "Login",
       url: props.data.Login.login ? "/profile" : "/login",
@@ -37,7 +37,7 @@ const NavLinks = (props) => {
         })}
 
         {/* Drop down for services */}
-        {!props.isMobile && (
+        {/* {!props.isMobile && (
           <div className="dropdown">
             <motion.li
               onClick={() => props.isMobile && props.closeMobile()}
@@ -68,9 +68,10 @@ const NavLinks = (props) => {
               </motion.ul>
             </div>
           </div>
-        )}
+        )} */}
 
-        {props.isMobile && (
+        {/* For Mobile */}
+        {/* {props.isMobile && (
           <motion.li
             onClick={() => props.isMobile && props.closeMobile()}
             className="li4"
@@ -89,7 +90,7 @@ const NavLinks = (props) => {
           >
             <Link to="/services/c1">Commercial Services</Link>
           </motion.li>
-        )}
+        )} */}
 
         <motion.li initial={animateFrom} animate={animateTo} className="li">
           <Link to={props.data.Login.login ? "/profile" : "/login"}>

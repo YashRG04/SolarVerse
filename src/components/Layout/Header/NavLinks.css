@@ -32,14 +32,14 @@ li:last-child {
 .li:last-child svg {
   width: 1.72rem;
   height: 1.72rem;
-  color: #fdbd59;
+  color: #ffdd02;
   cursor: pointer;
 }
 
 /* on hover line animation */
 .li2 a:hover,.li4 a:hover {
   padding-bottom: 0.3rem;
-  border-bottom: 0.2rem solid #fdbd59;
+  border-bottom: 0.2rem solid #ffdd02;
   animation: lineanimation 0.3s ease-in-out forwards;
 }
 
@@ -65,7 +65,7 @@ li:last-child a:hover svg {
 
 .dropbtn:hover{
   padding-bottom: 0.3rem;
-  border-bottom: 0.2rem solid #fdbd59;
+  border-bottom: 0.2rem solid #ffdd02;
   animation: lineanimation 0.3s ease-in-out forwards;
   cursor: pointer;
   transition: 0.25s;
@@ -101,7 +101,7 @@ li:last-child a:hover svg {
 }
 
 .dropdown-content a:hover {
-  color: #fdbd59;
+  color: #ffdd02;
 } 
 
 
@@ -112,7 +112,7 @@ li:last-child a:hover svg {
 
 
 .ProfileLogo {
-  color: #fdbd59;
+  color: #ffdd02;
 }
 
 @media screen and (max-width: 920px) {

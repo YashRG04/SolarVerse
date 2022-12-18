@@ -4,6 +4,7 @@ import "./ServiceCard.css";
 import { motion } from "framer-motion";
 
 const ServiceCard = ({ name, id, description, image }) => {
+  
   const animateFrom = { opacity: 0, y: 50 };
   const animateTo = { opacity: 1, y: 0 };
 

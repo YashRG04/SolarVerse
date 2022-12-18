@@ -1,15 +1,16 @@
 .GoSolarContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 2rem;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1;
+  background-color: #f5f3f3;
   border-radius: 1rem;
   font-family: "ABEEZEE", sans-serif;
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
+
 .GoSolarFirst {
   display: flex;
   flex-direction: row;
@@ -35,7 +36,7 @@
 }
 .GoSecondComp > h2 {
   display: flex;
-  font-size: 2rem;
+  font-size: 1.45rem;
   align-items: center;
   font-family: system-ui;
   justify-content: center;

@@ -1,5 +1,3 @@
-
-
 export const DomesticServices = [
   {
     id: "d1",

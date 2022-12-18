@@ -1,58 +1,33 @@
-.ServiceContainer {
+.WhatContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #f5f3f3;
-  margin-top: 3rem;
   box-sizing: border-box;
   border-radius: 2rem;
+  margin-top: 2rem;
+  padding-top: 3.5rem;
 }
 
-.DomesticService {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
-}
-
-.ServiceTitle {
+h1 {
+  text-transform: capitalize;
   font-size: 2.1rem;
-  color: #000;
-  padding-top: 1rem;
 }
 
-.CommercialService {
+.WhatContainerCard {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   margin-bottom: 2rem;
   padding-top: 1rem;
 }
 
-.ServiceCardContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.Underline {
-  border: 0;
-  width: 22%;
-  background-color: #ffdd02;
-  height: 0.3em;
-  border-radius: 0.3em;
-  margin: 1rem 0rem 1.5rem;
-  text-align: center;
-}
-
-.Underline1 {
+.Underline2 {
   border-top: #ffdd02;
   order: 0;
-  width: 11%;
+  width: 100%;
   background-color: #ffdd02;
   height: 0.3em;
   border-radius: 0.3em;
@@ -61,9 +36,8 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .ServiceCardContainer {
+  .WhatContainerCard {
     flex-direction: column;
     align-items: center;
   }
 }
-

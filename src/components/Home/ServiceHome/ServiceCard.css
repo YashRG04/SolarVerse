@@ -23,6 +23,8 @@
   background: rgb(239, 235, 235) fff;
   overflow: hidden;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .ServiceCard img {
@@ -62,7 +64,7 @@
   text-decoration: none;
   font-family: "Belleza", sans-serif;
   padding: 0.5rem 1rem;
-  background-color: #fdbd59;
+  background-color: #ffdd02;
   border: none;
   border-radius: 1rem;
   color: #000;
@@ -75,7 +77,7 @@
 }
 
 .ServiceButton:hover {
-  background-color: #ffdd02;
+  background-color: #39b54a;
   transition: 0.5s;
 }
 

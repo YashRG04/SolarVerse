@@ -22,7 +22,7 @@
 .FooterHr {
   width: 30%;
   border: 0;
-  background-color: #fdbd59;
+  background-color: #ffdd02;
   height: 0.2em;
   border-radius: 0.3em;
   margin: 0.5rem 0rem 1rem;
@@ -74,7 +74,7 @@
 }
 
 .SocialMedia a:hover {
-  color: #fdbd59;
+  color: #ffdd02;
 }
 
 .CenterFooter {
@@ -92,7 +92,7 @@
 .CenterHr {
   width: 50%;
   border: 0;
-  background-color: #fdbd59;
+  background-color: #ffdd02;
   height: 0.2em;
   border-radius: 0.3em;
   margin: 0.5rem 0rem 0rem;
@@ -107,7 +107,7 @@
 }
 
 .UsefulLinks a:hover {
-  color: #fdbd59;
+  color: #ffdd02;
 }
 
 .RightFooter {
@@ -129,7 +129,7 @@
 .RightHr {
   width: 30%;
   border: 0;
-  background-color: #fdbd59;
+  background-color: #ffdd02;
   height: 0.2em;
   border-radius: 0.3em;
   margin: 0.5rem 0rem 0rem;
@@ -148,7 +148,7 @@
 .RightFooterIcon {
   font-size: 1.3rem;
   margin: 0rem 1rem 0rem -1rem;
-  color: #fdbd59;
+  color: #ffdd02;
 }
 
 .RightFooterDescription {
@@ -172,7 +172,7 @@
 }
 
 .RightFooterDescription:hover {
-  color: #fdbd59;
+  color: #ffdd02;
 }
 
 .FooterBottom {

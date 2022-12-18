@@ -13,6 +13,7 @@ import Slider from "../Layout/Carousel/Slider";
 import Footer from "../Layout/Footer/Footer";
 import OfferedService from "./OfferedService/OfferedService";
 import GoSolarW from "./GoSolar/GoSolarW";
+import WhatContainer from "./WhatWeDo/WhatContainer";
 
 const Home = () => {
   const user = "Yash";
@@ -25,7 +26,9 @@ const Home = () => {
             <Slider />
             <hr />
           </div>
-          <ContentContainer />
+          <WhatContainer />
+          
+          {/* <ContentContainer /> */}
 
           <GoSolarW />
           <ServiceContainer />
