@@ -26,9 +26,10 @@ const Home = () => {
             <hr />
           </div>
           <ContentContainer />
-          <ServiceContainer />
+
           <GoSolarW />
-          <OfferedService />
+          <ServiceContainer />
+          {/* <OfferedService /> */}
         </div>
       </div>
     </Fragment>

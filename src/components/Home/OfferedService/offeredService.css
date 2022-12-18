@@ -1,28 +1,28 @@
-.offerserviceContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #f1f1f1;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-    align-items: center;
-    border-radius: 2rem;
+.offerserviceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  border-radius: 2rem;
 }
-.OfferedS{
-    display: flex;
-    flex-direction: row;
+.OfferedS {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.offerTitle{
-    font-size: 2.1rem;
-    color: #000;
-    padding-top: 1rem;
-    text-transform: uppercase; 
+.offerTitle {
+  font-size: 2.1rem;
+  color: #000;
+  padding-top: 1rem;
+  text-transform: uppercase;
 }
-.offerSubTitle{
-    font-size: 1.5rem;
-    color: #39b54a;
-
+.offerSubTitle {
+  font-size: 1.5rem;
+  color: #39b54a;
 }
 .OfferedButton {
   text-transform: uppercase;
@@ -30,7 +30,7 @@
   font-family: "Belleza", sans-serif;
   padding: 0.8rem 1.6rem;
   background-color: #fdbd59;
-  
+
   /* background-color: #39b54a; */
 
   border: none;
@@ -51,8 +51,7 @@
   transition: 0.5s;
 }
 @media screen and (max-width: 768px) {
-  
-  .OfferedButton{
+  .OfferedButton {
     margin-top: 1.5rem;
     padding: 0.7rem 1.4rem;
     font-size: 0.9rem;
@@ -60,11 +59,8 @@
 }
 
 @media screen and (max-width: 1250px) {
-
-    .OfferedS{
+  .OfferedS {
     display: flex;
     flex-direction: row;
-}
-
-
+  }
 }

@@ -1,6 +1,6 @@
-import React from 'react'
-import './GoSolarW.css'
-// import {family} from '../../../assets/images/family.svg' 
+import React from "react";
+import "./GoSolarW.css";
+// import {family} from '../../../assets/images/family.svg'
 const GoSolar = () => {
   return (
     <div className="GoSolarContainer">
@@ -17,10 +17,10 @@ const GoSolar = () => {
         <div className="GoSecondComp">
           <h2>Safest investments promising higher ROI</h2>
           <p>
-            Within 3-4 year payback on investment and the being the safest
-            investment of the era, solar solutions in India is your ultimate
-            companion. These investments, once made, will pay you off for the
-            next 25 years.
+            Within<b> 3-4 year payback on investment</b> and the being the
+            safest investment of the era, solar solutions in India is your
+            ultimate companion. These investments, once made, will pay you off
+            for the next 25 years.
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@ const GoSolar = () => {
           <h2>Subsidy</h2>
           <p>
             Solar investments would never leave you wanting perks. Get almost
-            40% as per the Governmental guidelines.
+            <b>40% as per the Governmental guidelines.</b>
           </p>
         </div>
         <div className="GoFirstComp">
@@ -52,11 +52,11 @@ const GoSolar = () => {
           <p>
             Being the earth's most abundant energy source, solar power
             guarantees you the running of your entire home. It is a wholesome,
-            greener way of preventing emissions. India's CO2 emission is
-            increasing by 2.7% every year, which is a huge amount considering
-            our booming population, hence Solar power is our most desired
-            solution to this as it is capable of producing energy with
-            zero-emission.
+            greener way of preventing emissions. India's
+            <b> CO2 emission is increasing by 2.7% every year</b>, which is a
+            huge amount considering our booming population, hence Solar power is
+            our most desired solution to this as it is capable of producing
+            energy with zero-emission.
           </p>
         </div>
       </div>
@@ -67,8 +67,12 @@ const GoSolar = () => {
           <p>
             Data collected by green think-tank Centre for Science and
             Environment (CSE) represents deaths attributable to ambient PM2.5 in
-            India has increased by 2.5 times in last 20 years -- from 2,79,500
-            in 1990 to 9,79,900 in 2019.
+            India has increased by
+            <b>
+              2.5 times in last 20 years -- from 2,79,500 in 1990 to 9,79,900 in
+              2019
+            </b>
+            .
           </p>
         </div>
         <div className="GoFirstComp">
@@ -80,6 +84,6 @@ const GoSolar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default GoSolar
+export default GoSolar;

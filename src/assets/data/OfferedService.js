@@ -1,22 +1,27 @@
+import fullSolarCheckup from "../images/full_solar_check-up.webp";
+import generationIssue from "../images/generation_issue.webp";
+import structureIssue from "../images/structure_issue.webp";
+import other from "../images/other.webp";
+
 export const OfferedServiceData = [
   {
     id: 1,
     name: "Full Plant Checkup",
-    image: "http://127.0.0.1:5500/images/full_solar_check-up.webp",
+    image: { fullSolarCheckup },
   },
   {
     id: 2,
     name: "Low Generation Issue",
-    image: "http://127.0.0.1:5500/images/generation_issue.webp",
+    image: { generationIssue },
   },
   {
     id: 3,
     name: "Structure Issue",
-    image: "http://127.0.0.1:5500/images/structure_issue.webp",
+    image: { structureIssue },
   },
   {
     id: 4,
     name: "Other Issue",
-    image: "http://127.0.0.1:5500/images/other.webp",
+    image: { other },
   },
 ];

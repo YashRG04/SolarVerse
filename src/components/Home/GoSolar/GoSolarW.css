@@ -1,70 +1,61 @@
-.GoSolarContainer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
-     border-radius: 1rem;
+.GoSolarContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  font-family: "ABEEZEE", sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }
-.GoSolarFirst{
-    display: flex;
-    flex-direction: row;
-    height: 30%;
-    margin-left: 5.4rem;
-    margin-right: 5.4rem;
-    /* margin-top: 1.1rem; */
-
-
-    
-}
-.GoFirstComp  {
-    width: 50%;
-
-
-}
-.GoFirstComp >img {
-    /* height: 12%; */
-    width: 35rem;
-    height: 21rem;
-   
-
-}
-.GoSecondComp{
-    background-color: #e3e3db;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    
-
-
-}
-.GoSecondComp > h2{
-    display: flex;
-    font-size: 2.3rem;
-    align-items: center;
-    font-family: system-ui;
-    justify-content: center;
-    
-    margin: 2rem;
-    /* margin-top: 0%; */
-
-}
-.GoSecondComp > p{
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    margin: 2rem;
-
+.GoSolarFirst {
+  display: flex;
+  flex-direction: row;
+  width: 66%;
+  height: 30%;
+  margin-left: 5.4rem;
+  margin-right: 5.4rem;
+  /* margin-top: 1.1rem; */
 }
 
+.GoFirstComp {
+  width: 50%;
+}
+.GoFirstComp > img {
+  /* height: 12%; */
+  width: 82%;
+}
+.GoSecondComp {
+  background-color: #e3e3db;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.GoSecondComp > h2 {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  font-family: system-ui;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "abeezee", sans-serif;
 
+  margin: 2rem 2rem 0rem;
+  /* margin-top: 0%; */
+}
+.GoSecondComp > p {
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-family: "belleza", sans-serif;
+  margin: 1rem 2rem 1rem;
+  color: rgb(56, 52, 52);
+}
 
-
-
-
-.GoUnderline{
-    border: 0;
+.GoUnderline {
+  border: 0;
   width: 19%;
   background-color: #ffdd02;
   height: 0.3em;

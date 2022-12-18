@@ -8,8 +8,10 @@ const ServiceContainer = () => {
     <Fragment>
       <div className="ServiceContainer">
         <div className="DomesticService">
-          <h1 className="ServiceTitle">DOMESTIC SERVICES</h1>
+          <h1 className="offerTitle">Services Being Offered</h1>
           <hr className="Underline" />
+          <h1 className="offerSubTitle">Maintainance</h1>
+          <hr className="Underline1" />
           <div className="ServiceCardContainer">
             {DomesticServices.map(({ name, id, description, image }) => {
               return (

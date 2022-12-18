@@ -1,18 +1,21 @@
-.Offercard{
-      width: 22%;
-      margin: 3rem;
-      margin-top: 2rem;
-      padding: 2rem;
-      border-radius: 1rem;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+.Offercard {
+  width: 18vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: white;
+  text-align: center;
 }
-.OfferServiceName{
-     font-size: 1.3rem;
-     font-family:  system-ui;
+
+.OfferServiceName {
+  font-size: 1.3rem;
+  font-family: system-ui;
 }
+
 .Offercard img {
   width: 100%;
   object-fit: cover;
@@ -25,15 +28,14 @@
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
 }
-@media screen  and (max-width: 650px) {
-    .Offercard{
-      width: 85%;
-     }
-     .ServiceImages{
-        width: 100%;;
-     }
-     .OfferServiceName{
-        font-size: 1.1rem;
-     }
-    
+@media screen and (max-width: 650px) {
+  .Offercard {
+    width: 85%;
+  }
+  .ServiceImages {
+    width: 100%;
+  }
+  .OfferServiceName {
+    font-size: 1.1rem;
+  }
 }

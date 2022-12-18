@@ -54,7 +54,7 @@
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
-  margin-left: 23rem;
+  justify-content: center;
 }
 .figures div {
   display: flex;
