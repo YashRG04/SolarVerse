@@ -3,7 +3,7 @@ import "./GoSolarW.css";
 import OfferCard from "../OfferedService/OfferCard";
 // import {family} from '../../../assets/images/family.svg'
 import { GoSolarWData } from "../../../assets/data/GoSolarW";
-import ServiceBtnSlider from "../ServiceHome/ServiceBtnSlider";
+import GoBtnSlider from "./GoBtnSlider"
 
 const GoSolar = () => {
   const [serviceIndex, setServiceIndex] = useState(1);
@@ -28,7 +28,7 @@ const GoSolar = () => {
       setServiceIndex((prevCounter) =>
         prevCounter == GoSolarWData.length ? 1 : prevCounter + 1
       );
-    }, [5000]);
+    }, [10000]);
     return () => clearInterval(interval);
   }, []);
 
@@ -171,8 +171,9 @@ const GoSolar = () => {
           </div>
         </div>
 
-        <ServiceBtnSlider moveSlide={nextSlide} direction={"nextService"} />
-        <ServiceBtnSlider moveSlide={prevSlide} direction={"prevService"} />
+        <GoBtnSlider moveSlide={nextSlide} direction={"nextService"} />
+
+        <GoBtnSlider moveSlide={prevSlide} direction={"prevService"} />
       </div>
     </div>
   );
