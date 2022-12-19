@@ -7,21 +7,25 @@ export const OfferedServiceData = [
   {
     id: 1,
     name: "Full Plant Checkup",
-    image: { fullSolarCheckup },
+    image:
+      "https://res.cloudinary.com/yashrg04/image/upload/v1671350828/Solarverse/full_solar_check-up_a32vkh.webp",
   },
   {
     id: 2,
     name: "Low Generation Issue",
-    image: { generationIssue },
+    image:
+      "https://res.cloudinary.com/yashrg04/image/upload/v1671350828/Solarverse/generation_issue_gtove1.webp",
   },
   {
     id: 3,
     name: "Structure Issue",
-    image: { structureIssue },
+    image:
+      "https://res.cloudinary.com/yashrg04/image/upload/v1671350829/Solarverse/structure_issue_ia0uir.webp",
   },
   {
     id: 4,
     name: "Other Issue",
-    image: { other },
+    image:
+      "https://res.cloudinary.com/yashrg04/image/upload/v1671350829/Solarverse/structure_issue_ia0uir.webp",
   },
 ];

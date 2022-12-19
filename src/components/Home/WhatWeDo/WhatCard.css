@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  border-width: 25rem;
   border-radius: 1rem;
   border-color: #000;
   background-color: rgb(255, 255, 255);

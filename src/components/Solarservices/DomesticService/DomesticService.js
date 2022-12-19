@@ -6,6 +6,7 @@ import "./DomestiService.css";
 import ServiceCard from "../../Home/ServiceHome/ServiceCard";
 import { DomesticServices } from "../../../assets/data/DomesticServices";
 import { DomesticServicesData } from "../../../assets/data/DomesticServiceData";
+import { Link } from "react-router-dom";
 
 const DomesticService = () => {
   // get the service id from the url
@@ -39,6 +40,12 @@ const DomesticService = () => {
         {/* <div className="StepsContainer">
           <StepsContainer stepsData={serviceData.steps} />
         </div> */}
+
+        <div className="ButtonContainer">
+          <Link className="Purchase" to="/">
+            PURCHASE PLAN
+          </Link>
+        </div>
 
         <div className="RemainingServices">
           <h1>Other Services</h1>

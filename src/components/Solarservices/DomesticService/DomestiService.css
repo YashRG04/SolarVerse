@@ -28,6 +28,33 @@
   padding-bottom: 2rem;
 }
 
+.Purchase {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Belleza", sans-serif;
+  padding: 0.8rem 1.6rem;
+  background-color: #ffdd02;
+
+  /* background-color: #39b54a; */
+
+  border: none;
+  border-radius: 1rem;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.Purchase:hover {
+  background-color: #39b54a;
+  /* background-color: #fdbd59; */
+  transition: 0.5s;
+}
+
 
 
 @media screen and (max-width: 802px) {

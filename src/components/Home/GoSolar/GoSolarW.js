@@ -1,7 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./GoSolarW.css";
+import OfferCard from "../OfferedService/OfferCard";
 // import {family} from '../../../assets/images/family.svg'
+import { GoSolarWData } from "../../../assets/data/GoSolarW";
+import ServiceBtnSlider from "../ServiceHome/ServiceBtnSlider";
+
 const GoSolar = () => {
+  const [serviceIndex, setServiceIndex] = useState(1);
+  const nextSlide = () => {
+    if (serviceIndex !== GoSolarWData.length) {
+      setServiceIndex(serviceIndex + 1);
+    } else if (serviceIndex === GoSolarWData.length) {
+      setServiceIndex(1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (serviceIndex !== 1) {
+      setServiceIndex(serviceIndex - 1);
+    } else if (serviceIndex === 1) {
+      setServiceIndex(GoSolarWData.length);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setServiceIndex((prevCounter) =>
+        prevCounter == GoSolarWData.length ? 1 : prevCounter + 1
+      );
+    }, [5000]);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="GoSolarContainer">
       <h1 className="offerTitle">Why Go Solar?</h1>
@@ -81,6 +111,68 @@ const GoSolar = () => {
             alt="image"
           />
         </div>
+      </div>
+      <div className="ServiceCrousalOut">
+        <div className="ServiceCardCrousalContainer">
+          <div
+            key={GoSolarWData[0].id}
+            className={
+              serviceIndex === GoSolarWData[0].id ? "slideactive-anim" : "slide"
+            }
+          >
+            <div className="Servicecontainer">
+              <OfferCard
+                name={GoSolarWData[0].name}
+                image={GoSolarWData[0].image}
+              />
+            </div>
+          </div>
+
+          <div
+            key={GoSolarWData[1].id}
+            className={
+              serviceIndex === GoSolarWData[1].id ? "slideactive-anim" : "slide"
+            }
+          >
+            <div className="Servicecontainer">
+              <OfferCard
+                name={GoSolarWData[1].name}
+                image={GoSolarWData[1].image}
+              />
+            </div>
+          </div>
+
+          <div
+            key={GoSolarWData[2].id}
+            className={
+              serviceIndex === GoSolarWData[2].id ? "slideactive-anim" : "slide"
+            }
+          >
+            <div className="Servicecontainer">
+              <OfferCard
+                name={GoSolarWData[2].name}
+                image={GoSolarWData[2].image}
+              />
+            </div>
+          </div>
+
+          <div
+            key={GoSolarWData[3].id}
+            className={
+              serviceIndex === GoSolarWData[3].id ? "slideactive-anim" : "slide"
+            }
+          >
+            <div className="Servicecontainer">
+              <OfferCard
+                name={GoSolarWData[3].name}
+                image={GoSolarWData[3].image}
+              />
+            </div>
+          </div>
+        </div>
+
+        <ServiceBtnSlider moveSlide={nextSlide} direction={"nextService"} />
+        <ServiceBtnSlider moveSlide={prevSlide} direction={"prevService"} />
       </div>
     </div>
   );
