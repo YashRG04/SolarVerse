@@ -1,5 +1,5 @@
 import fullSolarCheckup from "../images/full_solar_check-up.webp";
-import generationIssue from "../images/generation_issue.webp";
+// import greenenrgy from "../images/greenenergy.svg";
 import structureIssue from "../images/structure_issue.webp";
 import other from "../images/other.webp";
 
@@ -19,7 +19,7 @@ export const GoSolarWData = [
     id: 3,
     name: "Green Energy",
     image:
-      "https://www.civilengineeringweb.com/wp-content/uploads/2019/10/what-is-net-zzero-energy-building.jpg",
+      "https://thumbs.dreamstime.com/b/money-bag-dollar-symbol-two-people-figures-investment-lending-leasing-available-loans-subsidies-government-support-154074162.jpg",
   },
   {
     id: 4,

@@ -38,7 +38,7 @@ const ServiceContainer = () => {
       setServiceIndex((prevCounter) =>
         prevCounter == OfferedServiceData.length ? 1 : prevCounter + 1
       );
-    }, [5000]);
+    }, [10000]);
     return () => clearInterval(interval);
   }, []);
 
