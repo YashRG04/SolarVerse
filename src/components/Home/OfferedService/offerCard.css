@@ -5,13 +5,12 @@
   align-items: center;
   margin: 2rem;
   margin-left: 1.25rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 2rem;
   border-radius: 1rem;
   background-color: white;
   text-align: center;
 }
-
 
 .Offercard img {
   width: 100%;
@@ -28,13 +27,15 @@
 @media screen and (max-width: 650px) {
   .Offercard {
     width: 85%;
-    height: 13rem
+    height: 15rem;
   }
-  .offerimagecontainer{
+  .offerimagecontainer {
     height: 8rem;
-
-
   }
+  .OfferServiceName {
+    padding: 0rem 1rem;
+  }
+
   .ServiceImages {
     width: 100%;
   }

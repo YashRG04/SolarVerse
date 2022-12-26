@@ -3,7 +3,7 @@ import "./GoSolarW.css";
 import OfferCard from "../OfferedService/OfferCard";
 // import {family} from '../../../assets/images/family.svg'
 import { GoSolarWData } from "../../../assets/data/GoSolarW";
-import GoBtnSlider from "./GoBtnSlider"
+import GoBtnSlider from "./GoBtnSlider.js";
 
 const GoSolar = () => {
   const [serviceIndex, setServiceIndex] = useState(1);

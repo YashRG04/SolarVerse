@@ -1,3 +1,7 @@
+.ServiceCardCrousalContainer {
+  border-radius: 1.5rem;
+}
+
 .ServiceContainer {
   display: flex;
   flex-direction: column;
@@ -110,8 +114,12 @@
     width: 16rem;
     position: relative;
     overflow: hidden;
+  }
+
+  .ServiceCardCrousalContainer:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
+
   .Serviceslide {
     width: 100%;
     height: 100%;
@@ -161,11 +169,11 @@
 
 .prevGo {
   position: relative;
-  right: 5.0rem;
+  right: 5rem;
   transform: translateY(-660%);
 }
-.nextGo{
-     position: relative;
-     left: 17.5rem;
-     transform: translateY(-660%);
+.nextGo {
+  position: relative;
+  left: 17.5rem;
+  transform: translateY(-660%);
 }
