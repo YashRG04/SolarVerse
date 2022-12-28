@@ -24,7 +24,14 @@
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
 }
-@media screen and (max-width: 650px) {
+
+.OfferServiceName{
+  text-decoration: none;
+  color: black;
+  
+}
+
+@media screen and (max-width: 900px) {
   .Offercard {
     width: 85%;
     height: 15rem;

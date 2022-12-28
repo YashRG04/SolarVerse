@@ -161,11 +161,11 @@
 
 .prevService {
   position: relative;
-  right: 11.5rem;
+  right: 10.5rem;
   transform: translateY(-660%);
 }
 .nextService {
   position: relative;
-  left: 11.5rem;
+  left: 10.5rem;
   transform: translateY(-660%);
 }

@@ -169,11 +169,13 @@
 
 .prevGo {
   position: relative;
-  right: 5rem;
+  right: 3.8rem;
+  background-color: #f1f1f1;
   transform: translateY(-660%);
 }
 .nextGo {
   position: relative;
-  left: 17.5rem;
+  left: 16.5rem;
+  background-color: #f1f1f1;
   transform: translateY(-660%);
 }

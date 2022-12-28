@@ -6,12 +6,13 @@ import ServiceCard from "./ServiceCard";
 import "./ServiceContainer.css";
 import OfferCard from "../OfferedService/OfferCard";
 import { OfferedServiceData } from "../../../assets/data/OfferedService";
-import { useState} from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import ServiceBtnSlider from "./ServiceBtnSlider";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ServiceContainer = () => {
-
   const [serviceIndex, setServiceIndex] = useState(1);
   const nextSlide = () => {
     if (serviceIndex !== OfferedServiceData.length) {
@@ -42,12 +43,19 @@ const ServiceContainer = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <Fragment>
       <div className="ServiceContainer">
         <div className="DomesticService">
-          <h1 className="offerTitle">Services Being Offered</h1>
-          <hr className="Underline" />
+          <h1 data-aos="slide-left" className="offerTitle">
+            Services Being Offered
+          </h1>
+
+          <hr data-aos="slide-left" className="Underline" />
           <h1 className="offerSubTitle">Maintainance</h1>
           <hr className="Underline1" />
           <div className="ServiceCardContainer">
@@ -76,6 +84,7 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
+                id={OfferedServiceData[0].id}
                   name={OfferedServiceData[0].name}
                   image={OfferedServiceData[0].image}
                 />
@@ -92,6 +101,7 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
+                id={OfferedServiceData[1].id}
                   name={OfferedServiceData[1].name}
                   image={OfferedServiceData[1].image}
                 />
@@ -108,6 +118,7 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
+                id={OfferedServiceData[2].id}
                   name={OfferedServiceData[2].name}
                   image={OfferedServiceData[2].image}
                 />
@@ -124,6 +135,7 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
+                id={OfferedServiceData[3].id}
                   name={OfferedServiceData[3].name}
                   image={OfferedServiceData[3].image}
                 />
@@ -135,7 +147,7 @@ const ServiceContainer = () => {
         </div>
 
         <div className="ButtonContainer">
-          <Link className="OfferedButton" to="/constactus">
+          <Link data-aos="fade-in" className="OfferedButton" to="/constactus">
             CONTACT US
           </Link>
         </div>

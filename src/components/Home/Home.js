@@ -16,8 +16,7 @@ import GoSolarW from "./GoSolar/GoSolarW";
 import WhatContainer from "./WhatWeDo/WhatContainer";
 
 const Home = () => {
-  const user = "Yash";
-  const login = true;
+  
   return (
     <Fragment>
       <div className="Container" id="top">
@@ -27,7 +26,7 @@ const Home = () => {
             <hr />
           </div>
           <WhatContainer />
-          
+      
           {/* <ContentContainer /> */}
 
           <GoSolarW />
