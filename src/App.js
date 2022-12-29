@@ -12,6 +12,8 @@ import CommercialService from "./components/Solarservices/CommercialService/Comm
 import AboutUs from "./components/About/AboutUs";
 import InfForm from "./components/Form/InfForm";
 
+import { AccountBox } from "./components/Login/accountbox";
+
 function App() {
   const user = "Yash";
   const login = false;
@@ -29,13 +31,14 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<AboutUs/>} />
+        <Route exact path="/about" element={<AboutUs />} />
 
         <Route path="/services/d1" element={<DomesticService />} />
         <Route path="/services/d2" element={<DomesticService />} />
         <Route path="/services/d3" element={<DomesticService />} />
         <Route path="/services/d4" element={<DomesticService />} />
         <Route path="/form" element={<InfForm />} />
+        <Route path="/login" element={<AccountBox />} />
 
         {/* <Route path="/services/c1" element={<CommercialService />} />
         <Route path="/services/c2" element={<CommercialService />} />
