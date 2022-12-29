@@ -28,7 +28,7 @@ const GoSolar = () => {
       setServiceIndex((prevCounter) =>
         prevCounter == GoSolarWData.length ? 1 : prevCounter + 1
       );
-    }, [10000]);
+    }, [5000]);
     return () => clearInterval(interval);
   }, []);
 
