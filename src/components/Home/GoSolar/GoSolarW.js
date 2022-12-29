@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./GoSolarW.css";
-import OfferCard from "../OfferedService/OfferCard";
+import GoSolarCard from "./GoSolarCard";
 // import {family} from '../../../assets/images/family.svg'
 import { GoSolarWData } from "../../../assets/data/GoSolarW";
-import GoBtnSlider from "./GoBtnSlider"
+import GoBtnSlider from "./GoBtnSlider.js";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 const GoSolar = () => {
   const [serviceIndex, setServiceIndex] = useState(1);
@@ -32,19 +35,23 @@ const GoSolar = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="GoSolarContainer">
-      <h1 className="offerTitle">Why Go Solar?</h1>
-      <hr className="GoUnderline" />
+      <h1  data-aos="slide-left" className="offerTitle">Why Go Solar?</h1>
+      <hr  data-aos="slide-left" className="GoUnderline" />
 
       <div className="GoSolarFirst">
-        <div className="GoFirstComp">
+        <div  data-aos="flip-right"className="GoFirstComp">
           <img
             src="https://www.computerhope.com/jargon/c/chart.gif"
             alt="image"
           />
         </div>
-        <div className="GoSecondComp">
+        <div  data-aos="flip-left"className="GoSecondComp">
           <h2>Safest investments promising higher ROI</h2>
           <p>
             Within<b> 3-4 year payback on investment</b> and the being the
@@ -55,14 +62,14 @@ const GoSolar = () => {
         </div>
       </div>
       <div className="GoSolarFirst">
-        <div className="GoSecondComp">
+        <div data-aos="flip-right" className="GoSecondComp">
           <h2>Subsidy</h2>
           <p>
             Solar investments would never leave you wanting perks. Get almost
             <b>40% as per the Governmental guidelines.</b>
           </p>
         </div>
-        <div className="GoFirstComp">
+        <div  data-aos="flip-left"className="GoFirstComp">
           <img
             src="https://www.shutterstock.com/image-photo/money-bag-word-subsidy-wooden-260nw-1279322677.jpg"
             alt="image"
@@ -71,13 +78,13 @@ const GoSolar = () => {
       </div>
 
       <div className="GoSolarFirst">
-        <div className="GoFirstComp">
+        <div data-aos="flip-right" className="GoFirstComp">
           <img
             src="https://www.civilengineeringweb.com/wp-content/uploads/2019/10/what-is-net-zzero-energy-building.jpg"
             alt="image"
           />
         </div>
-        <div className="GoSecondComp">
+        <div  data-aos="flip-left"className="GoSecondComp">
           <h2>Green Energy</h2>
           <p>
             Being the earth's most abundant energy source, solar power
@@ -92,20 +99,20 @@ const GoSolar = () => {
       </div>
 
       <div className="GoSolarFirst">
-        <div className="GoSecondComp">
+        <div data-aos="flip-right" className="GoSecondComp">
           <h2>Power for better future</h2>
           <p>
             Data collected by green think-tank Centre for Science and
             Environment (CSE) represents deaths attributable to ambient PM2.5 in
             India has increased by
             <b>
-              2.5 times in last 20 years -- from 2,79,500 in 1990 to 9,79,900 in
+              2.5 times in last 20 yea data-aos="flip-left"rs -- from 2,79,500 in 1990 to 9,79,900 in
               2019
             </b>
             .
           </p>
         </div>
-        <div className="GoFirstComp">
+        <div data-aos="flip-left" className="GoFirstComp">
           <img
             src="https://img.freepik.com/free-vector/active-people-bikes-windmills-house-with-solar-panel-rooftop-flat-illustration_74855-10477.jpg"
             alt="image"
@@ -121,7 +128,7 @@ const GoSolar = () => {
             }
           >
             <div className="Servicecontainer">
-              <OfferCard
+              <GoSolarCard
                 name={GoSolarWData[0].name}
                 image={GoSolarWData[0].image}
               />
@@ -135,7 +142,7 @@ const GoSolar = () => {
             }
           >
             <div className="Servicecontainer">
-              <OfferCard
+              <GoSolarCard
                 name={GoSolarWData[1].name}
                 image={GoSolarWData[1].image}
               />
@@ -149,7 +156,7 @@ const GoSolar = () => {
             }
           >
             <div className="Servicecontainer">
-              <OfferCard
+              <GoSolarCard
                 name={GoSolarWData[2].name}
                 image={GoSolarWData[2].image}
               />
@@ -163,7 +170,7 @@ const GoSolar = () => {
             }
           >
             <div className="Servicecontainer">
-              <OfferCard
+              <GoSolarCard
                 name={GoSolarWData[3].name}
                 image={GoSolarWData[3].image}
               />

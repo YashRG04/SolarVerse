@@ -1,10 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import "./WhatCard.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const WhatCard = ({name,id,description,image}) => {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <Fragment>
-      <div className="WhatCard">
+      <div data-aos="zoom-in-left" className="WhatCard">
         <div className="WhatCardImage">
           <img className="WhatImage" src={image} alt={name} />
         </div>

@@ -1,22 +1,30 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./ServiceCard.css";
-import { motion } from "framer-motion";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ServiceCard = ({ name, id, description, image }) => {
-  
-  const animateFrom = { opacity: 0, y: 50 };
-  const animateTo = { opacity: 1, y: 0 };
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+  const idLink = `/services/${id}`;
 
   return (
     <Fragment>
-      <div initial={animateFrom} animate={animateTo} className="ServiceCard">
+      <div
+        data-aos="flip-left"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="top-center"
+        className="ServiceCard"
+      >
         <div className="ImageContainer">
           <img className="ServiceImages" src={image} alt={name} />
         </div>
         <h1 className="ServiceName">{name}</h1>
         <p className="ServiceDescription">{description}</p>
-        <Link to={`/services/${id}`} className="ServiceButton">
+        <Link className="ServiceButton" to={idLink}>
           Learn More
         </Link>
       </div>

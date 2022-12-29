@@ -11,6 +11,8 @@
   padding-bottom: 5rem;
 }
 
+
+
 .GoSolarFirst {
   display: flex;
   flex-direction: row;
@@ -63,7 +65,7 @@
   border-radius: 0.3em;
   margin: 1rem 0rem 1.5rem;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 @media screen and (max-width: 768px) {
