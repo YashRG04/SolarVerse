@@ -39,6 +39,7 @@ const InfForm = () => {
                 type="text"
                 name="name"
                 value={name}
+                required
                 onChange={(e) => setName(e.target.value)}
               />
             </label>
