@@ -12,7 +12,7 @@ export const OfferedServiceData = [
       "https://res.cloudinary.com/yashrg04/image/upload/v1671350828/Solarverse/full_solar_check-up_a32vkh.webp",
   },
   {
-    id: 2,
+     id: 2,
     // id: "d2",
     name: "Low Generation Issue",
     image:
