@@ -7,6 +7,7 @@ import GoBtnSlider from "./GoBtnSlider.js";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BarChart from "./BarChart";
+import BarChart2 from "./BarChar2.js";
 
 
 const GoSolar = () => {
@@ -32,7 +33,7 @@ const GoSolar = () => {
       setServiceIndex((prevCounter) =>
         prevCounter == GoSolarWData.length ? 1 : prevCounter + 1
       );
-    }, [5000]);
+    }, [100000]);
     return () => clearInterval(interval);
   }, []);
 
@@ -49,7 +50,7 @@ const GoSolar = () => {
 
       <div className="GoSolarFirst">
         <div data-aos="flip-left" className="GoFirstComp">
-          <BarChart />
+          <BarChart width={450} />
         </div>
         <div data-aos="flip-left" className="GoSecondComp">
           <h2>Safest investments promising higher ROI</h2>
@@ -127,11 +128,14 @@ const GoSolar = () => {
               serviceIndex === GoSolarWData[0].id ? "slideactive-anim" : "slide"
             }
           >
-            <div className="Servicecontainer">
-              <GoSolarCard
-                name={GoSolarWData[0].name}
-                image={GoSolarWData[0].image}
-              />
+            <div className="Servicentainer">
+              <div className="Offcard">
+                <div className="erimagecontainer">
+                  <BarChart2 width={750} />
+                </div>
+                <h1 className="OfferServiceName">{GoSolarWData[0].name}</h1>
+              </div>
+
             </div>
           </div>
 
