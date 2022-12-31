@@ -127,10 +127,7 @@ const GoSolar = () => {
             }
           >
             <div className="Servicecontainer">
-              <GoSolarCard
-                name={GoSolarWData[0].name}
-                image={GoSolarWData[0].image}
-              />
+              <BarChart style={{width:"10%"}}/>
             </div>
           </div>
 
