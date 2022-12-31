@@ -6,6 +6,7 @@ import { GoSolarWData } from "../../../assets/data/GoSolarW";
 import GoBtnSlider from "./GoBtnSlider.js";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import BarChart from "./BarChart";
 
 
 const GoSolar = () => {
@@ -46,11 +47,9 @@ const GoSolar = () => {
 
       <div className="GoSolarFirst">
         <div  data-aos="flip-right"className="GoFirstComp">
-          <img
-            src="https://www.computerhope.com/jargon/c/chart.gif"
-            alt="image"
-          />
+          <BarChart />
         </div>
+        
         <div  data-aos="flip-left"className="GoSecondComp">
           <h2>Safest investments promising higher ROI</h2>
           <p>
