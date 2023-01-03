@@ -11,8 +11,6 @@
   padding-bottom: 5rem;
 }
 
-
-
 .GoSolarFirst {
   display: flex;
   flex-direction: row;
@@ -72,4 +70,19 @@
   .GoSolarFirst {
     display: none;
   }
+}
+
+.erimagecontainer {
+  height: 10rem;
+  align-items: center;
+}
+.Offcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  height: 14rem;
+  margin: 1.2rem;
+  border-radius: 1rem;
 }

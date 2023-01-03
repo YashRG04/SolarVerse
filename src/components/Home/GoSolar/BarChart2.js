@@ -4,9 +4,8 @@ import "./BarChart.css";
 import Chart from "react-apexcharts";
 import * as zoom from "chartjs-plugin-zoom";
 import { useEffect, useState } from "react";
-import "./BarChart.css";
 
-const BarChart = ({ wid }) => {
+const BarChart2 = ({ wid }) => {
   const [temp, setTemp] = useState({
     options: {
       chart: {
@@ -14,12 +13,9 @@ const BarChart = ({ wid }) => {
         toolbar: {
           show: false,
         },
+        height: "100",
       },
-      title: {
-        text: "XYZ - Cost Analysis (1997 - 2022)",
-        align: "left",
-        offsetX: 110,
-      },
+
       dataLabels: {
         enabled: false,
       },
@@ -27,30 +23,39 @@ const BarChart = ({ wid }) => {
         show: false,
       },
       xaxis: {
+        title: {
+          text: "Number of Years",
+          position: "bottom", // topRight, topLeft, bottomRight, bottomLeft
+          offsetY: -20,
+          offsetX: 0,
+          style: {
+            color: "#008FFB",
+            fontSize: "5.7px",
+          },
+        },
         categories: [
           1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
           21, 22, 23, 24, 25,
         ],
         labels: {
           style: {
-            fontSize: "12px",
-          },
-        },
-        title: {
-          text: "Number of Years",
-          position: "bottom", // topRight, topLeft, bottomRight, bottomLeft
-          offsetY: -10,
-          offsetX: 0,
-          style: {
-            color: "#008FFB",
+            fontSize: "5.7px",
           },
         },
       },
       yaxis: {
+        show: true,
         title: {
           text: "Income (thousand crores)",
           style: {
             color: "#008FFB",
+            fontSize: "5.7px",
+          },
+        },
+
+        labels: {
+          style: {
+            fontSize: "5.7px",
           },
         },
       },
@@ -82,8 +87,9 @@ const BarChart = ({ wid }) => {
         series={temp.series}
         type="area"
         width={wid}
+        height="155"
       />
     </div>
   );
 };
-export default BarChart;
+export default BarChart2;

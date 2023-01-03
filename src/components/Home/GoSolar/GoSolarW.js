@@ -7,7 +7,7 @@ import GoBtnSlider from "./GoBtnSlider.js";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BarChart from "./BarChart";
-
+import BarChart2 from "./BarChart2";
 
 const GoSolar = () => {
   const [serviceIndex, setServiceIndex] = useState(1);
@@ -42,15 +42,17 @@ const GoSolar = () => {
 
   return (
     <div className="GoSolarContainer">
-      <h1  data-aos="slide-left" className="offerTitle">Why Go Solar?</h1>
-      <hr  data-aos="slide-left" className="GoUnderline" />
+      <h1 data-aos="slide-left" className="offerTitle">
+        Why Go Solar?
+      </h1>
+      <hr data-aos="slide-left" className="GoUnderline" />
 
       <div className="GoSolarFirst">
-        <div  data-aos="flip-right"className="GoFirstComp">
-          <BarChart />
+        <div data-aos="flip-right" className="GoFirstComp">
+          <BarChart width={450} />
         </div>
-        
-        <div  data-aos="flip-left"className="GoSecondComp">
+
+        <div data-aos="flip-left" className="GoSecondComp">
           <h2>Safest investments promising higher ROI</h2>
           <p>
             Within<b> 3-4 year payback on investment</b> and the being the
@@ -68,7 +70,7 @@ const GoSolar = () => {
             <b>40% as per the Governmental guidelines.</b>
           </p>
         </div>
-        <div  data-aos="flip-left"className="GoFirstComp">
+        <div data-aos="flip-left" className="GoFirstComp">
           <img
             src="https://www.shutterstock.com/image-photo/money-bag-word-subsidy-wooden-260nw-1279322677.jpg"
             alt="image"
@@ -83,7 +85,7 @@ const GoSolar = () => {
             alt="image"
           />
         </div>
-        <div  data-aos="flip-left"className="GoSecondComp">
+        <div data-aos="flip-left" className="GoSecondComp">
           <h2>Green Energy</h2>
           <p>
             Being the earth's most abundant energy source, solar power
@@ -105,8 +107,8 @@ const GoSolar = () => {
             Environment (CSE) represents deaths attributable to ambient PM2.5 in
             India has increased by
             <b>
-              2.5 times in last 20 yea data-aos="flip-left"rs -- from 2,79,500 in 1990 to 9,79,900 in
-              2019
+              2.5 times in last 20 yea data-aos="flip-left"rs -- from 2,79,500
+              in 1990 to 9,79,900 in 2019
             </b>
             .
           </p>
@@ -126,8 +128,13 @@ const GoSolar = () => {
               serviceIndex === GoSolarWData[0].id ? "slideactive-anim" : "slide"
             }
           >
-            <div className="Servicecontainer">
-              <BarChart style={{width:"10%"}}/>
+            <div className="Servicentainer">
+              <div className="Offcard">
+                <div className="erimagecontainer">
+                  <BarChart2 width={750} />
+                </div>
+                <h1 className="OfferServiceName">{GoSolarWData[0].name}</h1>
+              </div>
             </div>
           </div>
 

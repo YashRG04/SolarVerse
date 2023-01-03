@@ -25,10 +25,13 @@
   transition: all 0.5s ease-in-out;
 }
 
-.OfferServiceName{
+.OfferServiceName {
   text-decoration: none;
   color: black;
-  
+}
+
+.erimagecontainer {
+  height: 10rem;
 }
 
 @media screen and (max-width: 900px) {
