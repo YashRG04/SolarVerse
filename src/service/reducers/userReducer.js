@@ -10,6 +10,10 @@ import {
 export const userReducer = (state = { user: {} }, action) => {
   switch (action.type) {
     case LOGIN_REQUEST:
+      return {
+        loading: true,
+        isAuthenticated: true,
+      };
     case REGISTER_USER_REQUEST:
       return {
         loading: true,
@@ -17,6 +21,10 @@ export const userReducer = (state = { user: {} }, action) => {
       };
     case LOGIN_SUCCESS:
     case REGISTER_USER_SUCCESS:
+     localStorage.setItem("user", action.payload);
+      console.log('login success');
+      console.log("register success");
+
       return {
         ...state,
         loading: false,

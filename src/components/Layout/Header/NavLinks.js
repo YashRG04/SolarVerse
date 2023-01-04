@@ -4,15 +4,23 @@ import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+
 const NavLinks = (props) => {
+
+  const {user}=useSelector((state)=>state.user)
+
+  const userl=localStorage.getItem("user");
+
   const links = [
     { name: "Home", url: "/" },
     { name: "Services", url: "/services/d1" },
     { name: "My Bookings", url: "/bookings" },
     { name: "About Us", url: "/about" },
     {
-      name: props.data.Login.login ? `Hello ${props.data.User.user}` : "Login",
-      url: props.data.Login.login ? "/profile" : "/login",
+       name:userl ? `Hello ${userl}` : "Login",
+      url: userl ? "/profile" : "/login",
     },
   ];
 
