@@ -52,7 +52,7 @@ export function LoginForm(props) {
 
   return (
     <BoxContainer>
-      <form className="FormContainer" onSubmit={loginSubmit}>
+      <form className="FormContainer " onSubmit={loginSubmit}  >
         <input
           className="Input"
           type="email"
@@ -77,9 +77,8 @@ export function LoginForm(props) {
       </Link>
 
       <Marginer direction="vertical" margin="1.6em" />
-      <button className="SubmitButton" type="submit">
-        SignIn
-      </button>
+      <input className="SubmitButton" type="submit"/>
+      
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
         Don't have an account?{" "}
