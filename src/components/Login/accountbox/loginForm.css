@@ -40,6 +40,10 @@
   border-bottom: 1.5px solid #7a7878;
 }
 
+.MuiButton-label{
+ 
+}
+
 .SubmitButton {
   margin-top: 1rem;
   padding-top: 2rem;
