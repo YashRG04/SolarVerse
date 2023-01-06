@@ -1,0 +1,15 @@
+.TitleContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: "ABEEZEE", sans-serif;
+  text-align: center;
+  margin-top: 1rem;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.758);
+}
+
+.BookingTitle {
+  padding-top: 1rem;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}

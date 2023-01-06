@@ -13,6 +13,7 @@ import AboutUs from "./components/About/AboutUs";
 import InfForm from "./components/Form/InfForm";
 
 import { AccountBox } from "./components/Login/accountbox";
+import Details from "./components/Checkout/Details";
 
 function App() {
   const user = "Yash";
@@ -39,6 +40,7 @@ function App() {
         <Route path="/services/d4" element={<DomesticService />} />
         <Route path="/form" element={<InfForm />} />
         <Route path="/login" element={<AccountBox />} />
+        <Route path="/booking" element={<Details />} />
 
         {/* <Route path="/services/c1" element={<CommercialService />} />
         <Route path="/services/c2" element={<CommercialService />} />
