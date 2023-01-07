@@ -14,6 +14,8 @@ import InfForm from "./components/Form/InfForm";
 
 import { AccountBox } from "./components/Login/accountbox";
 import Details from "./components/Checkout/Details";
+import Mybook from "./components/Mybook/Mybook";
+import MyBooking from "./components/Mybook/MyBooking";
 
 function App() {
   const user = "Yash";
@@ -41,6 +43,7 @@ function App() {
         <Route path="/form" element={<InfForm />} />
         <Route path="/login" element={<AccountBox />} />
         <Route path="/booking" element={<Details />} />
+        <Route path="/mybookings" element={<MyBooking/>}/>
 
         {/* <Route path="/services/c1" element={<CommercialService />} />
         <Route path="/services/c2" element={<CommercialService />} />

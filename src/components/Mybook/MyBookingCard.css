@@ -1,0 +1,69 @@
+.bookingcard{
+
+    align-items: center;
+    display: flex;
+     border-radius: 1rem; 
+    /* flex-direction: column */
+    justify-content: center;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+.bookingcardcontainer{ 
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    /* border-color: #000; */
+    border-radius: 1rem; 
+    height: 18rem;
+    transition: all 0.5s ease-in-out;
+}
+.bookingcard :hover{
+  box-shadow: 1rem 0rem 0.3rem rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
+}
+.leftbooking{
+    width: 50%;
+    border: none;
+}
+.rightbooking{
+    width: 50%;
+}
+.leftbooking >h4:hover{
+     box-shadow: 0 0 0rem rgba(0, 0, 0, 0.25);
+     transition: all 0.5s ease-in-out;
+}
+.leftbooking > h4{
+    padding: 0.75rem;
+    padding-left: 2rem;
+}
+.rightbooking >h4{
+    padding: 0.75rem;
+    font-weight: 400;
+    padding-left: 2rem;
+}
+.rightbooking >h4:hover{
+     box-shadow: 0 0 0rem rgba(0, 0, 0, 0.25);
+     transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:515px) {
+    .bookingcardcontainer{ 
+        height: 18rem;
+         width: 90%;
+    }
+    .rightbooking >h4{
+    
+    padding-left: 1rem;
+}  
+}
+@media screen and (max-width:715px) {
+    .bookingcardcontainer{ 
+        height: 18rem;
+         width: 90%;
+    }
+    .rightbooking >h4{
+    
+    padding-left: 1rem;
+}  
+}

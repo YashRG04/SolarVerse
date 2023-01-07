@@ -20,7 +20,7 @@ const Details = () => {
           <hr data-aos="slide-left" className="Underline" />
         </div>
         <div className="DetailsContainer">
-            <form className="DetailsForm">
+            <form className="DetailsForm"/>
         </div>
       </div>
     </Fragment>
