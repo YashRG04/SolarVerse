@@ -8,8 +8,82 @@
   color: rgba(0, 0, 0, 0.758);
 }
 
-.BookingTitle {
-  padding-top: 1rem;
+.Title {
   text-transform: capitalize;
   font-size: 1.8rem;
+}
+
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Box {
+  background-color: white;
+  width: 25rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 0rem 2rem 2rem;
+  justify-content: space-evenly;
+  height: 80%;
+  transition: all 0.5s;
+  justify-content: center;
+}
+
+.Form > div {
+  padding: 1rem 0rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.Form > div > input,
+.Form > div > select {
+  padding: 1rem 4rem;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+}
+
+.Form > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+@media screen and (max-width: 768px) {
+  .Form div {
+    justify-content: center;
+  }
+
+  .Form > div > input,
+  .Form > div > select {
+    width: 70%;
+    font-size: 1rem;
+    font-family: "Belleza", sans-serif;
+  }
+
+  .Form > div > svg {
+    transform: translateX(-6rem);
+  }
+
+  .Box {
+    align-items: center;
+    justify-content: center;
+  }
 }
