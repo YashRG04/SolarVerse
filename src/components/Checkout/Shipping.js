@@ -37,7 +37,8 @@ const Shipping = () => {
             <form className="ShippingForm Form" encType="multipart/form-data">
               <div data-aos="zoom-out-up">
                 <HomeIcon />
-                <input type="text" placeholder="Address" required />
+                <input type="text" placeholder="Address" required 
+                onChange={(e)=>setAddress(e.target.value)}/>
               </div>
               <div data-aos="zoom-out-up">
                 <LocationCityIcon />
