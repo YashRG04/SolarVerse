@@ -16,10 +16,10 @@ const NavLinks = (props) => {
   const links = [
     { name: "Home", url: "/" },
     { name: "Services", url: "/services/d1" },
-    { name: "My Bookings", url: "/bookings" },
+    { name: "My Bookings", url: "/mybookings" },
     { name: "About Us", url: "/about" },
     {
-       name:userl ? `Hello ${userl}` : "Login",
+      name: userl ? `Hello ${userl}` : "Login",
       url: userl ? "/profile" : "/login",
     },
   ];

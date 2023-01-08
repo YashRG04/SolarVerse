@@ -1,0 +1,11 @@
+.bookcontainer{
+   padding-top: 5rem;
+   background-color: #f6f3f3;
+
+}
+.bookcontainer > h1{
+        display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}

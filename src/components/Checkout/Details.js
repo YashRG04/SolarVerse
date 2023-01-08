@@ -44,6 +44,7 @@ const Details = () => {
           </h1>
           <hr data-aos="slide-left" className="Underline" />
         </div>
+
         <div className="DetailsContainer Container">
           <div className="DetailsBox Box">
             <form

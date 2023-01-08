@@ -1,0 +1,109 @@
+/* inspired by: https://css-tricks.com/responsive-data-tables/ */
+.responsiveTable {
+  width: 100%;
+}
+.mybookcontainer{
+    /* margin-top: 4rem; */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+   
+}
+.mybookcontainer > h1{
+        display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.responsiveTable td .tdBefore {
+  display: none;
+}
+.bookhead{
+    background-color: rgb(56, 113, 56);
+    
+}
+.tdBefore{
+    color: #000;
+}
+.bookstatus{
+    color:rgb(49, 244, 49);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 140em) {
+  /*
+    Force table elements to not behave like tables anymore
+    Hide table headers (but not display: none;, for accessibility)
+  */
+
+  .responsiveTable table,
+  .responsiveTable thead,
+  .responsiveTable tbody,
+  .responsiveTable th,
+  .responsiveTable td,
+  .responsiveTable tr {
+    display: block;
+  }
+
+  .responsiveTable thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    border-bottom: 2px solid #333;
+  }
+
+  .responsiveTable tbody tr {
+    border: 1px solid #000;
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+    margin-top: 1rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+
+
+    /* padding: 1.25em;
+    margin-top: 2rem;
+        margin-left: 20em;
+    margin-right: 20em; */
+  }
+
+  .responsiveTable td.pivoted {
+    /* Behave like a "row" */
+    border: none !important;
+    background-color:white;
+    position: relative;
+    padding-left: calc(50% + 10px) !important;
+    text-align: left !important;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  .responsiveTable td .tdBefore {
+    /* Now like a table header */
+    position: absolute;
+    display: block;
+
+    /* Top/left values mimic padding */
+    left: 1rem;
+    width: calc(50% - 20px);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: left !important;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width:500px) {
+
+     .responsiveTable tbody tr {
+    border: 1px solid #000;
+    width: 95%;
+    margin: auto;
+    padding: 0.1rem;  
+    margin-top: 1rem;
+
+  }
+    
+}
