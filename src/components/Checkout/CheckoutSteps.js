@@ -7,13 +7,18 @@ import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import "./CheckoutSteps.css";
 
 const CheckoutSteps = ({ activeStep }) => {
+
   const steps = [
     {
       label: <Typography>Booking Information</Typography>,
       icon: <InfoIcon />,
     },
     {
-      label: <Typography>Confirm Booking</Typography>,
+      label: <Typography>Shipping Details</Typography>,
+      icon: <LocalShippingIcon />,
+    },
+    {
+      label: <Typography>Confirm Order</Typography>,
       icon: <LibraryAddCheckIcon />,
     },
     {
