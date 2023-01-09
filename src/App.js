@@ -19,7 +19,7 @@ import Mybook from "./components/Mybook/Mybook";
 import MyBooking from "./components/Mybook/MyBooking";
 
 import Shipping from "./components/Checkout/Shipping";
-
+import Subscription from "./components/Checkout/Subscription";
 
 function App() {
   const user = "Yash";
@@ -48,10 +48,10 @@ function App() {
         <Route path="/login" element={<AccountBox />} />
         <Route path="/booking" element={<Details />} />
 
-        <Route path="/mybookings" element={<MyBooking/>}/>
+        <Route path="/mybookings" element={<MyBooking />} />
+        <Route path="/subscription" element={<Subscription />} />
 
         <Route path="/shipping" element={<Shipping />} />
-
 
         {/* <Route path="/services/c1" element={<CommercialService />} />
         <Route path="/services/c2" element={<CommercialService />} />

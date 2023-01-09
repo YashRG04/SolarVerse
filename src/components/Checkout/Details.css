@@ -66,6 +66,30 @@
   color: rgba(0, 0, 0, 0.623);
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.BtnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.ShippingBtn {
+  margin: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+/* align the text of the button to center */
+
+
+.ClearBtn {
+  margin: 1rem;
+  padding: 0rem 1rem 0rem 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .Form div {
     justify-content: center;

@@ -4,14 +4,18 @@ import InfoIcon from "@mui/icons-material/Info";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import LibraryAddCheckIcon from "@material-ui/icons/LibraryAddCheck";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import BallotIcon from "@mui/icons-material/Ballot";
 import "./CheckoutSteps.css";
 
 const CheckoutSteps = ({ activeStep }) => {
-
   const steps = [
     {
       label: <Typography>Booking Information</Typography>,
       icon: <InfoIcon />,
+    },
+    {
+      label: <Typography>Subscription Plans</Typography>,
+      icon: <BallotIcon />,
     },
     {
       label: <Typography>Shipping Details</Typography>,
@@ -37,7 +41,12 @@ const CheckoutSteps = ({ activeStep }) => {
         className="padding"
         style={{ paddingTop: "10px", height: "4.2rem" }}
       ></div>
-      <Stepper alternativeLabel activeStep={activeStep} style={stepStyles}>
+      <Stepper
+        className="Checkout"
+        alternativeLabel
+        activeStep={activeStep}
+        style={stepStyles}
+      >
         {steps.map((item, index) => (
           <Step
             key={index}

@@ -11,3 +11,9 @@
 .MuiStepConnector-completed {
   background-color: #fbe55c;
 }
+
+@media screen and (max-width: 768px) {
+  .MuiStepper-root{
+    display: none !important;
+  }
+}

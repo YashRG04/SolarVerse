@@ -1,0 +1,94 @@
+.SubscriptionContainer {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.SelectedPlan {
+  font-family: "Belleza", sans-serif;
+  font-size: 1.5rem;
+  color: #3ab54b;
+  text-align: center;
+}
+
+.subscription-plans {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Abeezee", sans-serif;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.subscription-plans th,
+.subscription-plans td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+
+.subscription-plans th {
+  background-color: #f2f2f2;
+  color: #000;
+  font-weight: bold;
+  font-family: "Belleza", sans-serif;
+  font-size: 1.2em;
+}
+
+.subscription-plans tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.subscription-plans tr:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: #fffdc9;
+}
+
+.plan-basic {
+  color: #666;
+}
+
+.plan-premium {
+  color: #333;
+}
+
+.plan-enterprise {
+  color: #000;
+}
+
+.btn-sign-up {
+  background-color: #ffdd03;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-family: "Belleza", sans-serif;
+  transition: all 0.3s;
+}
+
+.btn-sign-up:hover {
+  background-color: #3ab54b;
+}
+
+@media only screen and (max-width: 600px) {
+  .subscription-plans {
+    width: 100%;
+  }
+
+  .subscription-plans td {
+    font-size: 0.75rem;
+  }
+
+  .subscription-plans th {
+    font-size: 1rem;
+  }
+
+  .subscription-plans td:nth-child(3), th:nth-child(3) {
+    display: none;
+  }
+}
+
+
