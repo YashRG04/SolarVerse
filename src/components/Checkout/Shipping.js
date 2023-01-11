@@ -1,5 +1,6 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import CheckoutSteps from "./CheckoutSteps";
+import "./Shipping.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import PinDropIcon from "@material-ui/icons/PinDrop";
@@ -14,6 +15,9 @@ import { useAlert } from "react-alert";
 
 import { Country, State } from "country-state-city";
 import { useNavigate } from "react-router-dom";
+import AddressCard from "./AddressCard";
+import { Address } from "../../assets/data/Address";
+import AddLocationIcon from "@mui/icons-material/AddLocation";
 
 const Shipping = () => {
   useEffect(() => {
@@ -66,8 +70,25 @@ const Shipping = () => {
     localStorage.setItem("state", state);
     localStorage.setItem("pinCode", pinCode);
 
+    // make an object shippingInfo
+    localStorage.setItem(
+      "shippingInfo",
+      JSON.stringify({
+        address1,
+        address2,
+        landmark,
+        city,
+        state,
+        pinCode,
+      })
+    );
+
+    alert.success("Address Saved");
+
     navigate("/confirm");
   };
+
+  const address = { address1, address2, landmark, city, state, pinCode };
 
   // Retrieve the data from local storage
   useEffect(() => {
@@ -79,12 +100,72 @@ const Shipping = () => {
     pinCode === "" && setPinCode(localStorage.getItem("pinCode"));
   }, []);
 
-  console.log(state);
+  function handleSelect(address) {
+    console.log("Select was pressed");
+
+    setAddress1(address.address1);
+    setAddress2(address.address2);
+    setLandmark(address.landmark);
+    setCity(address.city);
+    setState(address.state);
+    setPinCode(address.pinCode);
+
+    // save the data in local storage
+    localStorage.setItem("address1", address1);
+    localStorage.setItem("address2", address2);
+    localStorage.setItem("landmark", landmark);
+    localStorage.setItem("city", city);
+    localStorage.setItem("state", state);
+    localStorage.setItem("pinCode", pinCode);
+
+    localStorage.setItem(
+      "shippingInfo",
+      JSON.stringify({
+        address1,
+        address2,
+        landmark,
+        city,
+        state,
+        pinCode,
+      })
+    );
+
+    alert.success("Address Selected Press Contniue to Checkout");
+
+    // navigate("/confirm");
+  }
+
+  console.log(localStorage.getItem("shippingInfo"));
+
+  function handleEdit(address) {
+    console.log("Edit was pressed");
+
+    setAddress1(address.address1);
+    setAddress2(address.address2);
+    setLandmark(address.landmark);
+    setCity(address.city);
+    setState(address.state);
+    setPinCode(address.pinCode);
+
+    alert.success("Edit address and Press Contniue to Checkout");
+  }
+
+  function handleAdd() {
+    console.log("Add was pressed");
+    setAddress1("");
+    setAddress2("");
+    setLandmark("");
+    setCity("");
+    setState("");
+    setPinCode("");
+    alert.success("Add address and Press Contniue to Checkout");
+  }
 
   return (
     <Fragment>
       <div id="top">
         <CheckoutSteps activeStep={2} />
+
         <div className="ShippingDetails">
           <div className="TitleContainer">
             <h1 data-aos="slide-left" className="ShippingTitle Title">
@@ -92,9 +173,29 @@ const Shipping = () => {
             </h1>
             <hr data-aos="slide-left" className="Underline" />
           </div>
+
+          <div className="SavedAddressContainer">
+            <div className="AddressContainer">
+              {Address.map((item) => (
+                <AddressCard
+                  key={item.id}
+                  address={item}
+                  onSelect={handleSelect}
+                  onEdit={handleEdit}
+                />
+              ))}
+              <div data-aos="zoom-out-down" className="AddAddress">
+                <div className="AddAddressIcon">
+                  <AddLocationIcon className="Icon" fontSize="large" />
+                  <button onClick={handleAdd}>Add New Address</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="ShippingContainer Container">
             <div className="ShippingBox Box">
               <form
+                data-aos="zoom-out-up"
                 className="ShippingForm Form"
                 encType="multipart/form-data"
                 onKeyDown={(e) => {
@@ -128,7 +229,7 @@ const Shipping = () => {
                     </select>
                   </div>
                 )}
-                <div data-aos="zoom-out-up">
+                <div>
                   <HomeIcon />
                   <input
                     type="text"
@@ -138,7 +239,7 @@ const Shipping = () => {
                     onChange={(e) => setAddress1(e.target.value)}
                   />
                 </div>
-                <div data-aos="zoom-out-up">
+                <div>
                   <NearMeIcon />
                   <input
                     type="text"
@@ -148,7 +249,7 @@ const Shipping = () => {
                     autoComplete="address-level2"
                   />
                 </div>
-                <div data-aos="zoom-out-up">
+                <div>
                   <FaLandmark />
                   <input
                     type="text"
@@ -180,12 +281,6 @@ const Shipping = () => {
 
                 <div className="BtnContainer">
                   <input
-                    type="submit"
-                    value="Continue"
-                    className="ShippingBtn Button "
-                  />
-
-                  <input
                     type="button"
                     value="Clear"
                     className="ClearBtn Button "
@@ -197,6 +292,11 @@ const Shipping = () => {
                       setState("");
                       setPinCode("");
                     }}
+                  />
+                  <input
+                    type="submit"
+                    value="Continue"
+                    className="ShippingBtn Button "
                   />
                 </div>
               </form>

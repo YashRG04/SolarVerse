@@ -86,9 +86,12 @@
     font-size: 1rem;
   }
 
-  .subscription-plans td:nth-child(3), th:nth-child(3) {
+  .subscription-plans td:nth-child(3),
+  th:nth-child(3) {
     display: none;
   }
+
+  .btn-sign-up {
+    font-size: 0.75rem;
+  }
 }
-
-

@@ -67,6 +67,8 @@ const Details = () => {
     localStorage.setItem("PhoneNo", phoneNo);
     localStorage.setItem("Name", name);
     localStorage.setItem("PlanName", PlanName);
+    localStorage.setItem("Area", Area);
+    localStorage.setItem("Date", date);
 
     navigate("/subscription");
   };
