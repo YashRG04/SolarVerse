@@ -14,16 +14,22 @@ export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
 
-    const config = { headers: { "Content-Type": "application/json" } };
+    const config = {
+      headers: {
+        "Content-Type": "application/json", 
+        "X-CSRFToken":
+          "YYyacnwR7nGw4qviuKDtF2gQGDRhI6IrGfJn0yFSsG4Pvv6ShKtTCO64mRdBOdm8",
+      },
+    };
      console.log(email, password);
     const { data } = await axios.post(
-      `http://35.90.144.161/api/login/`,
+      `api/login/`,
       { username:email, password },
       config
     );
     console.log(data);
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
-    // navigate('/');
+    navigate('/');
   } catch (error) {
     dispatch({
       type: LOGIN_FAIL,
@@ -38,9 +44,14 @@ export const register = (userData,navigate) => async (dispatch) => {
     dispatch({ type: REGISTER_USER_REQUEST });
      console.log(userData);
 
-    const config = { headers: { "Content-Type": "multipart/form-data" } };
+    const config = {
+      headers: {   
+        "X-CSRFToken":
+          "YYyacnwR7nGw4qviuKDtF2gQGDRhI6IrGfJn0yFSsG4Pvv6ShKtTCO64mRdBOdm8",
+      },
+    };
     const { data } = await axios.post(
-      `http://35.90.144.161/api/register/`,
+      `api/register/`,
       userData,
       config
     );
