@@ -21,20 +21,20 @@ const Subscription = () => {
 
   const planSelect1 = () => {
     localStorage.setItem("PlanSelected", "Basic");
-    localStorage.setItem("PlanFeatures", JSON.stringify({ BasicPlanFeatures }));
+    localStorage.setItem("PlanFeatures", BasicPlanFeatures);
     localStorage.setItem("PlanCost", BasicPlanCost);
     localStorage.setItem("PlanFrequency", BasicPlanFrequency);
     alert.success("Basic Plan Selected");
-    navigate("/shipping");
+    navigate("/shipping")
   };
 
   const planSelect2 = () => {
     localStorage.setItem("PlanSelected", "Standard");
-
+    localStorage.setItem("PlanFeatures", StandardPlanFeatures);
     localStorage.setItem("PlanCost", StandardPlanCost);
     localStorage.setItem("PlanFrequency", StandardPlanFrequency);
     alert.success("Standard Plan Selected");
-    navigate("/shipping");
+    navigate("/shipping")
   };
 
   const planSelect3 = () => {
@@ -43,8 +43,10 @@ const Subscription = () => {
     localStorage.setItem("PlanCost", PremiumPlanCost);
     localStorage.setItem("PlanFrequency", PremiumPlanFrequency);
     alert.success("Premium Plan Selected");
-    navigate("/shipping");
+    navigate("/shipping")
   };
+
+  console.log(localStorage.getItem("PlanFeatures"));
 
   const BasicPlanFeatures = [
     "One time service",

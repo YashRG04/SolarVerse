@@ -17,22 +17,23 @@ import { useNavigate } from "react-router-dom";
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
-  const dispatch=useDispatch();
-  const navigate=useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const csrf_token =
+    "YYyacnwR7nGw4qviuKDtF2gQGDRhI6IrGfJn0yFSsG4Pvv6ShKtTCO64mRdBOdm8";
 
   const initialState = {
-      email:'',
-      password1:'',
-      password2:''
-  }
-  const [formdata,setFormData] =useState(initialState);
-  const handleSubmit=(e)=>{
+    email: "",
+    password1: "",
+    password2: "",
+  };
+  const [formdata, setFormData] = useState(initialState);
+  const handleSubmit = (e) => {
     e.preventDefault();
-     console.log(formdata);
-    dispatch(register(formdata,navigate));
-
-  }
-
+    console.log(formdata);
+    dispatch(register(formdata, navigate, csrf_token));
+  };
 
   return (
     <BoxContainer>

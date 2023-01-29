@@ -25,29 +25,29 @@ const Confirm = () => {
   const address = `${ShippingInfo.address1}, ${ShippingInfo.address2}, ${ShippingInfo.landmark}, ${ShippingInfo.city}, ${ShippingInfo.state}, ${ShippingInfo.pinCode}`;
 
   const PlanName = localStorage.getItem("PlanName");
-  console.log(PlanName);
+  // console.log(PlanName);
 
   const PlanSelected = localStorage.getItem("PlanSelected");
-  console.log(PlanSelected);
+  // console.log(PlanSelected);
 
   const PlanPrice = localStorage.getItem("PlanCost");
-  console.log(PlanPrice);
+  // console.log(PlanPrice);
 
   const PlanFeatures = localStorage.getItem("PlanFeatures");
   console.log(PlanFeatures);
   //   make the list of items from planfeatures
 
   const PlanFeaturesList = PlanFeatures.split(",");
-  console.log(PlanFeaturesList);
+  // console.log(PlanFeaturesList);
 
   const PlanFrequency = localStorage.getItem("PlanFrequency");
-  console.log(PlanFrequency);
+  // console.log(PlanFrequency);
 
   const Area = localStorage.getItem("Area");
-  console.log(Area);
+  // console.log(Area);
 
   const BookingDate = localStorage.getItem("Date");
-  console.log(BookingDate);
+  // console.log(BookingDate);
 
   const proceedToPayment = () => {
     navigate("/payment");

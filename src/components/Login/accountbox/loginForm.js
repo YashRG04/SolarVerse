@@ -8,9 +8,7 @@ import {
   SubmitButton,
   NotMutedLink,
 } from "./common";
-import {
-  Button,
-} from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
 import { Link, useNavigate } from "react-router-dom";
@@ -20,7 +18,10 @@ import "./loginForm.css";
 
 export function LoginForm(props) {
   const dispatch = useDispatch();
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+
+  const csrf_token =
+    "YYyacnwR7nGw4qviuKDtF2gQGDRhI6IrGfJn0yFSsG4Pvv6ShKtTCO64mRdBOdm8";
 
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
@@ -30,8 +31,6 @@ export function LoginForm(props) {
 
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-
-  
 
   const [user, setUser] = useState({
     name: "",
@@ -44,8 +43,8 @@ export function LoginForm(props) {
   const loginSubmit = (e) => {
     e.preventDefault();
     console.log("loginSubmit");
-    
-    dispatch(login(loginEmail, loginPassword));
+
+    dispatch(login(loginEmail, loginPassword,csrf_token,navigate));
   };
 
   useEffect(() => {
@@ -56,7 +55,7 @@ export function LoginForm(props) {
 
   return (
     <BoxContainer>
-      <form className="FormContainer " onSubmit={loginSubmit}  >
+      <form className="FormContainer " onSubmit={loginSubmit}>
         <input
           className="Input"
           type="email"
@@ -86,10 +85,7 @@ export function LoginForm(props) {
           type="submit"
           fullWidth
           variant="contained"
-          style={{ borderRadius: 25 ,
-           color: "#fff"
-          
-          }}
+          style={{ borderRadius: 25, color: "#fff" }}
           className="SubmitButton"
         >
           Sign In

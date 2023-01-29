@@ -1,5 +1,5 @@
 .confirmOrderPage {
-  height: 100vh;
+  
   background-color: white;
   display: grid;
   grid-template-columns: 6fr 3fr;
@@ -14,7 +14,7 @@
   padding-bottom: 0%;
 }
 
-.ShippingHead {
+.ShippingHead , .PlanHead{
   font-family: "ABEEZEE", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
@@ -46,7 +46,7 @@
 }
 
 .confirmCartItems > p {
-  font: 600 1.8rem "Belleza";
+  font: 600 1.8rem "ABEEZEE";
   color: rgba(0, 0, 0, 0.758);
 }
 
@@ -137,7 +137,7 @@
     font: 400 4vw "Roboto";
   }
   .confirmshippingAreaBox > div > span {
-    font: 100 4vw "Roboto";
+    font: 100 4vw "Belleza";
   }
 
   .confirmCartItems > p {
