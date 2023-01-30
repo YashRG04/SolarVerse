@@ -28,6 +28,7 @@ const OfferedService = () => {
             CONTACT US
           </Link>
       </div>
+      
     </div>
   );
 };
