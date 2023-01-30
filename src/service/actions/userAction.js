@@ -23,7 +23,7 @@ export const login = (email, password, csrf_token,navigate) => async (dispatch) 
     };
      console.log(email, password);
     const { data } = await axios.post(
-      `http://35.90.144.161/api/login/`,
+      `api/login/`,
       { username:email, password },
       config
     );
@@ -52,7 +52,7 @@ export const register =
       },
     };
     const { data } = await axios.post(
-      `http://35.90.144.161/api/register/`,
+      `api/register/`,
       userData,
       config
     );
