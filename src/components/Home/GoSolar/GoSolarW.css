@@ -4,7 +4,7 @@
   margin-top: 2rem;
   align-items: center;
   justify-content: center;
-  background-color: #f5f3f3;
+  background: linear-gradient(180deg, rgb(241, 240, 240) 0%, #ffffff 100%) !important;
   border-radius: 1rem;
   font-family: "ABEEZEE", sans-serif;
   padding-top: 2rem;

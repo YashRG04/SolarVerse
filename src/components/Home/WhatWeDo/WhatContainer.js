@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import WhatCard from "./WhatCard";
 import "./WhatWeDo.css";
 import { WhatWeDoData1 } from "../../../assets/data/WhatWeDoData1";
-import { WhatWeDoData2 } from "../../../assets/data/WhatWeDoData2";
 
 const WhatContainer = () => {
   return (
@@ -27,21 +26,7 @@ const WhatContainer = () => {
           </div>
           
         </div>
-        <div className="WhatContainerSection">
-          <div className="WhatContainerCard">
-            {WhatWeDoData2.map(({ name, id, description, image }) => {
-              return (
-                <WhatCard
-                  name={name}
-                  id={id}
-                  description={description}
-                  image={image}
-                />
-              );
-            })}
-          </div>
-          
-        </div>
+        
       </div>
     </Fragment>
   );
