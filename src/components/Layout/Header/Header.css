@@ -4,14 +4,40 @@
   background: transparent;
   position: fixed;
   display: flex;
-  
+
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: auto;
   z-index: 1;
+  transition: all 0.5s ease-in-out;
+  padding-top: 0.5rem;
 }
 
+.scrolled {
+  padding-top: 0rem;
+  background-color: #f7f7f7;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Add a fade-in animation */
+.fade-in {
+  animation: fadein 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Define the animation keyframes */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* align log on left and links on right */
 
 .LeftContainer {
