@@ -35,6 +35,15 @@
     padding: 0.7rem 1.4rem;
     font-size: 0.9rem;
   }
+
+  .offerTitle{
+    font-size: 1.3rem;
+  }
+
+  .offerSubTitle {
+    font-size: 1.15rem;
+    color: #39b54a;
+  }
 }
 
 @media screen and (max-width: 1250px) {

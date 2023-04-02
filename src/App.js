@@ -21,6 +21,7 @@ import MyBooking from "./components/Mybook/MyBooking";
 import Shipping from "./components/Checkout/Shipping";
 import Subscription from "./components/Checkout/Subscription";
 import Confirm from "./components/Checkout/Confirm";
+import MobileFooter from "./components/Layout/Footer/MobileFooter";
 
 function App() {
   const user = "Yash";
@@ -61,6 +62,7 @@ function App() {
       </Routes>
 
       <Footer data={{ User: { user }, Login: { login } }} />
+      {/* <MobileFooter/> */}
       <Top className="ScrollTop" scrollToTop={scrollToTop} />
     </Router>
   );

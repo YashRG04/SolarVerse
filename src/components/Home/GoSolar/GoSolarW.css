@@ -4,11 +4,50 @@
   margin-top: 2rem;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgb(241, 240, 240) 0%, #ffffff 100%) !important;
+  background: linear-gradient(
+    180deg,
+    rgb(246, 246, 246) 0%,
+    #ffffff 100%
+  ) !important;
   border-radius: 1rem;
   font-family: "ABEEZEE", sans-serif;
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 0rem;
+}
+
+.GoSolarSubContainer {
+  display: flex;
+  flex-direction: row;
+  width: 66%;
+  margin-left: 5.4rem;
+  margin-right: 5.4rem;
+}
+
+.GoSolarLeft {
+  width: 50%;
+  margin: 3rem 5rem 0rem 0rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.GoSolarRight {
+  width: 50%;
+}
+
+.PointImage {
+  width: 3.15rem;
+  margin: 0.5rem 1rem 1rem;
+}
+
+.PointHead {
+  font-family: "ABEEZEE", sans-serif;
+  font-size: 1.1rem;
+  padding: 0rem 0.3rem 0.3rem;
+}
+
+.PointPara {
+  font-family: "Belleza", cursive;
+  font-size: 1rem;
+  padding: 0rem 0.3rem 0.3rem;
 }
 
 .GoSolarFirst {
@@ -57,18 +96,59 @@
 
 .GoUnderline {
   border: 0;
-  width: 19%;
+  width: 18%;
   background-color: #ffdd02;
   height: 0.3em;
   border-radius: 0.3em;
-  margin: 1rem 0rem 1.5rem;
+  margin: 0.5rem 0rem 1.5rem;
   text-align: center;
   margin-bottom: 3.5rem;
 }
 
 @media screen and (max-width: 768px) {
+
+  .GoSolarContainer h1{
+    font-size: 1.3rem;
+  }
+
   .GoSolarFirst {
     display: none;
+  }
+
+  .GoSolarSubContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .GoSolarLeft {
+    width: 97%;
+    margin: 0rem 0rem 1rem 1.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .GoSolarRight {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .PointImage {
+    width: 2.5rem;
+    margin: 0.5rem 1rem 1rem 2rem;
+  }
+
+  .PointHead {
+    font-family: "ABEEZEE", sans-serif;
+    font-size: 1rem;
+    padding: 0rem 1rem 0.3rem 0.5rem;
+  }
+
+  .PointPara {
+    font-family: "Belleza", cursive;
+    font-size: 0.85rem;
+    padding: 0rem 2rem 0.3rem 0.5rem;
   }
 }
 

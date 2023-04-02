@@ -1,6 +1,6 @@
 .WhatCard {
   width: 20%;
-  height: 22rem;
+  height: 23rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,11 @@
   border-width: 25rem;
   border-radius: 1rem;
   border-color: #000;
-  background: linear-gradient(180deg, rgb(241, 240, 240) 0%, #ffffff 100%) !important;
+  background: linear-gradient(
+    180deg,
+    rgb(241, 240, 240) 0%,
+    #ffffff 100%
+  ) !important;
   margin: 2rem;
   transition: all 0.5s ease-in-out;
 }
@@ -19,22 +23,10 @@
   transition: all 0.5s ease-in-out;
 }
 
-.WhatCardImage {
-  width: 90%;
-  margin: 0;
-  padding: 0;
-  background: rgb(239, 235, 235) fff;
-  overflow: hidden;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .WhatCardImage .WhatImage {
   align-items: center;
-  width: 82%;
-  height: 8.5rem;
+  width: 11rem;
+
   object-fit: cover;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
@@ -52,7 +44,8 @@
   text-transform: uppercase;
   color: #000;
   padding-top: 1rem;
-  margin: 0.5rem 0 -0.2rem;
+  padding-bottom: 0rem;
+  margin: 0.5rem 0 0.2rem;
   text-align: center;
 }
 
@@ -65,17 +58,44 @@
   text-align: left;
 }
 
+.Underline3 {
+  border-top: #ffdd02;
+  order: 0;
+  width: 14%;
+  background-color: #ffdd02;
+  height: 0.3em;
+  border-radius: 0.3em;
+  margin: 0.3rem 5rem 1rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .WhatCard {
-    width: 85%;
+    margin-top: 0rem;
+    margin-bottom: 3.5rem;
+    width: 90%;
+    background: transparent !important;
+    height: 18rem;
   }
 
-  .WhatCardImage{
-    width: 90%;
+  .WhatCard:hover {
+    transform: translateY(0);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
   }
 
   .WhatCardImage .WhatImage {
-    width: 92.5%;
+    width: 12.5rem;
+  }
+
+  .WhatName {
+    font-size: 1.1rem;
+    padding-top: 0rem;
+  }
+
+  .WhatDescription {
+    font-size: 0.95rem;
+    margin: 0rem 1rem;
   }
 }
 

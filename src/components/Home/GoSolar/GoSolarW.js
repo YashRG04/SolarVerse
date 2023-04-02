@@ -40,6 +40,33 @@ const GoSolar = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  const Point = [
+    {
+      image:
+        "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_money_hiutt5.svg",
+      head: "Make Money From Sun",
+      para: "Zunroof helps you save 100% on electricity bills, and also make money by selling excess solar units back to the grid",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_subsidy_fxmnlh.svg",
+      head: "Attractive Subsidy",
+      para: "Avail upto 40% solar subsidy on total installation cost as per Government guidelines*",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_graphics_m7ru8i.svg",
+      head: "Green Energy",
+      para: "1kW solar saves 154+ trees and prevents 20+ tons of CO2 emission",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_return_a6cz1f.svg",
+      head: "Return on Investment",
+      para: "Quick payback period of 3-4 years guaranteed, with pure profit following thereafter",
+    },
+  ];
+
   return (
     <div className="GoSolarContainer">
       <h1 data-aos="slide-left" className="offerTitle">
@@ -47,7 +74,28 @@ const GoSolar = () => {
       </h1>
       <hr data-aos="slide-left" className="GoUnderline" />
 
-      <div className="GoSolarFirst">
+      <div className="GoSolarSubContainer">
+        <div className="GoSolarLeft">
+          <BarChart width={450} />
+        </div>
+        <div className="GoSolarRight">
+          <ul className="RightList">
+            {Point.map((point) => {
+              return (
+                <li className="RightPoint">
+                  <img src={point.image} alt="solarverse" className="PointImage" />
+                  <div className="PointDesc">
+                    <h5 className="PointHead">{point.head}</h5>
+                    <p className="PointPara">{point.para}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
+      {/* <div className="GoSolarFirst">
         <div data-aos="flip-right" className="GoFirstComp">
           <BarChart width={450} />
         </div>
@@ -184,7 +232,7 @@ const GoSolar = () => {
         <GoBtnSlider moveSlide={nextSlide} direction={"nextService"} />
 
         <GoBtnSlider moveSlide={prevSlide} direction={"prevService"} />
-      </div>
+      </div> */}
     </div>
   );
 };

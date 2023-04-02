@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 const WhatCard = ({name,id,description,image}) => {
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
 
   return (
@@ -16,7 +16,7 @@ const WhatCard = ({name,id,description,image}) => {
           <img className="WhatImage" src={image} alt={name} />
         </div>
         <h1 className="WhatName">{name}</h1>
-        <hr className="Underline" />
+        <hr className="Underline3" />
         <p className="WhatDescription">{description}</p>
       </div>
     </Fragment>

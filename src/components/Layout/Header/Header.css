@@ -20,6 +20,10 @@
   transition: all 0.5s ease-in-out;
 }
 
+.scrolled2 {
+  color: #000;
+}
+
 /* Add a fade-in animation */
 .fade-in {
   animation: fadein 0.5s ease-in-out;
@@ -55,7 +59,7 @@
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: #000;
+  color: #fff;
   margin-left: 1rem;
   text-decoration: none;
 }

@@ -32,6 +32,7 @@ const MobileHeader = (props) => {
   const closeMobileMenu = () => {
     setOpen(false);
   };
+  
 
   return (
     <Fragment>

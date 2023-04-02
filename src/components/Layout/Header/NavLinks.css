@@ -11,7 +11,7 @@
 
 li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 1.1rem;
   text-transform: uppercase;
   transition: 0.25s;
@@ -19,10 +19,14 @@ li a {
 
 .li3 a ,.li4 a{
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 1.1rem;
   text-transform: uppercase;
   transition: 0.25s;
+}
+
+.scrolled1 a{
+  color: #000;
 }
 
 li:last-child {
@@ -130,10 +134,12 @@ li:last-child a:hover svg {
 
   li a {
     font-size: 1rem;
+    color: #000;
   }
 
   .li3 a, .li4 a{
     font-size: 1rem;
+    color: #000;
   }
 
   .dropbtn{

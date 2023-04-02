@@ -1,10 +1,8 @@
 import "./BarChart.css";
 // import { Bar, Chart } from "test-react-chartjs-2";
-import "./BarChart.css";
 import Chart from "react-apexcharts";
 import * as zoom from "chartjs-plugin-zoom";
 import { useEffect, useState } from "react";
-import "./BarChart.css";
 
 const BarChart = ({ wid }) => {
   const [temp, setTemp] = useState({

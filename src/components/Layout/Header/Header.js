@@ -45,7 +45,9 @@ const Header = (props) => {
               navigate("/");
             }}
           />
-          <Link to="/" className="LogoText">
+          <Link to="/" className="LogoText"
+          style={{textDecoration: "none", color: scrolled ? "black" : "white"}}
+          >
             SolarVerse
           </Link>
         </div>
