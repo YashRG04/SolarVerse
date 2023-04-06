@@ -6,7 +6,7 @@ const dataSlider = [
     title: "Lorem ipsum",
     subTitle: "Lorem",
     // url: "https://example04.my.canva.site/solarverse-ui/images/6d4ebd8415a9d763d8b2c87d93024807.jpg",
-    url: "https://msolarpower.co.za/wp-content/uploads/2022/01/potential-banner-test.jpg",
+    url: "https://www.solarsquare.in/img/new/r1.webp",
 
     heading: "SolarVersa",
   },
@@ -14,14 +14,14 @@ const dataSlider = [
     id: 1,
     title: "Lorem ipsum",
     subTitle: "Lorem",
-    url: "https://cdn.24.co.za/files/Cms/General/d/3760/af6b202781654872ad5fff752df09838.jpg",
+    url: "https://www.solarsquare.in/img/new/r2.webp",
     heading: "Hello peter2",
   },
   {
     id: 2,
     title: "Lorem ipsum",
     subTitle: "Lorem",
-    url: "https://example04.my.canva.site/solarverse-ui/images/6d4ebd8415a9d763d8b2c87d93024807.jpg",
+    url: "https://www.solarsquare.in/img/new/r3.webp",
     heading: "Hello peter3",
   },
   {

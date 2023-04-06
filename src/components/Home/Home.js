@@ -15,6 +15,7 @@ import OfferedService from "./OfferedService/OfferedService";
 import GoSolarW from "./GoSolar/GoSolarW";
 import WhatContainer from "./WhatWeDo/WhatContainer";
 import BannerForm2 from "../Layout/Carousel/Banner/BannerForm2";
+import BannerForm from "../Layout/Carousel/Banner/BannerForm";
 
 const Home = () => {
   return (
@@ -26,10 +27,14 @@ const Home = () => {
             <hr />
           </div>
 
-          <WhatContainer />
           <div className="BannerFormHomeContaier">
             <BannerForm2 />
           </div>
+          <div className="BannerFormAboutContaier">
+            <BannerForm />
+
+          </div>
+          <WhatContainer />
 
           {/* <ContentContainer /> */}
 
