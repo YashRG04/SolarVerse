@@ -1,17 +1,30 @@
-@media screen and (max-width: 768px) {
-  .MobileFooterConainer {
-    font-family: "Belleza", sans-serif;
-    background-color: #f7f7f7;
-    position: absolute;
-    bottom: 0px;
+.MobileFooter {
+  display: none;
+}
+
+@media screen and (max-width: 620px) {
+  .MobileFooter {
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
     justify-content: center;
+    bottom: 0rem;
+    z-index: 10000;
+    width: 100%;
+  }
+  .MobileFootContainer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: auto;
-    z-index: 1;
-    transition: 1s all ease;
+    background-color: #f7f7f7;
+    padding: 0.5rem 1rem;
+  }
+  .MobileFootIcon {
+    font-size: 1.8rem;
+    color: rgb(169, 167, 167);
+    margin: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .MobileFootIcon:hover {
+    color: #1deb77;
   }
 }

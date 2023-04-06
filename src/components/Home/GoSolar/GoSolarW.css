@@ -106,6 +106,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .GoSolarContainer{
+    margin-top: 0rem;
+  }
 
   .GoSolarContainer h1{
     font-size: 1.3rem;

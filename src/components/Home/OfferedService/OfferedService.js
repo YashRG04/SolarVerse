@@ -7,7 +7,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const OfferedService = () => {
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -19,16 +18,22 @@ const OfferedService = () => {
       <h1 className="offerSubTitle">Maintainance</h1>
 
       <div className="OfferedS">
-        {OfferedServiceData.map(({ name, image }) => {
-          return <OfferCard data-aos="fade-up" name={name} image={image} />;
+        {OfferedServiceData.map(({ name, image, desc }) => {
+          return (
+            <OfferCard
+              data-aos="fade-up"
+              name={name}
+              desc={desc}
+              image={image}
+            />
+          );
         })}
       </div>
       <div className="ButtonContainer">
-          <Link className="OfferedButton" to="/constactus">
-            CONTACT US
-          </Link>
+        <Link className="OfferedButton" to="/constactus">
+          CONTACT US
+        </Link>
       </div>
-      
     </div>
   );
 };

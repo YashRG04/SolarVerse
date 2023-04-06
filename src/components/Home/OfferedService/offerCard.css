@@ -3,17 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem;
+  /* margin: 2rem; */
   margin-left: 1.25rem;
-  margin-top: 1rem;
-  padding: 2rem;
+  /* margin-top: 1rem; */
+  padding: 1rem;
   border-radius: 1rem;
-  background-color: white;
+  /* background-color: white; */
   text-align: center;
 }
 
 .Offercard img {
-  width: 100%;
+  width: 7.5rem;
   object-fit: cover;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
@@ -26,9 +26,12 @@
 }
 
 .OfferServiceName {
+  margin: 1rem 1rem;
   text-decoration: none;
   color: black;
 }
+
+
 
 .erimagecontainer {
   height: 10rem;
@@ -40,7 +43,14 @@
     height: 15rem;
   }
   .offerimagecontainer {
-    height: 8rem;
+    height: 10rem;
+  
+  }
+  .Offercard>p{
+    font-family: "Belleza", cursive;
+    font-size: 0.85rem;
+    padding: 0rem 0rem 0.5rem 0rem;
+    text-decoration: none;
   }
   .OfferServiceName {
     padding: 0rem 1rem;

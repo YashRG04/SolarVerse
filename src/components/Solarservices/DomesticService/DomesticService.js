@@ -20,7 +20,6 @@ const DomesticService = () => {
   return (
     <Fragment>
       <div className="ServiceConatiner" id="top">
-        <div className="Cushion"></div>
         <div className="ServiceBanner">
           <ServiceBanner
             image={serviceData.image}

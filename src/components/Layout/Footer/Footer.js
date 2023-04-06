@@ -13,7 +13,7 @@ const Footer = (props) => {
     { name: "Home", url: "/" },
     { name: "About Us", url: "/about" },
     { name: "Services", url: "/services" },
-    { name: "My Bookings", url: "/bookings" },
+    // { name: "My Bookings", url: "/bookings" },
     {
       name: props.data.Login.login ? `Hello ${props.data.User.user}` : "Login",
       url: props.data.Login.login ? "/profile" : "/login",

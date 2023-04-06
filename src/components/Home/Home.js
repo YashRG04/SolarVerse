@@ -14,9 +14,9 @@ import Footer from "../Layout/Footer/Footer";
 import OfferedService from "./OfferedService/OfferedService";
 import GoSolarW from "./GoSolar/GoSolarW";
 import WhatContainer from "./WhatWeDo/WhatContainer";
+import BannerForm2 from "../Layout/Carousel/Banner/BannerForm2";
 
 const Home = () => {
-  
   return (
     <Fragment>
       <div className="Container" id="top">
@@ -25,8 +25,12 @@ const Home = () => {
             <Slider />
             <hr />
           </div>
+
           <WhatContainer />
-      
+          <div className="BannerFormHomeContaier">
+            <BannerForm2 />
+          </div>
+
           {/* <ContentContainer /> */}
 
           <GoSolarW />

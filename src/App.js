@@ -37,7 +37,7 @@ function App() {
         className="MobileNavbar"
         data={{ User: { user }, Login: { login } }}
       />
-
+      <MobileFooter />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<AboutUs />} />
@@ -62,7 +62,7 @@ function App() {
       </Routes>
 
       <Footer data={{ User: { user }, Login: { login } }} />
-      {/* <MobileFooter/> */}
+
       <Top className="ScrollTop" scrollToTop={scrollToTop} />
     </Router>
   );

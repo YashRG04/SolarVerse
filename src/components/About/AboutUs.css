@@ -6,8 +6,8 @@
   /* height: 50rem; */
 }
 .AboutUs .AboutBanner img {
-  margin-top: 4rem;
-  height: 22rem;
+  margin-top: 0rem;
+  height: 30rem;
   width: 100%;
   object-fit: cover;
 }
@@ -28,7 +28,7 @@
 .AboutUsabout h1 {
   font-size: 2.2rem;
   font-family: "ABEEZEE", sans-serif;
-  margin-top: 2.5rem;
+  margin-top: 5rem;
   color: rgb(37, 29, 29);
 }
 .AboutUsabout div {
@@ -75,7 +75,7 @@
 .AOurTeam .Teamoh1 {
   font-size: 2.2rem;
   font-family: "ABEEZEE", sans-serif;
-  margin-top: 2.5rem;
+  margin-top: 5rem;
   color: rgb(37, 29, 29);
 }
 .AOurTeam .Teamline {

@@ -1,6 +1,7 @@
 import React from "react";
 import "./GoBtnSLider.css"
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs";
 
 export default function ServiceBtnSlider({ direction, moveSlide }) {
   console.log(direction, moveSlide);
@@ -14,9 +15,9 @@ export default function ServiceBtnSlider({ direction, moveSlide }) {
       }
     >
       {direction === "nextService" ? (
-        <AiOutlineRight size={30} />
+        <BsFillArrowRightCircleFill size={30} />
       ) : (
-        <AiOutlineLeft size={30} />
+        <BsFillArrowLeftCircleFill size={30} />
       )}
     </button>
   );

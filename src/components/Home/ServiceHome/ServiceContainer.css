@@ -129,6 +129,9 @@
     height: 100%;
     opacity: 1;
   }
+  .slideactive-anim{
+   background: linear-gradient( 180deg, rgb(241, 240, 240) 0%, #ffffff 100% ) !important;
+  }
 }
 @media screen and (min-width: 768px) {
   .ServiceCardCrousalContainer {
@@ -165,11 +168,11 @@
 
 .prevService {
   position: relative;
-  right: 10.5rem;
+  right: 10rem;
   transform: translateY(-660%);
 }
 .nextService {
   position: relative;
-  left: 10.5rem;
+  left: 10rem;
   transform: translateY(-660%);
 }

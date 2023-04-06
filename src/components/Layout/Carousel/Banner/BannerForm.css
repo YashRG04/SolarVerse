@@ -1,0 +1,75 @@
+.banner-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2rem;
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  /* color:black; */
+}
+
+.BannerFormAboutContaier {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 60rem;
+  top: 3em;
+
+  width: 15vw;
+  height: 4rem;
+}
+
+.banner-form-heading {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.banner-form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.banner-form-field label {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-form-field input,
+.banner-form-field select {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  /* border: 1px solid #ccc; */
+  background: transparent;
+  background-color: white;
+  border: none;
+  color: rgb(0, 0, 0);
+  outline: none;
+  border-bottom: 1px solid gray;
+
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.banner-form-field input:focus,
+.banner-form-field select:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px #66afe9;
+}
+
+.banner-form-submit-button {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #fbdd02;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.banner-form-submit-button:hover {
+  background-color: #3ab54b;
+}
