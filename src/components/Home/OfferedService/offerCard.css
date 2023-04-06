@@ -1,5 +1,5 @@
 .Offercard {
-  width: 18vmax;
+  width: 18rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .Offercard img {
-  width: 7.5rem;
+  width: 9rem;
   object-fit: cover;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
@@ -39,8 +39,8 @@
 
 @media screen and (max-width: 900px) {
   .Offercard {
-    width: 85%;
-    height: 15rem;
+    width: 90%;
+    height: 18rem;
   }
   .offerimagecontainer {
     height: 10rem;
@@ -48,7 +48,7 @@
   }
   .Offercard>p{
     font-family: "Belleza", cursive;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding: 0rem 0rem 0.5rem 0rem;
     text-decoration: none;
   }

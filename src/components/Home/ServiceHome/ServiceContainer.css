@@ -105,13 +105,21 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .ServiceCrousalOut {
+    height: 22rem;
+  }
+
+  .Servicecontainer {
+    height: 22rem;
+  }
+
   .ServiceCardContainer {
     display: none;
   }
 
   .ServiceCardCrousalContainer {
-    height: 17rem;
-    width: 16rem;
+    height: 22rem;
+    width: 18rem;
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -129,8 +137,12 @@
     height: 100%;
     opacity: 1;
   }
-  .slideactive-anim{
-   background: linear-gradient( 180deg, rgb(241, 240, 240) 0%, #ffffff 100% ) !important;
+  .slideactive-anim {
+    background: linear-gradient(
+      180deg,
+      rgb(241, 240, 240) 0%,
+      #ffffff 100%
+    ) !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -169,10 +181,10 @@
 .prevService {
   position: relative;
   right: 10rem;
-  transform: translateY(-660%);
+  transform: translateY(50%);
 }
 .nextService {
   position: relative;
   left: 10rem;
-  transform: translateY(-660%);
+  transform: translateY(50%);
 }

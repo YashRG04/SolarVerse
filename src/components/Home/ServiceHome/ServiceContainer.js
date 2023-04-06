@@ -84,9 +84,10 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
-                id={OfferedServiceData[0].id}
+                  id={OfferedServiceData[0].id}
                   name={OfferedServiceData[0].name}
                   image={OfferedServiceData[0].image}
+                  desc={OfferedServiceData[0].desc}
                 />
               </div>
             </div>
@@ -101,9 +102,10 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
-                id={OfferedServiceData[1].id}
+                  id={OfferedServiceData[1].id}
                   name={OfferedServiceData[1].name}
                   image={OfferedServiceData[1].image}
+                  desc={OfferedServiceData[1].desc}
                 />
               </div>
             </div>
@@ -118,9 +120,10 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
-                id={OfferedServiceData[2].id}
+                  id={OfferedServiceData[2].id}
                   name={OfferedServiceData[2].name}
                   image={OfferedServiceData[2].image}
+                  desc={OfferedServiceData[2].desc}
                 />
               </div>
             </div>
@@ -135,9 +138,10 @@ const ServiceContainer = () => {
             >
               <div className="Servicecontainer">
                 <OfferCard
-                id={OfferedServiceData[3].id}
+                  id={OfferedServiceData[3].id}
                   name={OfferedServiceData[3].name}
                   image={OfferedServiceData[3].image}
+                  desc={OfferedServiceData[3].desc}
                 />
               </div>
             </div>

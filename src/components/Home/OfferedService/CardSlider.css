@@ -1,0 +1,33 @@
+
+
+.card-slider {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
+}
+
+.card {
+  width: 300px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:last-of-type {
+  margin-right: 0px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card.active {
+  transform: scale(1.05);
+  z-index: 1;
+}

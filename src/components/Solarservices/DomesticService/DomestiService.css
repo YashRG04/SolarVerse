@@ -12,7 +12,7 @@
 
 .RemainingServices h1 {
   font-family: "ABEEZEE", sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #000;
   margin-bottom: 1rem;
@@ -57,9 +57,11 @@
 
 
 
+
 @media screen and (max-width: 802px) {
   .Services {
     flex-direction: column;
     align-items: center;
   }
+  
 }

@@ -19,12 +19,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .Logo1 {
   width: 4.2rem;
   cursor: pointer;
-  margin-left: -3rem;
+  margin-left: -7rem;
+  margin-right: 3rem;
    user-select: none;
    -moz-user-select: none;
    -webkit-user-drag: none;
@@ -37,7 +39,7 @@
   text-transform: uppercase;
   font-weight: 600;
   color: #000;
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 
 .RightContainer1 {
