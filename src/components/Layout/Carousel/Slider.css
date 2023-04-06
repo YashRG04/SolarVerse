@@ -4,7 +4,7 @@
 
   /* width: 82%; */
   /* height: auto; */
-  height: 46rem;
+  height: 37rem;
   /* margin: 100px auto 0; */
   position: relative;
   overflow: hidden;
@@ -12,7 +12,6 @@
 }
 
 @media screen and (max-width: 800px) {
-
   .SlideArrow {
     width: 2rem;
     height: 2rem;
@@ -86,18 +85,21 @@
 
 .container-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
 }
 .dot {
-  width: 2rem;
+  width: 0.5rem;
   height: 0.5rem;
-  border-radius: 10%;
-  border: 3px solid #f1f1f1;
+  border-radius: 50%;
+  border: 0.4px solid #f1f1f1;
   margin: 0 5px;
   background: #f1f1f1;
+}
+.dot:hover {
+  cursor: pointer;
 }
 .dot.active {
   background: rgb(32, 32, 32);
@@ -124,7 +126,7 @@
   position: relative;
   text-align: center;
   color: rgb(235, 233, 233);
-  height: 50rem;
+  height: 42rem;
 }
 .center {
   position: absolute;
@@ -134,31 +136,55 @@
 }
 
 /* //Banner 1 */
-.banner1 {
+.banner1,
+.banner2,
+.banner3 {
   position: absolute;
   top: 40%;
   left: 50%;
+  width: 100vw;
+  height: 42rem;
   transform: translate(-50%, -50%);
   display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem 1rem;
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.89));
+
+  /* padding: 2rem 1rem; */
   text-align: center;
   text-transform: capitalize;
 }
-.banner1 h1 {
-  color: #ffdd02;
-  align-items: center;
+.banner1 h1,
+.banner2 h1,
+.banner3 h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  position: absolute;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  top: 36.5rem;
+  left: 15vw;
+  font-weight: 900;
 }
-.banner1 div {
+.banner1 div,
+.banner2 div,
+.banner3 div {
   width: 10rem;
   height: 5px;
   background: white;
   margin: 1.7rem auto;
 }
-.banner1 p {
-  font-size: 1.2rem;
+.banner1 p,
+.banner2 p,
+.banner3 p {
+  /* font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #ffdd02;
+  color: #ffffff; */
+  font-size: 0.8rem;
+  position: absolute;
+  display: flex;
+  left: 15vw;
+  top: 40.5rem;
 }
 .banner1 h4 {
   font-size: 1rem;
@@ -169,9 +195,11 @@
 }
 
 @media screen and (max-width: 575px) {
-  .banner1 {
+  .banner1,
+  .banner2,
+  .banner3 {
     width: 100%;
-    height: 32rem;
+    height: 50rem;
     padding: 2rem 1rem;
   }
   .banner1 div {
@@ -179,24 +207,49 @@
   }
 }
 @media screen and (min-width: 576px) {
-  .banner1 {
+  .banner1,
+  .banner2,
+  .banner3 {
     padding: 2rem 3rem;
   }
-  .banner1 h1 {
+  .banner1 h1,
+  .banner2 h1,
+  .banner3 h1 {
     font-size: 3rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .banner1 {
+  .banner1,
+  .banner2,
+  .banner3 {
     padding: 2rem 6rem;
   }
-  .banner1 h1 {
-    font-size: 4rem;
+  .banner1 h1,
+  .banner2 h1,
+  .banner3 h1 {
+    font-size: 3rem;
+    position: absolute;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    display: flex;
+    top: 29rem;
+    font-weight: 900;
+    left: 5.05vw;
+  }
+  .banner1 p,
+  .banner2 p,
+  .banner3 p {
+    font-size: 1.1rem;
+    position: absolute;
+    display: flex;
+    top: 34rem;
+    left: 5.05vw;
   }
 }
 
 /* Banner2 */
-.banner2 {
+/* .banner2 {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -245,25 +298,25 @@
   .banner2 h1 {
     font-size: 4rem;
   }
-}
+} */
 
 /* Banner3 */
-.banner3 {
+/* .banner3 {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: inline-block;
-  /* background: rgba(0, 0, 0, 0.5); */
-  padding: 2rem 1rem;
+  display: inline-block; */
+/* background: rgba(0, 0, 0, 0.5); */
+/* padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-}
-.banner3 h2 {
+} */
+/* .banner3 h2 {
   color: white;
   align-items: center;
-}
-.banner3 div {
+} */
+/* .banner3 div {
   display: flex;
   width: 10rem;
   height: 5px;
@@ -299,7 +352,7 @@
   .banner3 h2 {
     font-size: 3rem;
   }
-}
+} */
 
 /* Banner4 */
 .banner4 {
@@ -417,4 +470,8 @@
     height: 0.3rem;
     border-bottom: 0;
   }
+}
+
+.container > img {
+  object-fit: cover;
 }
