@@ -8,8 +8,10 @@ import { useSelector } from "react-redux";
 
 const NavLinks = (props) => {
   const { user } = useSelector((state) => state.user);
-  const userl = localStorage.getItem("user");
+  const userl = JSON.parse(localStorage.getItem("user"));
+  console.log(userl);
   const [isScrolled, setIsScrolled] = useState(false);
+  // const {}
   const location = useLocation();
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const NavLinks = (props) => {
     // { name: "My Bookings", url: "/mybookings" },
     { name: "About Us", url: "/about" },
     {
-      name: userl ? `Hello ${userl}` : "Login",
+      name: userl ? `Hello ${(userl.first_name)}` : "Login",
       url: userl ? "/profile" : "/login",
     },
   ];

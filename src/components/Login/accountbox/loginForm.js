@@ -44,7 +44,7 @@ export function LoginForm(props) {
     e.preventDefault();
     console.log("loginSubmit");
 
-    dispatch(login(loginEmail, loginPassword,csrf_token,navigate));
+    dispatch(login(loginEmail, loginPassword,navigate));
   };
 
   useEffect(() => {
