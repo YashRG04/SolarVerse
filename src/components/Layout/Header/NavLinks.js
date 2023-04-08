@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
 const NavLinks = (props) => {
-  const { user } = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.getUser);
   const userl = JSON.parse(localStorage.getItem("user"));
   console.log(userl);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,8 +32,8 @@ const NavLinks = (props) => {
     // { name: "My Bookings", url: "/mybookings" },
     { name: "About Us", url: "/about" },
     {
-      name: userl ? `Hello ${(userl.first_name)}` : "Login",
-      url: userl ? "/profile" : "/login",
+      name: user ? `Hello ${(user.first_name)}` : "Login",
+      url: user ? "/profile" : "/login",
     },
   ];
 

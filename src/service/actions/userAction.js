@@ -9,7 +9,10 @@ import {
 
 import axios from "axios";
 
-var csrfToken = document.cookie?.split(';')?.find(cookie => cookie.trim()?.startsWith('csrf_token='))?.split('=')[1];
+var csrfToken = document.cookie
+  ?.split(";")
+  ?.find((cookie) => cookie.trim()?.startsWith("csrf_token="))
+  ?.split("=")[1];
 
 // Login User
 export const login = (email, password, navigate) => async (dispatch) => {
@@ -29,17 +32,15 @@ export const login = (email, password, navigate) => async (dispatch) => {
       { username: email, password },
       config
     );
-    
-      navigate("/");
-      dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
-  
 
+    navigate("/");
+    dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
+    dispatch(getUser());
   } catch (error) {
     console.log(error);
     dispatch({
       type: LOGIN_FAIL,
-      // payload: error.response?.data.non_field_errors,
-      payload:error
+      payload: error.response.data.non_field_errors || error.response.data.detail,
     });
   }
 };
@@ -64,35 +65,29 @@ export const register = (userData, navigate) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
-      payload: error.response.data.non_field_errors,
+      payload:
+        error.response.data.non_field_errors
     });
   }
 };
 
-export const getUser =()=>async(dispatch)=>{
+export const getUser = () => async (dispatch) => {
   try {
-    dispatch({type:"GET_USER_REQUEST"});
+    dispatch({ type: "GET_USER_REQUEST" });
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken":csrfToken,
+        "X-CSRFToken": csrfToken,
       },
     };
-    
-    const { data } = await axios.get(
-      `api/login/`,
-      config
-    );
-    console.log(data);
-    dispatch({ type: "GET_USER_SUCCESS",payload:data });
 
-    
+    const { data } = await axios.get(`api/login/`, config);
+    console.log(data);
+    dispatch({ type: "GET_USER_SUCCESS", payload: data });
   } catch (error) {
     dispatch({
       type: "GET_USER_FAIL",
-      payload: error.response?.data.non_field_errors,
+      payload: error.response.data.non_field_errors,
     });
-    
-    
   }
-}
+};

@@ -21,12 +21,12 @@ export function SignupForm(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { error, loading, isAuthenticated } = useSelector(
-    (state) => state.user
+  const { error, loading, isRegistered } = useSelector(
+    (state) => state.registerUser
   );
 
   console.log(error);
-  console.log(isAuthenticated);
+  console.log(isRegistered);
 
   const initialState = {
     email: "",
@@ -50,7 +50,7 @@ export function SignupForm(props) {
     if (error) {
       alert.error(error);
     }
-    if (isAuthenticated) {
+    if (isRegistered) {
       navigate("/");
       alert.success("Registration Successful");
       setTimeout(() => {
@@ -58,7 +58,7 @@ export function SignupForm(props) {
         alert.show("Please Login");
       }, 2000); 
     }
-  }, [error, isAuthenticated, alert, navigate]);
+  }, [error, isRegistered, alert, navigate]);
 
   useEffect(() => {
     setFormData(initialState);

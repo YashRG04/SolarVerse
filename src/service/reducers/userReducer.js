@@ -7,24 +7,16 @@ import {
   REGISTER_USER_FAIL,
 } from "../constants/userConstants";
 
-export const userReducer = (state = { user: {} }, action) => {
+export const loginuserReducer = (state = { user: {} }, action) => {
   switch (action.type) {
     case LOGIN_REQUEST:
       return {
         loading: true,
-        isAuthenticated: true,
-      };
-    case REGISTER_USER_REQUEST:
-      return {
-        loading: true,
         isAuthenticated: false,
       };
-    case LOGIN_SUCCESS:
-    case REGISTER_USER_SUCCESS:
-    //  localStorage.setItem("user", action.payload);
-    //   console.log('login success');
-    //   console.log("register success");
 
+    case LOGIN_SUCCESS:
+      console.log("Setting isAuthenticated to true");
       return {
         ...state,
         loading: false,
@@ -32,7 +24,6 @@ export const userReducer = (state = { user: {} }, action) => {
         user: action.payload,
       };
     case LOGIN_FAIL:
-    case REGISTER_USER_FAIL:
       return {
         ...state,
         loading: false,
@@ -45,8 +36,35 @@ export const userReducer = (state = { user: {} }, action) => {
   }
 };
 
-export const getUserReducer=(state={user:{}},action)=>{
-  switch(action.type){
+export const registerUserReducer = (state = { user: {} }, action) => {
+  switch (action.type) {
+    case REGISTER_USER_REQUEST:
+      return {
+        loading: true,
+        isRegistered: false,
+      };
+    case REGISTER_USER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        isRegistered: true,
+        user: action.payload,
+      };
+    case REGISTER_USER_FAIL:
+      return {
+        ...state,
+        loading: false,
+        isRegistered: false,
+        user: null,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export const getUserReducer = (state = { user: {} }, action) => {
+  switch (action.type) {
     case "GET_USER_REQUEST":
       return {
         loading: true,
@@ -55,8 +73,8 @@ export const getUserReducer=(state={user:{}},action)=>{
 
     case "GET_USER_SUCCESS":
       localStorage.setItem("user", JSON.stringify(action.payload));
-      console.log('login success');
-    
+      console.log("login success");
+
       return {
         ...state,
         loading: false,
@@ -73,6 +91,5 @@ export const getUserReducer=(state={user:{}},action)=>{
       };
     default:
       return state;
-
   }
-}
+};

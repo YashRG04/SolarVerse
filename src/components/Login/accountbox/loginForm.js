@@ -15,43 +15,43 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../../service/actions/userAction";
 import "./loginForm.css";
+import { useAlert } from "react-alert";
 
 export function LoginForm(props) {
+  const alert = useAlert();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const csrf_token =
-    "YYyacnwR7nGw4qviuKDtF2gQGDRhI6IrGfJn0yFSsG4Pvv6ShKtTCO64mRdBOdm8";
+  // const csrf_token =
+  //   "YYyacnwR7nGw4qviuKDtF2gQGDRhI6IrGfJn0yFSsG4Pvv6ShKtTCO64mRdBOdm8";
 
   const { error, loading, isAuthenticated } = useSelector(
-    (state) => state.user
+    (state) => state.loginUser
   );
 
+  console.log(error);
+  console.log(isAuthenticated);
   const { switchToSignup } = useContext(AccountContext);
 
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-
-  const { name, email, password } = user;
-
   const loginSubmit = (e) => {
     e.preventDefault();
-    console.log("loginSubmit");
 
-    dispatch(login(loginEmail, loginPassword,navigate));
+    dispatch(login(loginEmail, loginPassword, navigate));
   };
 
   useEffect(() => {
-    // if (isAuthenticated) {
-    //   props.history.push("/");
-    // }
-  }, [dispatch, error, isAuthenticated, props.history]);
+    if (error === "CSRF Failed: CSRF token missing or incorrect.") {
+      alert.error("You are already logged in");
+    } else if (isAuthenticated) {
+      alert.success("Login Successful");
+    }
+    else if (error) {
+      alert.error(error);
+    }
+  }, [error, isAuthenticated, alert]);
 
   return (
     <BoxContainer>
