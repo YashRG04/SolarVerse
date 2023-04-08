@@ -33,7 +33,7 @@ export const login = (email, password, navigate) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: LOGIN_FAIL,
-      payload: error.response.data.message,
+      payload: error.response.data.non_field_errors,
     });
   }
 };
@@ -47,19 +47,18 @@ export const register = (userData, navigate) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        // "X-CSRFToken":
-        //   "dLprynZdMMuMldj1rI1LIL2uHAIHu0uYh0L7zkERFb9r6432JXaN5UhSWSPu9IWf",
       },
     };
     const { data } = await axios.post(`api/register/`, userData, config);
     console.log(data);
-    navigate("/");
+    navigate("/login");
 
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data });
+    console.log(data);
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
-      payload: error.response.data.message,
+      payload: error.response.data.non_field_errors,
     });
   }
 };

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   BoldLink,
   BoxContainer,
@@ -11,29 +11,59 @@ import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
 import "./loginForm.css";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../../service/actions/userAction";
 import { useNavigate } from "react-router-dom";
+import { useAlert } from "react-alert";
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const csrf_token =
-    "YYyacnwR7nGw4qviuKDtF2gQGDRhI6IrGfJn0yFSsG4Pvv6ShKtTCO64mRdBOdm8";
+  const { error, loading, isAuthenticated } = useSelector(
+    (state) => state.user
+  );
+
+  console.log(error);
+  console.log(isAuthenticated);
 
   const initialState = {
     email: "",
     password1: "",
     password2: "",
+    phone_number: "",
+    first_name: "",
+    lastname: "",
   };
+
+  const alert = useAlert();
+
   const [formdata, setFormData] = useState(initialState);
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formdata);
-    dispatch(register(formdata, navigate, csrf_token));
+    dispatch(register(formdata, navigate));
   };
+
+  useEffect(() => {
+    if (error) {
+      alert.error(error);
+    }
+    if (isAuthenticated) {
+      navigate("/");
+      alert.success("Registration Successful");
+      setTimeout(() => {
+        navigate("/login");
+        alert.show("Please Login");
+      }, 2000); 
+    }
+  }, [error, isAuthenticated, alert, navigate]);
+
+  useEffect(() => {
+    setFormData(initialState);
+  }, []);
+
 
   return (
     <BoxContainer>
@@ -45,6 +75,45 @@ export function SignupForm(props) {
           placeholder="Email"
           onChange={(e) => setFormData({ ...formdata, email: e.target.value })}
         />
+
+        <input
+          className="phone Input"
+          placeholder="Phone Number"
+          type="tel"
+          pattern="[0-9]{10}"
+          maxLength={10}
+          onChange={(e) => {
+            let phone = e.target.value;
+            // Remove any non-digit characters
+            phone = phone.replace(/\D/g, "");
+            // Check if the number starts with "+91" and remove it
+            if (phone.startsWith("91")) {
+              phone = phone.slice(2);
+            } else if (phone.startsWith("+91")) {
+              phone = phone.slice(3);
+            }
+            setFormData({ ...formdata, phone_number: phone });
+          }}
+        />
+
+        <input
+          className="firstname Input"
+          placeholder="First Name"
+          type="text"
+          onChange={(e) =>
+            setFormData({ ...formdata, first_name: e.target.value })
+          }
+        />
+
+        <input
+          className="lastname Input"
+          placeholder="Last Name"
+          type="text"
+          onChange={(e) =>
+            setFormData({ ...formdata, lastname: e.target.value })
+          }
+        />
+
         <input
           className="Input"
           type="password"

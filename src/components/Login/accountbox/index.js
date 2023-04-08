@@ -24,7 +24,7 @@ const Cushion = styled.div`
 
 const BoxContainer = styled.div`
   width: 26rem;
-  min-height: 38rem;
+  min-height: 45rem;
   display: flex;
   flex-direction: column;
   border-radius: 19px;

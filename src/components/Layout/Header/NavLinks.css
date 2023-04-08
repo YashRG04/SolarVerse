@@ -29,6 +29,10 @@ li a {
   color: #000;
 }
 
+.loginlink a{
+  color: #000;
+}
+
 li:last-child {
   margin-right: 3rem;
 }

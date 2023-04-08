@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./NavLinks.css";
 import { FaUserAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { useSelector } from "react-redux";
@@ -10,6 +10,7 @@ const NavLinks = (props) => {
   const { user } = useSelector((state) => state.user);
   const userl = localStorage.getItem("user");
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,11 +40,11 @@ const NavLinks = (props) => {
 
   return (
     <Fragment>
-      <motion.ul className="NavLinks">
+      <motion.ul className={`NavLinks ${location.pathname === "/login" ? " loginlink" : isScrolled ? "scrolled1" : ""}`}>
         {links.map(({ name, url }) => {
           return (
             <motion.li 
-              className={`li2 ${isScrolled ? "scrolled1" : ""}`}
+              className="li2"
               initial={animateFrom}
               animate={animateTo}
               key={name}

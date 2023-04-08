@@ -20,6 +20,11 @@
   transition: all 0.5s ease-in-out;
 }
 
+.loginbg{
+  background-color: #f7f7f7;
+  transition: all 0.5s ease-in-out;
+}
+
 .scrolled2 {
   color: #000;
 }
