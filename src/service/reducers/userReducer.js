@@ -21,9 +21,9 @@ export const userReducer = (state = { user: {} }, action) => {
       };
     case LOGIN_SUCCESS:
     case REGISTER_USER_SUCCESS:
-     localStorage.setItem("user", action.payload);
-      console.log('login success');
-      console.log("register success");
+    //  localStorage.setItem("user", action.payload);
+    //   console.log('login success');
+    //   console.log("register success");
 
       return {
         ...state,
@@ -44,3 +44,35 @@ export const userReducer = (state = { user: {} }, action) => {
       return state;
   }
 };
+
+export const getUserReducer=(state={user:{}},action)=>{
+  switch(action.type){
+    case "GET_USER_REQUEST":
+      return {
+        loading: true,
+        isAuthenticated: true,
+      };
+
+    case "GET_USER_SUCCESS":
+      localStorage.setItem("user", JSON.stringify(action.payload));
+      console.log('login success');
+    
+      return {
+        ...state,
+        loading: false,
+        isAuthenticated: true,
+        user: action.payload,
+      };
+    case "GET_USER_FAIL":
+      return {
+        ...state,
+        loading: false,
+        isAuthenticated: false,
+        user: null,
+        error: action.payload,
+      };
+    default:
+      return state;
+
+  }
+}

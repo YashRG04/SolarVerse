@@ -22,12 +22,22 @@ import Shipping from "./components/Checkout/Shipping";
 import Subscription from "./components/Checkout/Subscription";
 import Confirm from "./components/Checkout/Confirm";
 import MobileFooter from "./components/Layout/Footer/MobileFooter";
+import { getUser } from "./service/actions/userAction";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 function App() {
   const user = "Yash";
   const login = false;
+  
 
   const scrollToTop = "top";
+  const dispatch=useDispatch();
+
+
+  useEffect(()=>{
+    dispatch(getUser());
+  },[])
 
   return (
     <Router>

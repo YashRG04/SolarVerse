@@ -9,6 +9,8 @@ import {
 
 import axios from "axios";
 
+var csrfToken = document.cookie?.split(';')?.find(cookie => cookie.trim()?.startsWith('csrf_token='))?.split('=')[1];
+
 // Login User
 export const login = (email, password, navigate) => async (dispatch) => {
   try {
@@ -27,13 +29,17 @@ export const login = (email, password, navigate) => async (dispatch) => {
       { username: email, password },
       config
     );
-    console.log(data);
-    navigate("/");
-    dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
+    
+      navigate("/");
+      dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
+  
+
   } catch (error) {
+    console.log(error);
     dispatch({
       type: LOGIN_FAIL,
-      payload: error.response.data.non_field_errors,
+      // payload: error.response?.data.non_field_errors,
+      payload:error
     });
   }
 };
@@ -62,3 +68,31 @@ export const register = (userData, navigate) => async (dispatch) => {
     });
   }
 };
+
+export const getUser =()=>async(dispatch)=>{
+  try {
+    dispatch({type:"GET_USER_REQUEST"});
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken":csrfToken,
+      },
+    };
+    
+    const { data } = await axios.get(
+      `api/login/`,
+      config
+    );
+    console.log(data);
+    dispatch({ type: "GET_USER_SUCCESS",payload:data });
+
+    
+  } catch (error) {
+    dispatch({
+      type: "GET_USER_FAIL",
+      payload: error.response?.data.non_field_errors,
+    });
+    
+    
+  }
+}
