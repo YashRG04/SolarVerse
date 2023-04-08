@@ -17,8 +17,8 @@ export const login = (email, password, navigate) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken":
-          "dLprynZdMMuMldj1rI1LIL2uHAIHu0uYh0L7zkERFb9r6432JXaN5UhSWSPu9IWf",
+        // "X-CSRFToken":
+        //   "dLprynZdMMuMldj1rI1LIL2uHAIHu0uYh0L7zkERFb9r6432JXaN5UhSWSPu9IWf",
       },
     };
     console.log(email, password);
@@ -29,7 +29,7 @@ export const login = (email, password, navigate) => async (dispatch) => {
     );
     console.log(data);
     navigate("/");
-    dispatch({ type: LOGIN_SUCCESS, payload: data.user });
+    dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
   } catch (error) {
     dispatch({
       type: LOGIN_FAIL,
@@ -47,8 +47,8 @@ export const register = (userData, navigate) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken":
-          "dLprynZdMMuMldj1rI1LIL2uHAIHu0uYh0L7zkERFb9r6432JXaN5UhSWSPu9IWf",
+        // "X-CSRFToken":
+        //   "dLprynZdMMuMldj1rI1LIL2uHAIHu0uYh0L7zkERFb9r6432JXaN5UhSWSPu9IWf",
       },
     };
     const { data } = await axios.post(`api/register/`, userData, config);
