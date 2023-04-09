@@ -68,11 +68,11 @@ const GoSolar = () => {
   ];
 
   return (
-    <div className="GoSolarContainer">
-      <h1 data-aos="slide-left" className="offerTitle">
+    <div className="GoSolarContainer" data-aos="slide-left">
+      <h1 className="offerTitle">
         Why Go Solar?
       </h1>
-      <hr data-aos="slide-left" className="GoUnderline" />
+      <hr className="GoUnderline" />
 
       <div className="GoSolarSubContainer">
         <div className="GoSolarLeft">
@@ -83,7 +83,11 @@ const GoSolar = () => {
             {Point.map((point) => {
               return (
                 <li className="RightPoint">
-                  <img src={point.image} alt="solarverse" className="PointImage" />
+                  <img
+                    src={point.image}
+                    alt="solarverse"
+                    className="PointImage"
+                  />
                   <div className="PointDesc">
                     <h5 className="PointHead">{point.head}</h5>
                     <p className="PointPara">{point.para}</p>

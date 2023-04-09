@@ -49,13 +49,11 @@ const ServiceContainer = () => {
 
   return (
     <Fragment>
-      <div className="ServiceContainer">
+      <div className="ServiceContainer" data-aos="slide-left">
         <div className="DomesticService">
-          <h1 data-aos="slide-left" className="offerTitle">
-            Services Being Offered
-          </h1>
+          <h1 className="offerTitle">Services Being Offered</h1>
 
-          <hr data-aos="slide-left" className="Underline" />
+          <hr className="Underline" />
           <h1 className="offerSubTitle">Maintainance</h1>
           <hr className="Underline1" />
           <div className="ServiceCardContainer">

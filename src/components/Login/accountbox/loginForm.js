@@ -43,7 +43,7 @@ export function LoginForm(props) {
   };
 
   useEffect(() => {
-    if (error === "CSRF Failed: CSRF token missing or incorrect.") {
+    if (error === "CSRF Failed: Referer checking failed - Referer is insecure while host is secure.") {
       alert.error("You are already logged in");
     } else if (isAuthenticated) {
       alert.success("Login Successful");

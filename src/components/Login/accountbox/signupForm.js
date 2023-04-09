@@ -25,6 +25,8 @@ export function SignupForm(props) {
     (state) => state.registerUser
   );
 
+  const { isAuthenticated } = useSelector((state) => state.loginUser);
+
   console.log(error);
   console.log(isRegistered);
 
@@ -56,14 +58,13 @@ export function SignupForm(props) {
       setTimeout(() => {
         navigate("/login");
         alert.show("Please Login");
-      }, 2000); 
+      }, 2000);
     }
   }, [error, isRegistered, alert, navigate]);
 
   useEffect(() => {
     setFormData(initialState);
   }, []);
-
 
   return (
     <BoxContainer>

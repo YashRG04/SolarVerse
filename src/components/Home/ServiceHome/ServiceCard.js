@@ -14,7 +14,7 @@ const ServiceCard = ({ name, id, description, image }) => {
   return (
     <Fragment>
       <div
-        data-aos="flip-left"
+        data-aos="slide-left"
         data-aos-duration="1000"
         data-aos-anchor-placement="top-center"
         className="ServiceCard"
