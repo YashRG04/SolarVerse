@@ -32,7 +32,7 @@ const NavLinks = (props) => {
     // { name: "My Bookings", url: "/mybookings" },
     { name: "About Us", url: "/about" },
     {
-      name: user ? `Hello ${(user.first_name)}` : "Login",
+      name: user ? `Hello ${user.first_name}` : "Login",
       url: user ? "/profile" : "/login",
     },
   ];
@@ -42,10 +42,19 @@ const NavLinks = (props) => {
 
   return (
     <Fragment>
-      <motion.ul className={`NavLinks ${location.pathname === "/login" ? " loginlink" : isScrolled ? "scrolled1" : ""}`}>
+      <motion.ul
+        className={`NavLinks ${
+          location.pathname === "/login" ||
+          location.pathname === "/password/forgot"
+            ? " loginlink"
+            : isScrolled
+            ? "scrolled1"
+            : ""
+        }`}
+      >
         {links.map(({ name, url }) => {
           return (
-            <motion.li 
+            <motion.li
               className="li2"
               initial={animateFrom}
               animate={animateTo}

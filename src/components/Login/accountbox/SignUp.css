@@ -1,0 +1,242 @@
+.NewFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.FormCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-width: 25rem;
+  border-radius: 1rem;
+  border-color: #000;
+  background-color: #f7f7f7;
+  margin: 2rem;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.25);
+  width: 25%;
+}
+
+.FormCard a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.FormLogoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormLogo {
+  width: 3.5rem;
+  margin-right: -0.5rem;
+  margin-top: 0.2rem;
+}
+
+.FormLogoText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.FormHeading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  font-family: "ABeeZee", sans-serif;
+  margin-top: 0.5rem;
+}
+
+.FormSocial a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  margin: 1rem;
+}
+
+.facebook a,
+.google a {
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.facebook a {
+  background-color: #3b5898dd;
+}
+
+.google a {
+  background-color: #db3235d4;
+}
+
+.facebook a:hover {
+  background-color: #3b5898;
+}
+
+.google a:hover {
+  background-color: #db3235;
+}
+
+.FormSocialIcon {
+  margin-right: 0.5rem;
+}
+
+.FormSocialText {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: titlecase;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.FormDividerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.FormDivider {
+  width: 8rem;
+  height: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  margin: 0rem 0.5rem;
+  box-shadow: 0 0 0.01rem rgba(0, 0, 0, 0.25);
+}
+
+.FormDivider1 {
+  width: 130%;
+  height: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0.5rem;
+  box-shadow: 0 0 0.01rem rgba(0, 0, 0, 0.25);
+}
+
+.FormDividerText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.FormInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.FormInput {
+  width: 142%;
+  padding: 0.8rem 5rem 0.6rem 1rem;
+  border: 0.07rem solid rgba(44, 42, 42, 0.25);
+  border-radius: 0.3rem;
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  color: #908888;
+  text-transform: titlecase;
+  font-family: "ABeeZee", sans-serif;
+  text-align: left;
+}
+
+.FormInput:focus {
+  outline: none;
+  border: 0.07rem solid rgba(44, 42, 42, 0.75);
+}
+
+.PasswordInputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 135%;
+}
+
+.PasswordInput {
+  margin-left: -0.5rem;
+  width: 135%;
+  padding-right: 1rem;
+}
+
+.ShowPasswordButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: -1.9rem;
+}
+
+.ShowPasswordButton svg {
+  margin-left: -0.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: rgba(0, 0, 0, 0.811);
+  transition: all 0.3s ease-in-out;
+}
+
+.FormSubmit {
+  padding: 0.6rem 1rem;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "ABeeZee", sans-serif;
+  text-align: left;
+  background-color: #ffdd02;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+  border: 0.07rem solid rgba(44, 42, 42, 0.25);
+  box-shadow: 0 0 0.01rem rgba(0, 0, 0, 0.078);
+  cursor: pointer;
+}
+
+.FormSubmit:hover {
+  background-color: #39b54a;
+  color: #000;
+  border: 0.07rem solid rgba(44, 42, 42, 0.75);
+}
+
+.FormDividerText1{
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.25);
+  font-family: "ABeeZee", sans-serif;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.FormDividerText1 a{
+  text-decoration: none;
+  color: #39b54a;
+  font-weight: 600;
+  font-family: "ABeeZee", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .FormCard {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .FormCard {
+    width: 100%;
+  }
+}

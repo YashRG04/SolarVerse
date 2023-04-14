@@ -52,7 +52,7 @@ export function SignupForm(props) {
     if (error) {
       alert.error(error);
     }
-    if (isRegistered) {
+    if (isRegistered && !isAuthenticated ) {
       navigate("/");
       alert.success("Registration Successful");
       setTimeout(() => {

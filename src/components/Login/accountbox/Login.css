@@ -1,0 +1,9 @@
+.BackToPasswordLoginButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #29b03b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "ABeeZee", sans-serif;
+}

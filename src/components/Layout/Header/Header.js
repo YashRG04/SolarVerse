@@ -1,12 +1,12 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../assets/images/logo.jpg";
 import "./Header.css";
 import NavLinks from "./NavLinks";
 
 const Header = (props) => {
+  const location=useLocation();
   const navigate = useNavigate();
-  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -36,7 +36,11 @@ const Header = (props) => {
     <Fragment>
       <div
         className={`NavContainer${
-          isLoginPage ? " loginbg" : scrolled ? " scrolled" : ""
+          isLoginPage || location.pathname === "/password/forgot"
+            ? " loginbg"
+            : scrolled
+            ? " scrolled"
+            : ""
         }${showNavbar ? " fade-in" : ""}`}
       >
         <div className="LeftContainer">
@@ -53,7 +57,12 @@ const Header = (props) => {
             className="LogoText"
             style={{
               textDecoration: "none",
-              color: scrolled || isLoginPage ? "black" : "white",
+              color:
+                scrolled ||
+                isLoginPage ||
+                location.pathname === "/password/forgot"
+                  ? "black"
+                  : "white",
             }}
           >
             SolarVerse

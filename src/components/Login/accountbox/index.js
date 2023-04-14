@@ -138,7 +138,7 @@ export function AccountBox(props) {
     setExpanded(true);
     setTimeout(() => {
       setExpanded(false);
-    }, expandingTransition.duration * 1000 - 1500);
+    }, expandingTransition.duration * 900 - 1500);
   };
 
   const switchToSignup = () => {

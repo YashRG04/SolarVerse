@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Form, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Home from "./components/Home/Home";
 import Header from "./components/Layout/Header/Header.js";
 import MobileHeader from "./components/Layout/Header/MobileHeader";
@@ -24,29 +29,43 @@ import Confirm from "./components/Checkout/Confirm";
 import MobileFooter from "./components/Layout/Footer/MobileFooter";
 import { getUser } from "./service/actions/userAction";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import ForgotPassword from "./components/Password/ForgotPassword/ForgotPassword";
+import SignUp from "./components/Login/accountbox/SignUp";
+import Login from "./components/Login/accountbox/Login";
 
 function App() {
   const user = "Yash";
   const login = false;
-  
 
   const scrollToTop = "top";
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
+  const location = window.location;
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(getUser());
-  },[])
+  }, []);
 
   return (
     <Router>
       <ScrollToTop />
-      <Header className="Navbar" data={{ User: { user }, Login: { login } }} />
-      <MobileHeader
-        className="MobileNavbar"
-        data={{ User: { user }, Login: { login } }}
-      />
+      {location.pathname === "/signup" ||
+      location.pathname === "/login" ? null : (
+        <Header
+          className="Navbar"
+          data={{ User: { user }, Login: { login } }}
+        />
+      )}
+
+      {location.pathname === "/signup" ||
+      location.pathname === "/login" ? null : (
+        <MobileHeader
+          className="MobileNavbar"
+          data={{ User: { user }, Login: { login } }}
+        />
+      )}
+
       <MobileFooter />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -57,23 +76,26 @@ function App() {
         <Route path="/services/d3" element={<DomesticService />} />
         <Route path="/services/d4" element={<DomesticService />} />
         <Route path="/form" element={<InfForm />} />
-        <Route path="/login" element={<AccountBox />} />
-
+        {/* <Route path="/login" element={<AccountBox />} /> */}
+        <Route path="/password/forgot" element={<ForgotPassword />} />
         <Route path="/mybookings" element={<MyBooking />} />
         <Route path="/booking" element={<Details />} />
         <Route path="/subscription" element={<Subscription />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/confirm" element={<Confirm />} />
-
-        {/* <Route path="/services/c1" element={<CommercialService />} />
-        <Route path="/services/c2" element={<CommercialService />} />
-        <Route path="/services/c3" element={<CommercialService />} />
-        <Route path="/services/c4" element={<CommercialService />} /> */}
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
-      <Footer data={{ User: { user }, Login: { login } }} />
+      {location.pathname === "/signup" ||
+      location.pathname === "/login" ? null : (
+        <Footer data={{ User: { user }, Login: { login } }} />
+      )}
 
-      <Top className="ScrollTop" scrollToTop={scrollToTop} />
+      {location.pathname === "/signup" ||
+      location.pathname === "/login" ? null : (
+        <Top className="ScrollTop" scrollToTop={scrollToTop} />
+      )}
     </Router>
   );
 }
