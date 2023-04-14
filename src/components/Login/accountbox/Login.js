@@ -132,6 +132,12 @@ const Login = () => {
             )}
 
             {!isOTPSelected && (
+              <p className="FormDividerText1">
+                <Link to="/forgot">Forgot Password?</Link>
+              </p>
+            )}
+
+            {!isOTPSelected && (
               <button className="FormSubmit" type="submit">
                 Login
               </button>

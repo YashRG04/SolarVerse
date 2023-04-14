@@ -36,7 +36,7 @@ const Header = (props) => {
     <Fragment>
       <div
         className={`NavContainer${
-          isLoginPage || location.pathname === "/password/forgot"
+          isLoginPage || location.pathname === "/forgot" || location.pathname === "/reset"
             ? " loginbg"
             : scrolled
             ? " scrolled"
@@ -60,7 +60,8 @@ const Header = (props) => {
               color:
                 scrolled ||
                 isLoginPage ||
-                location.pathname === "/password/forgot"
+                location.pathname === "/forgot"
+                || location.pathname === "/reset"
                   ? "black"
                   : "white",
             }}

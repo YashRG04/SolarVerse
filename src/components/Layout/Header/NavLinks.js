@@ -45,7 +45,8 @@ const NavLinks = (props) => {
       <motion.ul
         className={`NavLinks ${
           location.pathname === "/login" ||
-          location.pathname === "/password/forgot"
+          location.pathname === "/forgot" ||
+          location.pathname === "/reset"
             ? " loginlink"
             : isScrolled
             ? "scrolled1"

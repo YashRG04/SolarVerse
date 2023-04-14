@@ -33,6 +33,7 @@ import React, { useEffect } from "react";
 import ForgotPassword from "./components/Password/ForgotPassword/ForgotPassword";
 import SignUp from "./components/Login/accountbox/SignUp";
 import Login from "./components/Login/accountbox/Login";
+import ResetPassword from "./components/Password/ResetPassword/ResetPassword";
 
 function App() {
   const user = "Yash";
@@ -77,7 +78,8 @@ function App() {
         <Route path="/services/d4" element={<DomesticService />} />
         <Route path="/form" element={<InfForm />} />
         {/* <Route path="/login" element={<AccountBox />} /> */}
-        <Route path="/password/forgot" element={<ForgotPassword />} />
+        <Route path="/forgot" element={<ForgotPassword />} />
+        <Route path="/reset" element={<ResetPassword />} />
         <Route path="/mybookings" element={<MyBooking />} />
         <Route path="/booking" element={<Details />} />
         <Route path="/subscription" element={<Subscription />} />
