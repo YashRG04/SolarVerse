@@ -213,7 +213,7 @@
   border: 0.07rem solid rgba(44, 42, 42, 0.75);
 }
 
-.FormDividerText1{
+.FormDividerText1 {
   font-size: 0.8rem;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.25);
@@ -222,21 +222,63 @@
   margin-bottom: 0.5rem;
 }
 
-.FormDividerText1 a{
+.FormDividerText1 a {
   text-decoration: none;
   color: #39b54a;
   font-weight: 600;
   font-family: "ABeeZee", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-  .FormCard {
-    width: 100%;
-  }
-}
+
 
 @media screen and (max-width: 1000px) {
   .FormCard {
+    width: 90%;
+  }
+
+  .FormInput {
+    width: 120%;
+  }
+
+  .PasswordInputContainer {
+    width: 114%;
+  }
+
+  .FormDivider {
+    width: 7rem;
+  }
+
+  .FormDivider1{
     width: 100%;
+  }
+
+  .SignupLogo{
+    display: none;
+  }
+
+  .Cushion2{
+    height: 3.5rem;
+  }
+
+  .FormSocialText{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 1000px) {
+  .FormInput {
+    width: 109%;
+  }
+
+  .PasswordInputContainer {
+    width: 103%;
+  }
+
+  .FormDivider {
+    width: 6rem;
+  }
+
+  .FormSocialText {
+    font-size: 0.8rem;
   }
 }

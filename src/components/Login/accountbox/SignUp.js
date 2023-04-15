@@ -57,12 +57,15 @@ const SignUp = () => {
     setFormData(initialState);
   }, []);
 
+  
+
   return (
     <Fragment>
+      <div className="Cushion2"></div>
       <div className="NewFormContainer">
         <div className="SignUpForm FormCard">
           <Link to="/">
-            <div className="FormLogoContainer">
+            <div className="FormLogoContainer SignupLogo">
               <img className="FormLogo" src={logo} alt="MeriElectricity Logo" />
               <h3 className="FormLogoText">MeriElectricity</h3>
             </div>

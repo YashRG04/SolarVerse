@@ -51,21 +51,13 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      {location.pathname === "/signup" ||
-      location.pathname === "/login" ? null : (
-        <Header
-          className="Navbar"
-          data={{ User: { user }, Login: { login } }}
-        />
-      )}
 
-      {location.pathname === "/signup" ||
-      location.pathname === "/login" ? null : (
-        <MobileHeader
-          className="MobileNavbar"
-          data={{ User: { user }, Login: { login } }}
-        />
-      )}
+      <Header className="Navbar" data={{ User: { user }, Login: { login } }} />
+
+      <MobileHeader
+        className="MobileNavbar"
+        data={{ User: { user }, Login: { login } }}
+      />
 
       <MobileFooter />
       <Routes>
@@ -89,15 +81,9 @@ function App() {
         <Route path="/login" element={<Login />} />
       </Routes>
 
-      {location.pathname === "/signup" ||
-      location.pathname === "/login" ? null : (
-        <Footer data={{ User: { user }, Login: { login } }} />
-      )}
+      <Footer data={{ User: { user }, Login: { login } }} />
 
-      {location.pathname === "/signup" ||
-      location.pathname === "/login" ? null : (
-        <Top className="ScrollTop" scrollToTop={scrollToTop} />
-      )}
+      <Top className="ScrollTop" scrollToTop={scrollToTop} />
     </Router>
   );
 }

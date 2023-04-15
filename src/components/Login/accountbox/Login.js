@@ -48,7 +48,12 @@ const Login = () => {
   };
 
   const handleLoginWithOTP = (e) => {
+    if (OTP.length !== 4) {
+      alert.error("Please enter a valid OTP");
+      return;
+    }
     navigate("/");
+    alert.success("Login Successful");
   };
 
   useEffect(() => {
@@ -63,6 +68,25 @@ const Login = () => {
       alert.error(error);
     }
   }, [error, isAuthenticated, alert]);
+
+  const handleResendOTP = (e) => {};
+  const [counter, setCounter] = useState(0);
+
+  const [OTP, setOTP] = useState("");
+
+  useEffect(() => {
+    let intervalId;
+    if (counter > 0) {
+      intervalId = setInterval(() => setCounter(counter - 1), 1000);
+    }
+    return () => clearInterval(intervalId);
+  }, [counter]);
+
+  const handleClick = () => {
+    handleResendOTP();
+    alert.success("OTP sent to your phone number");
+    setCounter(30); // Reset the counter to 30 seconds
+  };
 
   return (
     <Fragment>
@@ -199,8 +223,24 @@ const Login = () => {
                     type="tel"
                     placeholder="Enter OTP"
                     required
+                    value={OTP}
+                    onChange={(e) => setOTP(e.target.value)}
                     // add state to handle OTP input
                   />
+                )}
+
+                {isOtpSent && (
+                  <p className="FormDividerText1">
+                    <button
+                      className="BackToPasswordLoginButton ResendOTPButton"
+                      onClick={handleClick}
+                      disabled={counter !== 0}
+                    >
+                      Resend OTP
+                    </button>
+                    &nbsp;in&nbsp;{counter}
+                    &nbsp;seconds
+                  </p>
                 )}
 
                 {isOtpSent && (
