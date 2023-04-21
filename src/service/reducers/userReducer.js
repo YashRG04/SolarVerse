@@ -48,6 +48,7 @@ export const registerUserReducer = (state = { user: {} }, action) => {
         ...state,
         loading: false,
         isRegistered: true,
+        isAuthenticated: true,
         user: action.payload,
       };
     case REGISTER_USER_FAIL:

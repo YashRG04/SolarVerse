@@ -6,13 +6,7 @@ import {
   REGISTER_USER_SUCCESS,
   REGISTER_USER_FAIL,
 } from "../constants/userConstants";
-
 import axios from "axios";
-
-var csrfToken = document.cookie
-  ?.split(";")
-  ?.find((cookie) => cookie.trim()?.startsWith("csrf_token="))
-  ?.split("=")[1];
 
 // Login User
 export const login = (email, password, navigate) => async (dispatch) => {
@@ -22,16 +16,17 @@ export const login = (email, password, navigate) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        // "X-CSRFToken":
-        //   "dLprynZdMMuMldj1rI1LIL2uHAIHu0uYh0L7zkERFb9r6432JXaN5UhSWSPu9IWf",
       },
     };
-    console.log(email, password);
+
     const { data } = await axios.post(
       `api/login/`,
       { username: email, password },
       config
     );
+
+    // Store access token in local storage
+    localStorage.setItem("access_token", data.access);
 
     navigate("/");
     dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
@@ -49,7 +44,6 @@ export const login = (email, password, navigate) => async (dispatch) => {
 export const register = (userData, navigate) => async (dispatch) => {
   try {
     dispatch({ type: REGISTER_USER_REQUEST });
-    console.log(userData);
 
     const config = {
       headers: {
@@ -57,32 +51,35 @@ export const register = (userData, navigate) => async (dispatch) => {
       },
     };
     const { data } = await axios.post(`api/register/`, userData, config);
-    console.log(data);
-    navigate("/login");
 
+    localStorage.setItem("access_token", data.access);
+    navigate("/");
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data });
-    console.log(data);
+    dispatch(getUser());
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
-      payload:
-        error.response.data.non_field_errors
+      payload: error.response.data.non_field_errors
     });
   }
 };
 
 export const getUser = () => async (dispatch) => {
   try {
-    dispatch({ type: "GET_USER_REQUEST" });
+    const access_token = localStorage.getItem("access_token");
+    if (!access_token) {
+      throw new Error("No access token found");
+    }
+
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken": csrfToken,
+        Authorization: `Bearer ${access_token}`,
+        "X-CSRFToken": getCSRFToken(),
       },
     };
 
     const { data } = await axios.get(`api/login/`, config);
-    console.log(data);
     dispatch({ type: "GET_USER_SUCCESS", payload: data });
   } catch (error) {
     dispatch({
@@ -90,4 +87,13 @@ export const getUser = () => async (dispatch) => {
       payload: error.response.data.non_field_errors,
     });
   }
+};
+
+// Helper function to get CSRF token from cookies
+const getCSRFToken = () => {
+  const cookieValue = document.cookie
+    .split("; ")
+    .find((cookie) => cookie.startsWith("csrftoken="))
+    .split("=")[1];
+  return cookieValue;
 };

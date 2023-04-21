@@ -43,15 +43,14 @@ const SignUp = () => {
     if (error) {
       alert.error(error);
     }
-    if (isRegistered && !isAuthenticated) {
-      navigate("/");
+    if (isRegistered && isAuthenticated) {
       alert.success("Registration Successful");
       // setTimeout(() => {
       //   navigate("/login");
       //   alert.show("Please Login");
       // }, 2000);
     }
-  }, [error, isRegistered, alert, navigate]);
+  }, [error, isRegistered, alert,isAuthenticated]);
 
   useEffect(() => {
     setFormData(initialState);
