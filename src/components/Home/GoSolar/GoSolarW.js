@@ -44,34 +44,32 @@ const GoSolar = () => {
     {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_money_hiutt5.svg",
-      head: "Make Money From Sun",
-      para: "Zunroof helps you save 100% on electricity bills, and also make money by selling excess solar units back to the grid",
+      head: "Turn Sunlight into Cash",
+      para: "Save up to 100% on electricity bills with SolarVerse! Generate excess energy and sell it back to the grid to earn money.",
     },
     {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_subsidy_fxmnlh.svg",
       head: "Attractive Subsidy",
-      para: "Avail upto 40% solar subsidy on total installation cost as per Government guidelines*",
+      para: "Get up to 40% solar subsidy on installation costs with SolarVerse, as per government guidelines*",
     },
     {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_graphics_m7ru8i.svg",
-      head: "Green Energy",
-      para: "1kW solar saves 154+ trees and prevents 20+ tons of CO2 emission",
+      head: "Carbon-neutral Energy",
+      para: "A 1kW solar system from SolarVerse can save 154+ trees and prevent 20+ tons of CO2 emissions. Join us in the fight against climate change.",
     },
     {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_return_a6cz1f.svg",
       head: "Return on Investment",
-      para: "Quick payback period of 3-4 years guaranteed, with pure profit following thereafter",
+      para: "Switch to SolarVerse and get a quick payback period of 3-4 years guaranteed, with pure profit following thereafter. Start saving and earning with solar energy.",
     },
   ];
 
   return (
     <div className="GoSolarContainer" data-aos="slide-left">
-      <h1 className="offerTitle">
-        Why Go Solar?
-      </h1>
+      <h1 className="offerTitle">Why Go Solar?</h1>
       <hr className="GoUnderline" />
 
       <div className="GoSolarSubContainer">

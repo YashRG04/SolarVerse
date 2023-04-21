@@ -149,7 +149,7 @@ const ServiceContainer = () => {
         </div>
 
         <div className="ButtonContainer">
-          <Link data-aos="fade-in" className="OfferedButton" to="/constactus">
+          <Link className="OfferedButton" to="/constactus">
             CONTACT US
           </Link>
         </div>

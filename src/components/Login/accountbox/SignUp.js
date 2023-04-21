@@ -72,12 +72,12 @@ const SignUp = () => {
           </Link>
           <h3 className="FormHeading">Sign Up</h3>
           <div className="FormSocialContainer">
-            <div className="FormSocial facebook">
+            {/* <div className="FormSocial facebook">
               <a href="http://localhost:8000/accounts/facebook/login/">
                 <BsFacebook className="FormSocialIcon" />
                 <p className="FormSocialText">Continue with Facebook</p>
               </a>
-            </div>
+            </div> */}
             <div className="FormSocial google">
               <a href="http://localhost:8000/accounts/google/login/">
                 <BsGoogle className="FormSocialIcon" />

@@ -18,23 +18,23 @@
 .GoSolarSubContainer {
   display: flex;
   flex-direction: row;
-  width: 66%;
+  width: 75%;
   margin-left: 5.4rem;
   margin-right: 5.4rem;
 }
 
 .GoSolarLeft {
-  width: 50%;
-  margin: 3rem 5rem 0rem 0rem;
+  width: 45%;
+  margin: 3rem 1rem 0rem 0rem;
   transition: all 0.5s ease-in-out;
 }
 
 .GoSolarRight {
-  width: 50%;
+  width: 55%;
 }
 
 .PointImage {
-  width: 3.15rem;
+  width: 2.75rem;
   margin: 0.5rem 1rem 1rem;
 }
 

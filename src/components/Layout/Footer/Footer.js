@@ -40,9 +40,9 @@ const Footer = (props) => {
             </div>
             <hr className="FooterHr" />
             <p className="FooterDescription">
-              Our goal to help our companies maintains achieve best position
-              their respective industries best team work that work have hand to
-              be repudiated research business around the world.
+              Power for better future! Solarverse is a digital platform
+              connecting solar equipment vendors and end consumers for the
+              deployment of solar solutions & related maintenance services
             </p>
             <div className="SocialMedia">
               <a target="_blank" href="https://www.facebook.com/">

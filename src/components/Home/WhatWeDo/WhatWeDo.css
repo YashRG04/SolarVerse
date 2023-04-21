@@ -24,7 +24,6 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
   margin-bottom: 2rem;
   padding-top: 1rem;
 }

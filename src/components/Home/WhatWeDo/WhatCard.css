@@ -1,6 +1,5 @@
 .WhatCard {
   width: 20%;
-  height: 23rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,12 +14,17 @@
   ) !important;
   margin: 2rem;
   transition: all 0.5s ease-in-out;
+  
 }
 
 .WhatCard:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
   transition: all 0.5s ease-in-out;
+}
+
+.WhatCardImage{
+  height: 7.4rem;
 }
 
 .WhatCardImage .WhatImage {
@@ -56,6 +60,7 @@
   margin: 0rem 0rem 0rem;
   line-height: 1.5;
   text-align: left;
+  transition: all 0.5s ease-in-out;
 }
 
 .Underline3 {
