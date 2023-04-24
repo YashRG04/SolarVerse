@@ -4,6 +4,9 @@ import "./WhatWeDo.css";
 import { WhatWeDoData1 } from "../../../assets/data/WhatWeDoData1";
 
 const WhatContainer = () => {
+
+  
+
   return (
     <Fragment>
       <div className="WhatContainer">
@@ -24,7 +27,6 @@ const WhatContainer = () => {
               );
             })}
           </div>
-          
         </div>
         
       </div>

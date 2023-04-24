@@ -20,7 +20,7 @@ const WhatCard = ({ name, id, description, image }) => {
     <Fragment>
       <div data-aos="zoom-in-left" className="WhatCard">
         <div className="WhatCardImage">
-          <img className="WhatImage" src={image} alt={name} />
+          <img className={`WhatImage ${id}`} src={image} alt={name} />
         </div>
         <h1 className="WhatName">{name}</h1>
         <hr className="Underline3" />
