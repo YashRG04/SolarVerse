@@ -1,26 +1,36 @@
+import { useDispatch, useSelector } from "react-redux";
 import "./BannerForm.css";
 import React, { useState } from "react";
+import { postEnquiry } from "../../../../service/actions/userAction";
 
 const BannerForm = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [pincode, setPincode] = useState("");
-  const [electricityBill, setElectricityBill] = useState("");
 
-  const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value);
-  };
+  const dispatch=useDispatch();
+  const {message}=useSelector((state)=>state.enquiry);
+ 
+  const initialState={
+    phone_number:"",
+    pin_code:"",
+    bill_amount:""
+  }
+  const [bannerform,setBannerform]=useState(initialState);
 
-  const handlePincodeChange = (event) => {
-    setPincode(event.target.value);
-  };
-
-  const handleElectricityBillChange = (event) => {
-    setElectricityBill(event.target.value);
-  };
-
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // your form submission logic goes here
+    console.log(bannerform);
+    dispatch(postEnquiry(bannerform));
+
+    setBannerform({
+      phone_number:"",
+      pin_code:"",
+      bill_amount:""
+    });
+    setTimeout(() => {
+      dispatch({ type: "CLEAR_ENQUIRY_MESSAGE" });
+    }, 8000);
+    
+
   };
 
   return (
@@ -31,9 +41,9 @@ const BannerForm = () => {
         <input
           type="tel"
           id="phone-number"
-          name="phone-number"
-          value={phoneNumber}
-          onChange={handlePhoneNumberChange}
+          name="phone_number"
+          value={bannerform.phone_number}
+          onChange={(e) => setBannerform({ ...bannerform, phone_number : e.target.value})}
           pattern="[0-9]{10}"
           required
         />
@@ -43,9 +53,9 @@ const BannerForm = () => {
         <input
           type="text"
           id="pincode"
-          name="pincode"
-          value={pincode}
-          onChange={handlePincodeChange}
+          name="pin_code"
+          value={bannerform.pin_code}
+          onChange={(e) => setBannerform({ ...bannerform, pin_code: e.target.value })}
           pattern="[0-9]{6}"
           required
         />
@@ -56,9 +66,9 @@ const BannerForm = () => {
         </label>
         <select
           id="electricity-bill"
-          name="electricity-bill"
-          value={electricityBill}
-          onChange={handleElectricityBillChange}
+          name="bill_amount"
+          value={bannerform.bill_amount}
+          onChange={(e) => setBannerform({ ...bannerform, bill_amount: e.target.value })}
           required
         >
           <option value="">Select an option</option>
@@ -71,6 +81,7 @@ const BannerForm = () => {
       <button type="submit" className="banner-form-submit-button">
         Submit
       </button>
+      <span>{message}</span>
     </form>
   );
 };
