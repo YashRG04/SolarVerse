@@ -7,7 +7,7 @@ import {
 } from "react-icons/bs";
 
 export default function ServiceBtnSlider({ direction, moveSlide }) {
-  console.log(direction, moveSlide);
+  // console.log(direction, moveSlide);
   return (
     <button
       onClick={moveSlide}

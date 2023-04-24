@@ -5,6 +5,8 @@ import {
   REGISTER_USER_REQUEST,
   REGISTER_USER_SUCCESS,
   REGISTER_USER_FAIL,
+  POST_ENQUIRY_SUCCESS,
+  POST_ENQUIRY_FAIL,
 } from "../constants/userConstants";
 import axios from "axios";
 
@@ -88,6 +90,28 @@ export const getUser = () => async (dispatch) => {
     });
   }
 };
+
+export const postEnquiry = (bannerform)=> async(dispatch)=>{
+  try {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const {data} = await axios.post(`api/enquiry/`,bannerform,config);
+    console.log(data);  
+    dispatch({ type: POST_ENQUIRY_SUCCESS, payload: data.message });
+
+  } catch (error) {
+    dispatch({
+      type:POST_ENQUIRY_FAIL,
+      payload: error.response.data.non_field_errors
+    });
+    
+  }
+}
+
+
 
 // Helper function to get CSRF token from cookies
 const getCSRFToken = () => {

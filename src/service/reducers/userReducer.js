@@ -5,6 +5,8 @@ import {
   REGISTER_USER_REQUEST,
   REGISTER_USER_SUCCESS,
   REGISTER_USER_FAIL,
+  POST_ENQUIRY_SUCCESS,
+  POST_ENQUIRY_FAIL
 } from "../constants/userConstants";
 
 export const loginuserReducer = (state = { user: {} }, action) => {
@@ -94,3 +96,25 @@ export const getUserReducer = (state = { user: {} }, action) => {
       return state;
   }
 };
+
+export const enquiryReducer=(state={},action)=>{
+
+  switch(action.type){
+    case POST_ENQUIRY_SUCCESS:
+      return {
+        message: action.payload
+      }
+
+    case POST_ENQUIRY_FAIL:
+      return{
+        message: action.payload
+      }
+    case "CLEAR_ENQUIRY_MESSAGE":
+      return {
+        message:""
+      }
+
+    default:
+      return state;
+  }
+}

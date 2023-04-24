@@ -9,6 +9,11 @@
   /* color:black; */
   color: white;
 }
+.banner-form >span{
+  font-size: 0.8rem;
+  margin-top: 1vh;
+  color: rgb(57, 181, 74);
+}
 
 .BannerFormAboutContaier{
   display: flex;

@@ -1,32 +1,48 @@
 import "./BannerForm2.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImCross } from "react-icons/im";
+import {useAlert} from "react-alert"
+import { postEnquiry } from "../../../../service/actions/userAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const BannerForm2 = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [pincode, setPincode] = useState("");
-  const [electricityBill, setElectricityBill] = useState("");
-  const [open, setOpen] = useState("true");
+  const dispatch = useDispatch();
+  const alert=useAlert();
+  const { message } = useSelector((state) => state.enquiry);
 
-  const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value);
-  };
-
-  const handlePincodeChange = (event) => {
-    setPincode(event.target.value);
-  };
-
-  const handleElectricityBillChange = (event) => {
-    setElectricityBill(event.target.value);
-  };
-
+  const initialState = {
+    phone_number: "",
+    pin_code: "",
+    bill_amount: ""
+  }
+  const [bannerform, setBannerform] = useState(initialState);
+  const [open,setOpen]=useState("true");
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    // your form submission logic goes here
+    console.log(bannerform);
+    dispatch(postEnquiry(bannerform));
+
+    setBannerform({
+      phone_number: "",
+      pin_code: "",
+      bill_amount: ""
+    });
+    setOpen("");
+    setTimeout(() => {
+      dispatch({ type: "CLEAR_ENQUIRY_MESSAGE" });
+    }, 8000);
   };
+
   const handleCross = (e) => {
     setOpen("");
   };
+  useEffect(()=>{
+    if(message)
+    {
+      alert.success(message);
+    }
+  },[dispatch,message])
 
   return (
     open && (
@@ -44,8 +60,8 @@ const BannerForm2 = () => {
               type="tel"
               id="phone-number"
               name="phone-number"
-              value={phoneNumber}
-              onChange={handlePhoneNumberChange}
+              value={bannerform.phone_number}
+              onChange={(e) => setBannerform({ ...bannerform, phone_number: e.target.value })}
               pattern="[0-9]{10}"
               required
             />
@@ -56,8 +72,8 @@ const BannerForm2 = () => {
               type="text"
               id="pincode"
               name="pincode"
-              value={pincode}
-              onChange={handlePincodeChange}
+              value={bannerform.pin_code}
+              onChange={(e) => setBannerform({ ...bannerform, pin_code: e.target.value })}
               pattern="[0-9]{6}"
               required
             />
@@ -69,8 +85,8 @@ const BannerForm2 = () => {
             <select
               id="electricity-bill"
               name="electricity-bill"
-              value={electricityBill}
-              onChange={handleElectricityBillChange}
+              value={bannerform.bill_amount}
+              onChange={(e) => setBannerform({ ...bannerform, bill_amount: e.target.value })}
               required
             >
               <option value="">Select an option</option>
@@ -85,6 +101,7 @@ const BannerForm2 = () => {
               <input
                 type="checkbox"
                 id="checkbox"
+                required
 
                 // checked={isChecked}
                 // onChange={handleCheckboxChange}
@@ -100,6 +117,7 @@ const BannerForm2 = () => {
           <button type="submit" className="banner-form2-submit-button">
             Submit
           </button>
+          
         </form>
       </>
     )
