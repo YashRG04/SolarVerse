@@ -31,10 +31,10 @@ const NavLinks = (props) => {
     { name: "Services", url: "/services/d1" },
     // { name: "My Bookings", url: "/mybookings" },
     { name: "About Us", url: "/about" },
-    {
-      name: user ? `Hello ${user.first_name}` : "Login",
-      url: user ? "/profile" : "/login",
-    },
+    // {
+    //   name: user ? `Hello ${user.first_name}` : "Login",
+    //   url: user ? "/profile" : "/login",
+    // },
   ];
 
   const animateFrom = { opacity: 0, y: 50 };
@@ -67,11 +67,12 @@ const NavLinks = (props) => {
           );
         })}
 
-        <motion.li initial={animateFrom} animate={animateTo} className="li">
+        {/* <motion.li initial={animateFrom} animate={animateTo} className="li">
           <Link to={props.data.Login.login ? "/profile" : "/login"}>
             {<FaUserAlt className="ProfileLogo" />}
           </Link>
-        </motion.li>
+        </motion.li> */}
+        
       </motion.ul>
     </Fragment>
   );

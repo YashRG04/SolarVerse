@@ -1,23 +1,23 @@
 import "./BannerForm2.css";
 import React, { useEffect, useState } from "react";
 import { ImCross } from "react-icons/im";
-import {useAlert} from "react-alert"
+import { useAlert } from "react-alert";
 import { postEnquiry } from "../../../../service/actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const BannerForm2 = () => {
   const dispatch = useDispatch();
-  const alert=useAlert();
+  const alert = useAlert();
   const { message } = useSelector((state) => state.enquiry);
 
   const initialState = {
     phone_number: "",
     pin_code: "",
-    bill_amount: ""
-  }
+    bill_amount: "",
+  };
   const [bannerform, setBannerform] = useState(initialState);
-  const [open,setOpen]=useState("true");
-  
+  const [open, setOpen] = useState("true");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(bannerform);
@@ -26,7 +26,7 @@ const BannerForm2 = () => {
     setBannerform({
       phone_number: "",
       pin_code: "",
-      bill_amount: ""
+      bill_amount: "",
     });
     setOpen("");
     setTimeout(() => {
@@ -37,12 +37,11 @@ const BannerForm2 = () => {
   const handleCross = (e) => {
     setOpen("");
   };
-  useEffect(()=>{
-    if(message)
-    {
+  useEffect(() => {
+    if (message) {
       alert.success(message);
     }
-  },[dispatch,message])
+  }, [dispatch, message]);
 
   return (
     open && (
@@ -61,7 +60,9 @@ const BannerForm2 = () => {
               id="phone-number"
               name="phone-number"
               value={bannerform.phone_number}
-              onChange={(e) => setBannerform({ ...bannerform, phone_number: e.target.value })}
+              onChange={(e) =>
+                setBannerform({ ...bannerform, phone_number: e.target.value })
+              }
               pattern="[0-9]{10}"
               required
             />
@@ -73,27 +74,31 @@ const BannerForm2 = () => {
               id="pincode"
               name="pincode"
               value={bannerform.pin_code}
-              onChange={(e) => setBannerform({ ...bannerform, pin_code: e.target.value })}
+              onChange={(e) =>
+                setBannerform({ ...bannerform, pin_code: e.target.value })
+              }
               pattern="[0-9]{6}"
               required
             />
           </div>
           <div className="banner-form2-field">
             <label htmlFor="electricity-bill">
-              Select highest electricity bill for last year:
+              Select highest monthly electricity bill for last year:
             </label>
             <select
               id="electricity-bill"
               name="electricity-bill"
               value={bannerform.bill_amount}
-              onChange={(e) => setBannerform({ ...bannerform, bill_amount: e.target.value })}
+              onChange={(e) =>
+                setBannerform({ ...bannerform, bill_amount: e.target.value })
+              }
               required
             >
               <option value="">Select an option</option>
-              <option value="500">Less than $500</option>
-              <option value="1000">$500-$1000</option>
-              <option value="2000">$1000-$2000</option>
-              <option value="2000+">More than $2000</option>
+              <option value="2000">Less than ₹2000</option>
+              <option value="4000">₹2000-₹4000</option>
+              <option value="6000">₹4000-₹6000</option>
+              <option value="8000+">More than ₹8000</option>
             </select>
           </div>
           <div className="banner-form-checkbox">
@@ -107,7 +112,7 @@ const BannerForm2 = () => {
                 // onChange={handleCheckboxChange}
               />
               <span>
-                By providing my phone number, I agree that zunroof can contact
+                By providing my phone number, I agree that Thriible can contact
                 me via phone/email/whatsapp and/or prerecorded messages using
                 the number provided
               </span>
@@ -117,7 +122,6 @@ const BannerForm2 = () => {
           <button type="submit" className="banner-form2-submit-button">
             Submit
           </button>
-          
         </form>
       </>
     )

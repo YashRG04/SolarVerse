@@ -55,9 +55,11 @@
 }
 
 .Logo {
-  margin-left: 0.5vmax;
-  width: 4.2rem;
+  margin-left: 2rem;
+  width: 9.5rem;
+  height: 5.9375rem;
   cursor: pointer;
+  margin-right: 0.5rem;
 }
 
 .LogoText {

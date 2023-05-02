@@ -5,7 +5,7 @@ const Banner3 = () => {
     <div className="banner3">
       <h1>Best Price Challenge</h1>
       {/* <div></div> */}
-      <p>Getting quality for cheaper?take 10% of our cost</p>
+      <p>Best quality in cheap price</p>
       
       {/* <div></div> */}
     </div>

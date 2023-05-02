@@ -27,22 +27,24 @@ const Footer = (props) => {
       <div className="FooterContainer">
         <div className="Footer">
           <div className="LeftFooter">
-            <div className="LeftContainer">
+            <div className="LeftContainer1">
               <img
-                className="FooterLogo Logo"
+                className="FooterLogo"
                 src={logo}
                 alt="SolarVerse Logo"
                 onClick={() => {
                   navigate("/");
                 }}
               />
-              <h1 className="LogoTextTitle">SolarVerse</h1>
+              {/* <h1 className="LogoTextTitle">SolarVerse</h1> */}
             </div>
             <hr className="FooterHr" />
             <p className="FooterDescription">
-              Power for better future! Solarverse is a digital platform
-              connecting solar equipment vendors and end consumers for the
-              deployment of solar solutions & related maintenance services
+              <span>Power for better future!</span>
+              <br></br>
+              Thriible is a digital platform connecting solar equipment
+              vendors and end consumers for the deployment of solar solutions &
+              related maintenance services
             </p>
             <div className="SocialMedia">
               <a target="_blank" href="https://www.facebook.com/">
@@ -84,7 +86,7 @@ const Footer = (props) => {
                     href="Tel:9999988888"
                     className="RightFooterDescription Telephone"
                   >
-                    99999988888
+                    9990565994
                   </a>
                 </div>
               </li>
@@ -105,10 +107,10 @@ const Footer = (props) => {
                   <IoLocationSharp className="RightFooterIcon LocationIcon" />
                   <a
                     target="_blank"
-                    href="https://goo.gl/maps/Rba3DEYBUYEatUYo7"
+                    href="https://www.google.com/maps/place/28%C2%B045'02.0%22N+77%C2%B006'58.8%22E/@28.7505781,77.1163666,19.92z/data=!4m4!3m3!8m2!3d28.750556!4d77.116338"
                     className="RightFooterDescription Location"
                   >
-                    Solarverse Technologies Pvt. Ltd. Plot No. 150, Sector 19
+                    Thriible Technologies, Delhi Technological University, Shahbad
                     Rohini, Delhi - 110042
                   </a>
                 </div>

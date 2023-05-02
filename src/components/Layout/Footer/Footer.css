@@ -20,13 +20,13 @@
 }
 
 .FooterHr {
-  width: 30%;
+  width: 23%;
   border: 0;
   background-color: #ffdd02;
   height: 0.2em;
   border-radius: 0.3em;
-  margin: 0.5rem 0rem 1rem;
-  text-align: center;
+  margin: 0rem 0rem 1rem -14rem;
+  text-align: left;
 }
 
 .LeftFooter {
@@ -36,9 +36,12 @@
   align-items: center;
 }
 
+.LeftContainer1{
+  margin-left: -15rem;
+}
+
 .FooterLogo {
-  width: 3.5rem;
-  border-radius: 50%;
+  width: 5rem;
 }
 
 .LogoTextTitle {
@@ -54,6 +57,10 @@
   color: #bababa;
   line-height: 1.5;
   margin: 0rem 1rem 1rem;
+}
+
+.FooterDescription span{
+  font-weight: 600;
 }
 
 .SocialMedia {

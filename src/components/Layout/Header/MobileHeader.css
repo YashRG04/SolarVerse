@@ -23,10 +23,11 @@
 }
 
 .Logo1 {
-  width: 4.2rem;
+  width: 6rem;
   cursor: pointer;
-  margin-left: -7rem;
-  margin-right: 3rem;
+  margin-left: 15rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0rem;
    user-select: none;
    -moz-user-select: none;
    -webkit-user-drag: none;

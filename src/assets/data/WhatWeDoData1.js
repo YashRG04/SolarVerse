@@ -27,7 +27,7 @@ export const WhatWeDoData1 = [
     id: "w4",
     name: "Maintenance",
     description:
-      "At SolarVerse, we don't just sell solar systems - we provide end-to-end solutions. From design and installation to maintenance and support, we're here for you every step of the way. Experience hassle-free solar energy with us.",
+      "At Thriible, we don't just sell solar systems - we provide end-to-end solutions. From design and installation to maintenance and support, we're here for you every step of the way. Experience hassle-free solar energy with us.",
     image:
       "https://res.cloudinary.com/yashrg04/image/upload/v1680269042/Solarverse/Maintanance_tm4kod-removebg-preview_knptto.png",
   },

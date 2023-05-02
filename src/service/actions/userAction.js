@@ -57,7 +57,7 @@ export const register = (userData, navigate) => async (dispatch) => {
     localStorage.setItem("access_token", data.access);
     navigate("/");
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data });
-    dispatch(getUser());
+    // dispatch(getUser());
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
@@ -98,7 +98,7 @@ export const postEnquiry = (bannerform)=> async(dispatch)=>{
         "Content-Type": "application/json",
       },
     };
-    const {data} = await axios.post(`api/enquiry/`,bannerform,config);
+    const {data} = await axios.post(`/api/enquiry/`,bannerform,config);
     console.log(data);  
     dispatch({ type: POST_ENQUIRY_SUCCESS, payload: data.message });
 
@@ -110,7 +110,6 @@ export const postEnquiry = (bannerform)=> async(dispatch)=>{
     
   }
 }
-
 
 
 // Helper function to get CSRF token from cookies

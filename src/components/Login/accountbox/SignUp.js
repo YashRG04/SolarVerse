@@ -66,7 +66,7 @@ const SignUp = () => {
           <Link to="/">
             <div className="FormLogoContainer SignupLogo">
               <img className="FormLogo" src={logo} alt="MeriElectricity Logo" />
-              <h3 className="FormLogoText">MeriElectricity</h3>
+              {/* <h3 className="FormLogoText">MeriElectricity</h3> */}
             </div>
           </Link>
           <h3 className="FormHeading">Sign Up</h3>

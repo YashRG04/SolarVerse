@@ -52,7 +52,7 @@ const Header = (props) => {
               navigate("/");
             }}
           />
-          <Link
+          {/* <Link
             to="/"
             className="LogoText"
             style={{
@@ -67,7 +67,7 @@ const Header = (props) => {
             }}
           >
             SolarVerse
-          </Link>
+          </Link> */}
         </div>
         <div className="RightContainer">
           <NavLinks data={props.data} />

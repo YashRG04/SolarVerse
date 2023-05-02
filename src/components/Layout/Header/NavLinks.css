@@ -52,7 +52,7 @@ li:last-child {
 }
 
 .li2:last-child a:hover {
-  border-bottom: none;
+  /* border-bottom: none; */
 }
 
 

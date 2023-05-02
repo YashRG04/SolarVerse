@@ -42,14 +42,14 @@ const MobileHeader = (props) => {
           <img
             className="Logo1"
             src={logo}
-            alt="SolarVerse Logo"
+            alt="Thriible Logo"
             onClick={() => {
               navigate("/");
             }}
           />
-          <Link to="/" className="LogoText">
+          {/* <Link to="/" className="LogoText">
             SolarVerse
-          </Link>
+          </Link> */}
         </div>
 
         <div className="RightContainer1">

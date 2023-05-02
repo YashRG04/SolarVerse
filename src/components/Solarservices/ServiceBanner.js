@@ -14,7 +14,7 @@ const ServiceBanner = (props) => {
         <div className="hero-text">
           <h1>{props.heading}</h1>
           <div className="ButtonContainer">
-            <Link className="Purchase" to="/booking">
+            <Link className="Purchase" to="/">
               PURCHASE PLAN
             </Link>
           </div>

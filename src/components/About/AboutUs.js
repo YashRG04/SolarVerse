@@ -18,7 +18,7 @@ const AboutUs = () => {
         }}
       >
         <div className="hero-text">
-          <h1>WE ARE SOLARVERSE</h1>
+          <h1>WE ARE Thriible</h1>
         </div>
       </div>
 
@@ -142,7 +142,7 @@ const AboutUs = () => {
           ​continue to grow
         </p>
       </div>
-      <div className="AOurTeam">
+      {/* <div className="AOurTeam">
         <h1 className="Teamoh1">OUR TEAM</h1>
         <div className="Teamline"></div>
 
@@ -159,7 +159,7 @@ const AboutUs = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

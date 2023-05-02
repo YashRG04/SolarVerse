@@ -41,7 +41,7 @@ const DomesticService = () => {
         </div> */}
 
         <div className="ButtonContainer">
-          <Link className="Purchase" to="/booking">
+          <Link className="Purchase" to="/">
             PURCHASE PLAN
           </Link>
         </div>

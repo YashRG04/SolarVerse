@@ -35,7 +35,7 @@ const dataSlider = [
     id: 4,
     title: "Lorem ipsum",
     subTitle: "Lorem",
-    url: "https://cleanersineurope.com/wp-content/uploads/2022/03/solar-panel-cleaning-2-1.jpg",
+    url: "https://e0.pxfuel.com/wallpapers/517/856/desktop-wallpaper-solar-panels.jpg",
     heading: "Hello peter5",
   },
 ];

@@ -95,8 +95,8 @@ const Login = () => {
         <div className="LoginForm FormCard">
           <Link to="/">
             <div className="FormLogoContainer">
-              <img className="FormLogo" src={logo} alt="MeriElectricity Logo" />
-              <h3 className="FormLogoText">MeriElectricity</h3>
+              <img className="FormLogo" src={logo} alt="Thriible" />
+              {/* <h3 className="FormLogoText">Thriible</h3> */}
             </div>
           </Link>
           <h3 className="FormHeading">Login</h3>

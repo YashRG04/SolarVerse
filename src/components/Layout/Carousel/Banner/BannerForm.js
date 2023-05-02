@@ -62,7 +62,7 @@ const BannerForm = () => {
       </div>
       <div className="banner-form-field">
         <label htmlFor="electricity-bill">
-          Select highest electricity bill for last year:
+          Select highest monthly electricity bill for last year:
         </label>
         <select
           id="electricity-bill"
@@ -72,10 +72,10 @@ const BannerForm = () => {
           required
         >
           <option value="">Select an option</option>
-          <option value="500">Less than $500</option>
-          <option value="1000">$500-$1000</option>
-          <option value="2000">$1000-$2000</option>
-          <option value="2000+">More than $2000</option>
+          <option value="2000">Less than ₹2000</option>
+          <option value="4000">₹2000-₹4000</option>
+          <option value="6000">₹4000-₹6000</option>
+          <option value="8000+">More than ₹8000</option>
         </select>
       </div>
       <button type="submit" className="banner-form-submit-button">

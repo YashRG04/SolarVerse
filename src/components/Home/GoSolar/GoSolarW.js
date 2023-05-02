@@ -45,25 +45,25 @@ const GoSolar = () => {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_money_hiutt5.svg",
       head: "Turn Sunlight into Cash",
-      para: "Save up to 100% on electricity bills with SolarVerse! Generate excess energy and sell it back to the grid to earn money.",
+      para: "Save up to 100% on electricity bills with Thriible! Generate excess energy and sell it back to the grid to earn money.",
     },
     {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_subsidy_fxmnlh.svg",
       head: "Attractive Subsidy",
-      para: "Get up to 40% solar subsidy on installation costs with SolarVerse, as per government guidelines*",
+      para: "Get up to 40% solar subsidy on installation costs with Thriible, as per government guidelines*",
     },
     {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_graphics_m7ru8i.svg",
       head: "Carbon-neutral Energy",
-      para: "A 1kW solar system from SolarVerse can save 154+ trees and prevent 20+ tons of CO2 emissions. Join us in the fight against climate change.",
+      para: "A 1kW solar system from Thriible can save 154+ trees and prevent 20+ tons of CO2 emissions. Join us in the fight against climate change.",
     },
     {
       image:
         "https://res.cloudinary.com/yashrg04/image/upload/v1680357374/Solarverse_return_a6cz1f.svg",
       head: "Return on Investment",
-      para: "Switch to SolarVerse and get a quick payback period of 3-4 years guaranteed, with pure profit following thereafter. Start saving and earning with solar energy.",
+      para: "Switch to Thriible and get a quick payback period of 3-4 years guaranteed, with pure profit following thereafter. Start saving and earning with solar energy.",
     },
   ];
 
@@ -83,7 +83,7 @@ const GoSolar = () => {
                 <li className="RightPoint">
                   <img
                     src={point.image}
-                    alt="solarverse"
+                    alt="Thriible"
                     className="PointImage"
                   />
                   <div className="PointDesc">
