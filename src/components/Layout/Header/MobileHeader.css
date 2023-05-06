@@ -25,7 +25,7 @@
 .Logo1 {
   width: 6rem;
   cursor: pointer;
-  margin-left: 15rem;
+  /* margin-left: 15rem; */
   margin-bottom: 0.5rem;
   margin-right: 0rem;
    user-select: none;
