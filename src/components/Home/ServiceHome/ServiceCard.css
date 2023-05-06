@@ -106,3 +106,10 @@
     width: 45%;
   }
 }
+
+@media screen and (max-width: 1300px) and (min-width: 810px) {
+  .ServiceDescription {
+    font-size: 0.9rem;
+    height: 15rem;
+  }
+}

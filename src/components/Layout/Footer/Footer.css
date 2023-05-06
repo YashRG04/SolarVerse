@@ -8,8 +8,8 @@
   font-family: "belleza", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .Footer {
@@ -17,6 +17,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 3rem 0 0rem;
+  text-align: left;
 }
 
 .FooterHr {
@@ -25,7 +26,7 @@
   background-color: #ffdd02;
   height: 0.2em;
   border-radius: 0.3em;
-  margin: 0rem 0rem 1rem -14rem;
+  margin: 0rem 0rem 1rem 1rem;
   text-align: left;
 }
 
@@ -33,11 +34,11 @@
   width: 22%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
 }
 
 .LeftContainer1{
-  margin-left: -15rem;
+  margin-left: 0.5rem;
 }
 
 .FooterLogo {
@@ -86,7 +87,11 @@
 .CenterFooter {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: left;
+}
+
+.CenterFooterList{
+  text-align: left;
 }
 
 .CenterFooterTitle {
@@ -96,13 +101,17 @@
 }
 
 .CenterHr {
-  width: 50%;
+  width: 100%;
   border: 0;
   background-color: #ffdd02;
   height: 0.2em;
   border-radius: 0.3em;
   margin: 0.5rem 0rem 0rem;
   text-align: center;
+}
+
+.UsefulLinks{
+  margin: 1.5rem 0rem 1.5rem 0rem !important;
 }
 
 .UsefulLinks a {
@@ -133,12 +142,12 @@
 }
 
 .RightHr {
-  width: 30%;
+  width: 56%;
   border: 0;
   background-color: #ffdd02;
   height: 0.2em;
   border-radius: 0.3em;
-  margin: 0.5rem 2.5rem 0rem;
+  margin: 0.5rem 0rem 0rem;
   text-align: center;
 }
 
@@ -253,6 +262,7 @@
 
   .RightHr {
     margin-bottom: 1rem;
+    width: 35%;
   }
 
   .LocationIcon{

@@ -107,7 +107,7 @@ const DomesticService = () => {
                   </ul>
                   <div className="ButtonContainer">
                     <Link className="Purchase RightCardButton" to="/">
-                      PURCHASE PLAN
+                      BOOK NOW
                     </Link>
                   </div>
                 </div>
@@ -116,11 +116,11 @@ const DomesticService = () => {
           </div>
         </div>
 
-        <div className="ButtonContainer">
+        {/* <div className="ButtonContainer">
           <Link className="Purchase" to="/">
             BOOK NOW
           </Link>
-        </div>
+        </div> */}
 
         <div className="RemainingServices">
           <h1>Other Services</h1>
