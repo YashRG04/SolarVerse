@@ -10,15 +10,16 @@ const ServiceContent = (props) => {
   return (
     <Fragment>
       <div className="ServiceContentContainer">
-        <div className="ServiceContentHeading">
+        <div className="ServiceContentHeading WhatContainerHeading">
           <h1>{props.heading}</h1>
+          <hr className="Underline2 u3" />
         </div>
         <div className="ServiceContentText">
           <p>
            {props.content}
           </p>
         </div>
-        <div className="ServiceContentPoint">
+        {/* <div className="ServiceContentPoint">
           <div className="ListContainer">
             <ul className="List1">
               <motion.li
@@ -57,7 +58,7 @@ const ServiceContent = (props) => {
               </motion.li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );

@@ -30,7 +30,7 @@ const NavLinks = (props) => {
     { name: "Home", url: "/" },
     { name: "Services", url: "/services/d1" },
     // { name: "My Bookings", url: "/mybookings" },
-    { name: "About Us", url: "/about" },
+    // { name: "About Us", url: "/about" },
     // {
     //   name: user ? `Hello ${user.first_name}` : "Login",
     //   url: user ? "/profile" : "/login",
@@ -46,7 +46,7 @@ const NavLinks = (props) => {
         className={`NavLinks ${
           location.pathname === "/login" ||
           location.pathname === "/forgot" ||
-          location.pathname === "/reset"
+          location.pathname === "/reset" 
             ? " loginlink"
             : isScrolled
             ? "scrolled1"

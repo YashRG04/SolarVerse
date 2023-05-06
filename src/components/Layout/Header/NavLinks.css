@@ -33,7 +33,7 @@ li a {
   color: #000;
 }
 
-li:last-child {
+.li2:last-child {
   margin-right: 3rem;
 }
 
@@ -144,6 +144,10 @@ li:last-child a:hover svg {
   .li3 a, .li4 a{
     font-size: 1rem;
     color: #000;
+  }
+
+  .li2:last-child {
+    margin-right: 0rem;
   }
 
   .dropbtn{

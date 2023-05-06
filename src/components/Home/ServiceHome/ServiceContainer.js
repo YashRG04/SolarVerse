@@ -148,11 +148,11 @@ const ServiceContainer = () => {
           <ServiceBtnSlider moveSlide={prevSlide} direction={"prevService"} />
         </div>
 
-        <div className="ButtonContainer">
+        {/* <div className="ButtonContainer">
           <Link className="OfferedButton" to="/constactus">
             CONTACT US
           </Link>
-        </div>
+        </div> */}
         {/* <div className="CommercialService">
           <h1 className="ServiceTitle">COMMERCIAL SERVICES</h1>
           <hr className="Underline" />
