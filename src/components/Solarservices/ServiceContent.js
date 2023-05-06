@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "./ServiceContent.css";
 import { motion } from "framer-motion";
 import { BsFillCheckCircleFill } from "react-icons/bs";
@@ -6,6 +6,15 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 const ServiceContent = (props) => {
   const animateFrom = { opacity: 0, y: 50 };
   const animateTo = { opacity: 1, y: 0 };
+
+  const [showFullDescription, setShowFullDescription] = useState(false);
+  const truncatedDescription =
+    props.content.split(" ").slice(0, 100).join(" ") + " ...";
+
+  const toggleShowFullDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
 
   return (
     <Fragment>
@@ -16,7 +25,16 @@ const ServiceContent = (props) => {
         </div>
         <div className="ServiceContentText">
           <p>
-           {props.content}
+           {/* {props.content} */}
+           {showFullDescription ? props.content+" " : truncatedDescription}
+          {props.content.split(" ").length > 100 && (
+            <button
+              onClick={toggleShowFullDescription}
+              className="BackToPasswordLoginButton"
+            >
+              {showFullDescription ? "Read less" : "Read more"}
+            </button>
+          )}
           </p>
         </div>
         {/* <div className="ServiceContentPoint">
