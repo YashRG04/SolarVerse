@@ -9,28 +9,25 @@
   /* color:black; */
   color: white;
 }
-.banner-form >span{
+.banner-form > span {
   font-size: 0.8rem;
   margin-top: 1vh;
   color: rgb(57, 181, 74);
 }
 
-.BannerFormAboutContaier{
+.BannerFormAboutContaier {
   display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 70vw; 
-    right:7vw;
-    top: 7.5rem;
-
+  flex-direction: column;
+  position: absolute;
+  left: 70vw;
+  right: 7vw;
+  top: 7.5rem;
 }
 @media screen and (max-width: 768px) {
- 
-  .BannerFormAboutContaier{
+  .BannerFormAboutContaier {
     display: none;
   }
 }
-
 
 .banner-form-heading {
   font-size: 1rem;

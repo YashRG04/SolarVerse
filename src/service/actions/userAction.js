@@ -8,31 +8,26 @@ import {
   POST_ENQUIRY_SUCCESS,
   POST_ENQUIRY_FAIL,
 } from "../constants/userConstants";
-import axios from "axios";
+import api from './api'
 
 // Login User
 export const login = (email, password, navigate) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
 
-    const { data } = await axios.post(
+    const { data } = await api.post(
       `api/login/`,
       { username: email, password },
-      config
     );
-
+    console.log(data);
     // Store access token in local storage
     localStorage.setItem("access_token", data.access);
-
+    localStorage.setItem("refresh_token", data.refresh);
     navigate("/");
     dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
     dispatch(getUser());
+
   } catch (error) {
     console.log(error);
     dispatch({
@@ -46,16 +41,9 @@ export const login = (email, password, navigate) => async (dispatch) => {
 export const register = (userData, navigate) => async (dispatch) => {
   try {
     dispatch({ type: REGISTER_USER_REQUEST });
+    const { data } = await api.post(`api/register/`, userData);
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const { data } = await axios.post(`api/register/`, userData, config);
-
-    localStorage.setItem("access_token", data.access);
-    navigate("/");
+    navigate("/login");
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data });
     // dispatch(getUser());
   } catch (error) {
@@ -68,20 +56,9 @@ export const register = (userData, navigate) => async (dispatch) => {
 
 export const getUser = () => async (dispatch) => {
   try {
-    const access_token = localStorage.getItem("access_token");
-    if (!access_token) {
-      throw new Error("No access token found");
-    }
+   
+    const { data } = await api.get(`api/login/`);
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${access_token}`,
-        "X-CSRFToken": getCSRFToken(),
-      },
-    };
-
-    const { data } = await axios.get(`api/login/`, config);
     dispatch({ type: "GET_USER_SUCCESS", payload: data });
   } catch (error) {
     dispatch({
@@ -93,12 +70,8 @@ export const getUser = () => async (dispatch) => {
 
 export const postEnquiry = (bannerform)=> async(dispatch)=>{
   try {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const {data} = await axios.post(`/api/enquiry/`,bannerform,config);
+   
+    const {data} = await api.post(`/api/enquiry/`,bannerform);
     console.log(data);  
     dispatch({ type: POST_ENQUIRY_SUCCESS, payload: data.message });
 
