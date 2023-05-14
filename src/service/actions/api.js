@@ -1,19 +1,24 @@
 import axios from 'axios';
 
+axios.defaults.withCredentials = true;
+// Set the CSRF token from the cookie as a default header
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName = 'X-CSRFToken';
+
 
 const api = axios.create({
   baseURL: 'https://staging.merielectricity.in/',
-  
    headers: {
     'Content-Type': 'application/json',
+    // 'Origin':'http://localhost:3000'
   },
 });
 
 // Function to refresh the access token
 const refreshAccessToken = async () => {
   // Send a request to your server to refresh the access token
-  const response = await axios.post('https://your-api-url.com/refreshToken', {
-    refreshToken: localStorage.getItem('refreshToken'),
+  const response = await axios.post('https://staging.merielectricity.in/api/login/refresh/ ', {
+    refresh: localStorage.getItem('refresh_token')
   });
 
   // Update the access token in local storage
@@ -48,7 +53,9 @@ api.interceptors.response.use(
     const originalRequest = error.config;
      console.log(error);
     // If the error is a 401 and we haven't already retried the request
-    if (error.response?.status === 401 && !originalRequest._retry) {
+    // if (error.response?.status === 401 && !originalRequest._retry) {
+    if (error.response?.status === 405) {
+
       originalRequest._retry = true;
 
       try {

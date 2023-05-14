@@ -12,7 +12,7 @@ const SignUp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { error, loading, isRegistered } = useSelector(
+  const { error, loading, isRegistered,user } = useSelector(
     (state) => state.registerUser
   );
 
@@ -43,14 +43,20 @@ const SignUp = () => {
     if (error) {
       alert.error(error);
     }
+    // if(user)
+    // {
+    //   alert.success(user);
+    //    navigate("/login");
+    //    dispatch({ type: "REGISTER_USER_CLEAR" });
+    // }
     if (isRegistered && isAuthenticated) {
       alert.success("Registration Successful");
       // setTimeout(() => {
-      //   navigate("/login");
+      //   navigate("/login");    
       //   alert.show("Please Login");
       // }, 2000);
     }
-  }, [error, isRegistered, alert,isAuthenticated]);
+  }, [error, isRegistered, alert,isAuthenticated,user]);
 
   useEffect(() => {
     setFormData(initialState);

@@ -23,6 +23,7 @@ import Details from "./components/Checkout/Details";
 import Mybook from "./components/Mybook/Mybook";
 import MyBooking from "./components/Mybook/MyBooking";
 
+
 import Shipping from "./components/Checkout/Shipping";
 import Subscription from "./components/Checkout/Subscription";
 import Confirm from "./components/Checkout/Confirm";
@@ -45,7 +46,7 @@ function App() {
   const location = window.location;
 
   useEffect(() => {
-    dispatch(getUser());
+    // dispatch(getUser());
   }, []);
 
   return (

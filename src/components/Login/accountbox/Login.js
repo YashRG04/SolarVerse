@@ -108,7 +108,7 @@ const Login = () => {
               </a>
             </div> */}
             <div className="FormSocial google">
-              <a href="http://localhost:8000/accounts/google/login/">
+              <a href="https://staging.merielectricity.in/api/social/login/google-oauth2/">
                 <BsGoogle className="FormSocialIcon" />
                 <p className="FormSocialText">Login with Google</p>
               </a>
