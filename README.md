@@ -12,11 +12,3 @@ Install Chart.js by running yarn add chart.js.
 Install ApexCharts again (locally this time) by running yarn add apexcharts.
 Install version 1.22.19 of Yarn by running yarn set version 1.22.19.
 
-Usage
-Explain how to use your project here.
-
-Contributing
-Explain how others can contribute to your project here.
-
-License
-Include the license under which your project is distributed here.
