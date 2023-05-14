@@ -6,5 +6,6 @@
 To get started with this project, follow the steps below:
 
 yarn install
+
 yarn start
 
