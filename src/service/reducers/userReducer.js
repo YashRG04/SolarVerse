@@ -61,6 +61,11 @@ export const registerUserReducer = (state = { user: {} }, action) => {
         user: null,
         error: action.payload,
       };
+      case "REGISTER_USER_CLEAR":
+      return {
+        ...state,
+        user: null,
+      };
     default:
       return state;
   }

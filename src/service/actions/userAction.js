@@ -16,23 +16,32 @@ export const login = (email, password, navigate) => async (dispatch) => {
     dispatch({ type: LOGIN_REQUEST });
 
 
-    const { data } = await api.post(
+    const response = await api.post(
       `api/login/`,
       { username: email, password },
     );
-    console.log(data);
+    console.log(response);
+    const data=response.data;
+    // console.log(getCSRFToken());
+    console.log(response.headers);
+     const setCookieHeader = response.headers.get('Set-Cookie');
+     console.log(setCookieHeader);
+
     // Store access token in local storage
     localStorage.setItem("access_token", data.access);
     localStorage.setItem("refresh_token", data.refresh);
+    //  localStorage.setItem("csrftoken", headers["Set-Cookie"].split(";")[0].split("=")[1]);
+    // console.log(headers["Set-Cookie"].split(";")[0].split("=")[1]);
+    console.log(data.headers);
     navigate("/");
     dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
-    dispatch(getUser());
+    // dispatch(getUser());
 
   } catch (error) {
     console.log(error);
     dispatch({
       type: LOGIN_FAIL,
-      payload: error.response.data.non_field_errors || error.response.data.detail,
+      payload: error.response?.data?.non_field_errors || error.response.data.detail,
     });
   }
 };
