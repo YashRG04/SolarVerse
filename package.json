@@ -4,16 +4,19 @@
   "private": true,
   "proxy": "https://staging.merielectricity.in/",
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "aos": "^2.3.4",
+    "apexcharts": "^3.40.0",
     "axios": "^1.2.2",
+    "chart.js": "^4.3.0",
     "chartjs-plugin-zoom": "^2.0.0",
     "country-state-city": "^3.1.2",
     "framer-motion": "^8.1.9",
@@ -64,5 +67,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/war02abhishek/SOLARVERSE.git",
+  "author": "Abhishek <wanveabhishek2002@gmail.com>",
+  "license": "MIT"
 }
