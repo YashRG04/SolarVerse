@@ -32,7 +32,7 @@ export const login = (email, password, navigate) => async (dispatch) => {
     localStorage.setItem("refresh_token", data.refresh);
     //  localStorage.setItem("csrftoken", headers["Set-Cookie"].split(";")[0].split("=")[1]);
     // console.log(headers["Set-Cookie"].split(";")[0].split("=")[1]);
-    console.log(data.headers);
+    // console.log(data.headers);
     navigate("/");
     dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
     // dispatch(getUser());
@@ -41,7 +41,9 @@ export const login = (email, password, navigate) => async (dispatch) => {
     console.log(error);
     dispatch({
       type: LOGIN_FAIL,
-      payload: error.response?.data?.non_field_errors || error.response.data.detail,
+      // payload: error.response.data?.non_field_errors || error.response.data.detail,
+      payload: error.response,
+
     });
   }
 };
@@ -80,14 +82,17 @@ export const getUser = () => async (dispatch) => {
 export const postEnquiry = (bannerform)=> async(dispatch)=>{
   try {
    
-    const {data} = await api.post(`/api/enquiry/`,bannerform);
+    // const {data} = await api.post(`/api/enquiry/`,bannerform);
+    const {data} = await api.request('/api/enquiry/', 'POST', {bannerform})
+
     console.log(data);  
     dispatch({ type: POST_ENQUIRY_SUCCESS, payload: data.message });
 
   } catch (error) {
+    console.log(error);
     dispatch({
       type:POST_ENQUIRY_FAIL,
-      payload: error.response.data.non_field_errors
+      payload: error.response?.data?.non_field_errors
     });
     
   }
