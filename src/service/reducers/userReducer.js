@@ -5,8 +5,11 @@ import {
   REGISTER_USER_REQUEST,
   REGISTER_USER_SUCCESS,
   REGISTER_USER_FAIL,
+  COMPLETE_REGISTER_USER_REQUEST,
+  COMPLETE_REGISTER_USER_SUCCESS,
+  COMPLETE_REGISTER_USER_FAIL,
   POST_ENQUIRY_SUCCESS,
-  POST_ENQUIRY_FAIL
+  POST_ENQUIRY_FAIL,
 } from "../constants/userConstants";
 
 export const loginuserReducer = (state = { user: {} }, action) => {
@@ -43,9 +46,42 @@ export const registerUserReducer = (state = { user: {} }, action) => {
     case REGISTER_USER_REQUEST:
       return {
         loading: true,
-        isRegistered: false,
+        // isRegistered: false,
       };
     case REGISTER_USER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        // isRegistered: true,
+        // isAuthenticated: true,
+        user: action.payload,
+      };
+    case REGISTER_USER_FAIL:
+      return {
+        ...state,
+        loading: false,
+        // isRegistered: false,
+        user: null,
+        error: action.payload,
+      };
+    case "REGISTER_USER_CLEAR":
+      return {
+        ...state,
+        user: null,
+      };
+    default:
+      return state;
+  }
+};
+
+export const completeRegisterUserReducer = (state = { user: {} }, action) => {
+  switch (action.type) {
+    case COMPLETE_REGISTER_USER_REQUEST:
+      return {
+        loading: true,
+        isRegistered: false,
+      };
+    case COMPLETE_REGISTER_USER_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -53,18 +89,12 @@ export const registerUserReducer = (state = { user: {} }, action) => {
         isAuthenticated: true,
         user: action.payload,
       };
-    case REGISTER_USER_FAIL:
+    case COMPLETE_REGISTER_USER_FAIL:
       return {
         ...state,
         loading: false,
-        isRegistered: false,
         user: null,
         error: action.payload,
-      };
-      case "REGISTER_USER_CLEAR":
-      return {
-        ...state,
-        user: null,
       };
     default:
       return state;
@@ -102,24 +132,23 @@ export const getUserReducer = (state = { user: {} }, action) => {
   }
 };
 
-export const enquiryReducer=(state={},action)=>{
-
-  switch(action.type){
+export const enquiryReducer = (state = {}, action) => {
+  switch (action.type) {
     case POST_ENQUIRY_SUCCESS:
       return {
-        message: action.payload
-      }
+        message: action.payload,
+      };
 
     case POST_ENQUIRY_FAIL:
-      return{
-        message: action.payload
-      }
+      return {
+        message: action.payload,
+      };
     case "CLEAR_ENQUIRY_MESSAGE":
       return {
-        message:""
-      }
+        message: "",
+      };
 
     default:
       return state;
   }
-}
+};

@@ -1,42 +1,32 @@
-import axios from 'axios';
+import axios from "axios";
+import { TokenService } from "../TokenService";
 
-axios.defaults.withCredentials = true;
-// Set the CSRF token from the cookie as a default header
-axios.defaults.xsrfCookieName = 'csrftoken';
-axios.defaults.xsrfHeaderName = 'X-CSRFToken';
-
+// axios.defaults.withCredentials = true;
+// // Set the CSRF token from the cookie as a default header
+// axios.defaults.xsrfCookieName = "csrftoken";
+// axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 const api = axios.create({
-  baseURL: 'https://staging.merielectricity.in/',
-   headers: {
-    'Content-Type': 'application/json',
+  baseURL: "/api",
+  withCredentials: true,
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
     // 'Origin':'http://localhost:3000'
   },
 });
 
-// Function to refresh the access token
-const refreshAccessToken = async () => {
-  // Send a request to your server to refresh the access token
-  const response = await axios.post('https://staging.merielectricity.in/api/login/refresh/ ', {
-    refresh: localStorage.getItem('refresh_token')
-  });
-
-  // Update the access token in local storage
-  localStorage.setItem('access_token', response.data.accessToken);
-
-  // Return the new access token
-  return response.data.accessToken;
-};
-
 // Add a request interceptor
 api.interceptors.request.use(
   (config) => {
-    // Add the access token to the request headers
-    if (localStorage.getItem('access_token')) {
-      console.log("setting access token in Bearer",(localStorage.getItem('access_token')))
-    config.headers.Authorization = `Bearer ${localStorage.getItem('access_token')}`;
+    //get the access token from local storage
+    const access_token = TokenService.getAccessToken();
+    console.log("axios header token" + access_token);
+    
+    if (access_token) {
+      // if the access token exists, add it to the header
+      config.headers["Authorization"] = `Bearer ${access_token}`;
     }
-    // config.headers = cors();
     return config;
   },
   (error) => {
@@ -51,27 +41,39 @@ api.interceptors.response.use(
   },
   async (error) => {
     const originalRequest = error.config;
-     console.log(error);
-    // If the error is a 401 and we haven't already retried the request
-    // if (error.response?.status === 401 && !originalRequest._retry) {
-    if (error.response?.status === 405) {
+    console.log(error);
+    const valid = TokenService.getRefreshTokenValidity();
 
-      originalRequest._retry = true;
+    // If refresh token is expired, clear tokens and perform necessary actions
+    if (!valid) {
+      TokenService.clearToken();
+      // Perform any other necessary actions (e.g., redirect to login page)
+      window.location.href = "/login";
+      console.log("Refresh token expired");
+    }
 
-      try {
-        // Refresh the access token
-        const accessToken = await refreshAccessToken();
-
-        // Add the new access token to the request headers
-        api.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
-
-        // Retry the original request
-        return api(originalRequest);
-      } catch (error) {
-        // If refreshing the token fails, log the user out
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('refreshToken');
-        window.location.reload();
+    // If the error is due to an expired access token and refresh token is available
+    if (error.response.status === 401 && !originalRequest.retry) {
+      // Check if access_token exists before refreshing
+      if (TokenService.getAccessToken()) {
+        originalRequest.retry = true;
+        return api({
+          url: "/login/refresh/",
+          method: "post",
+          data: {
+            refresh: TokenService.getRefreshToken(),
+          },
+        }).then((res) => {
+          if (res.status === 200) {
+            TokenService.setToken(res.data);
+            api.defaults.headers.common.Authorization = `Bearer ${TokenService.getAccessToken()}`;
+            return api(originalRequest);
+          }
+          return null;
+        });
+      } else {
+        // Handle the scenario when tokens are not available
+        // ...
       }
     }
 

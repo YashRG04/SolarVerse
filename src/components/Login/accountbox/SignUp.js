@@ -12,11 +12,9 @@ const SignUp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { error, loading, isRegistered,user } = useSelector(
+  const { error, loading, isRegistered, user } = useSelector(
     (state) => state.registerUser
   );
-
-  const { isAuthenticated } = useSelector((state) => state.loginUser);
 
   const initialState = {
     email: "",
@@ -27,42 +25,54 @@ const SignUp = () => {
     lastname: "",
   };
 
+  const initialState1 = {
+    email: "",
+    password1: "",
+    password2: "",
+    phone_number: "",
+    first_name: "",
+    lastname: "",
+    otp: "",
+  };
+
   const alert = useAlert();
 
   const [formdata, setFormData] = useState(initialState);
+  const [formOtpdata, setFormOtpData] = useState(initialState1);
   const [showPassword, setShowPassword] = useState(false);
+
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formdata);
     dispatch(register(formdata, navigate));
+    
   };
+  
 
-  useEffect(() => {
-    if (error) {
-      alert.error(error);
-    }
-    // if(user)
-    // {
-    //   alert.success(user);
-    //    navigate("/login");
-    //    dispatch({ type: "REGISTER_USER_CLEAR" });
-    // }
-    if (isRegistered && isAuthenticated) {
-      alert.success("Registration Successful");
-      // setTimeout(() => {
-      //   navigate("/login");    
-      //   alert.show("Please Login");
-      // }, 2000);
-    }
-  }, [error, isRegistered, alert,isAuthenticated,user]);
+  // useEffect(() => {
+  //   if (error) {
+  //     alert.error(error);
+  //   }
+  //   // if(user)
+  //   // {
+  //   //   alert.success(user);
+  //   //    navigate("/login");
+  //   //    dispatch({ type: "REGISTER_USER_CLEAR" });
+  //   // }
+  //   if (isRegistered && isAuthenticated) {
+  //     alert.success("Registration Successful");
+  //     // setTimeout(() => {
+  //     //   navigate("/login");
+  //     //   alert.show("Please Login");
+  //     // }, 2000);
+  //   }
+  // }, [error, isRegistered, alert, isAuthenticated, user]);
 
   useEffect(() => {
     setFormData(initialState);
   }, []);
-
-  
 
   return (
     <Fragment>

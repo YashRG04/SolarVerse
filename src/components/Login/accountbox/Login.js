@@ -6,6 +6,7 @@ import { login } from "../../../service/actions/userAction";
 import logo from "../../../assets/images/logo.jpg";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { TokenService } from "../../../service/TokenService";
 import "./Login.css";
 
 const Login = () => {
@@ -26,6 +27,15 @@ const Login = () => {
   const [isOTPSelected, setIsOTPSelected] = useState(false);
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [loginPhone, setLoginPhone] = useState("");
+
+  // Block page for logged in users
+  const access_token = TokenService.getAccessToken();
+  const valid = TokenService.getAccessTokenValidity();
+  useEffect(() => {
+    if (valid) {
+      navigate("/");
+    }
+  }, [valid, navigate]);
 
   const loginSubmit = (e) => {
     e.preventDefault();
