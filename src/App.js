@@ -36,6 +36,7 @@ import SignUp from "./components/Login/accountbox/SignUp";
 import Login from "./components/Login/accountbox/Login";
 import ResetPassword from "./components/Password/ResetPassword/ResetPassword";
 
+
 function App() {
   const user = "Yash";
   const login = false;
@@ -50,7 +51,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+   <Router>
       <ScrollToTop />
 
       <Header className="Navbar" data={{ User: { user }, Login: { login } }} />
