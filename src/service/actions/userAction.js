@@ -66,15 +66,49 @@ export const registerComplete = (userData, navigate) => async (dispatch) => {
   try {
     dispatch({ type: COMPLETE_REGISTER_USER_REQUEST });
     const { data } = await api.post(`/register/complete/`, userData);
-    navigate("/");
+    navigate("/login");
     dispatch({ type: COMPLETE_REGISTER_USER_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
       type: COMPLETE_REGISTER_USER_FAIL,
-      payload: error.response.data.non_field_errors,
+      payload: error.response,
     });
   }
 };
+
+export const forgotPasswordA =(userEmail,navigate)=>async (dispatch)=>{
+  try {
+    const { data } = await api.post(`/password-reset/`,{username:userEmail});
+    console.log(data);
+     dispatch({ type: "FORGOT_PASSWORD_SUCCESS", payload: data });
+    navigate('/reset');
+
+
+  } catch (error) {
+     dispatch({
+      type: "FORGOT_PASSWORD_FAIL",
+      payload: error.response,
+    });
+    
+  }
+}
+export const confirmResetPassword =(userData,navigate)=>async (dispatch)=>{
+  try {
+    const { data } = await api.post(`/password-reset/confirm/`,userData);
+    console.log(data);
+    dispatch({ type: "RESET_PASSWORD_SUCCESS", payload: data });
+
+    navigate('/');
+
+  } catch (error) {
+     dispatch({
+      type: "FORGOT_PASSWORD_FAIL",
+      payload: error.response,
+    });
+    
+  }
+}
+
 
 export const getUser = () => async (dispatch) => {
   try {
@@ -92,7 +126,17 @@ export const getUser = () => async (dispatch) => {
 export const postEnquiry = (bannerform) => async (dispatch) => {
   try {
     // const {data} = await api.post(`/enquiry/`,bannerform);
-    const { data } = await api.post("/enquiry/", "POST", { bannerform });
+    console.log(bannerform);
+//     const formData = {
+//       pin_code: bannerform.pin_code,
+//       phone_number: bannerform.phone_number,
+//       bill_amount : bannerform.bill_amount
+
+// ,
+//       // Add other fields as needed
+//     };
+//     console.log(formData);
+    const { data } = await api.post("/enquiry/",bannerform);
 
     console.log(data);
     dispatch({ type: POST_ENQUIRY_SUCCESS, payload: data.message });

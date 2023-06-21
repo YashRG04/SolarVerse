@@ -68,6 +68,7 @@ export const registerUserReducer = (state = { user: {} }, action) => {
       return {
         ...state,
         user: null,
+        error:null
       };
     default:
       return state;
@@ -82,6 +83,8 @@ export const completeRegisterUserReducer = (state = { user: {} }, action) => {
         isRegistered: false,
       };
     case COMPLETE_REGISTER_USER_SUCCESS:
+    case "FORGOT_PASSWORD_SUCCESS":
+    case "RESET_PASSWORD_SUCCESS":
       return {
         ...state,
         loading: false,
@@ -90,11 +93,18 @@ export const completeRegisterUserReducer = (state = { user: {} }, action) => {
         user: action.payload,
       };
     case COMPLETE_REGISTER_USER_FAIL:
+    case "FORGOT_PASSWORD_FAIL":
       return {
         ...state,
         loading: false,
+        user:null,
+        err: action.payload,
+      };
+      case "REGISTER_COMPLETE_USER_CLEAR":   
+      return {
+        ...state,
         user: null,
-        error: action.payload,
+        err:null
       };
     default:
       return state;
