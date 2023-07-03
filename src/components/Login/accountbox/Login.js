@@ -31,11 +31,13 @@ const Login = () => {
   // Block page for logged in users
   const access_token = TokenService.getAccessToken();
   const valid = TokenService.getAccessTokenValidity();
+  console.log("Valid: ", valid);
   useEffect(() => {
-    if (valid) {
+    if (access_token) {
       navigate("/");
     }
-  }, [valid, navigate]);
+  }, [access_token, navigate]);
+  console.log(access_token);
 
   const loginSubmit = (e) => {
     e.preventDefault();
@@ -72,12 +74,12 @@ const Login = () => {
       "CSRF Failed: Referer checking failed - Referer is insecure while host is secure."
     ) {
       alert.error("You are already logged in");
-    } else if (isAuthenticated) {
+    } else if (access_token) {
       alert.success("Login Successful");
     } else if (error) {
       alert.error(error);
     }
-  }, [error, isAuthenticated, alert]);
+  }, [error, access_token, alert]);
 
   const handleResendOTP = (e) => {};
   const [counter, setCounter] = useState(0);
@@ -178,7 +180,8 @@ const Login = () => {
             )}
 
             <form />
-            {!isOTPSelected && (
+
+            {/* {!isOTPSelected && (
               <button
                 className="FormSubmit"
                 type="submit"
@@ -186,7 +189,9 @@ const Login = () => {
               >
                 Login with OTP
               </button>
-            )}
+            )} */}
+
+
             {!isOTPSelected && <hr className="FormDivider1" />}
             <p className="FormDividerText1">
               New?&nbsp;Create Account&nbsp;&nbsp;

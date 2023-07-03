@@ -11,7 +11,7 @@ const Footer = (props) => {
   const navigate = useNavigate();
   const links = [
     { name: "Home", url: "/" },
-    { name: "About Us", url: "/about" },
+    
     { name: "Services", url: "/services" },
     // { name: "My Bookings", url: "/bookings" },
     {

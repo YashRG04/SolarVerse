@@ -35,7 +35,7 @@
 }
 
 .FormLogo {
-  width: 5rem;
+  width: 7.5rem;
   /* margin-right: -0.5rem; */
   margin-top: 0.2rem;
 }
@@ -70,7 +70,7 @@
 .facebook a,
 .google a {
   color: white;
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.3rem;
   transition: all 0.3s ease-in-out;
 }
@@ -96,7 +96,7 @@
 }
 
 .FormSocialText {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: titlecase;
   font-family: "ABeeZee", sans-serif;

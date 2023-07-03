@@ -1,3 +1,4 @@
+import { useAlert } from "react-alert";
 import {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
@@ -34,7 +35,7 @@ export const login = (email, password, navigate) => async (dispatch) => {
     // console.log(data.headers);
     navigate("/");
     dispatch({ type: LOGIN_SUCCESS, payload: data?.user });
-    // dispatch(getUser());
+    dispatch(getUser());
   } catch (error) {
     console.log(error);
     dispatch({
@@ -76,39 +77,36 @@ export const registerComplete = (userData, navigate) => async (dispatch) => {
   }
 };
 
-export const forgotPasswordA =(userEmail,navigate)=>async (dispatch)=>{
+export const forgotPasswordA = (userEmail, navigate) => async (dispatch) => {
   try {
-    const { data } = await api.post(`/password-reset/`,{username:userEmail});
+    const { data } = await api.post(`/password-reset/`, {
+      username: userEmail,
+    });
     console.log(data);
-     dispatch({ type: "FORGOT_PASSWORD_SUCCESS", payload: data });
-    navigate('/reset');
-
-
+    dispatch({ type: "FORGOT_PASSWORD_SUCCESS", payload: data });
+    navigate("/reset");
   } catch (error) {
-     dispatch({
+    dispatch({
       type: "FORGOT_PASSWORD_FAIL",
       payload: error.response,
     });
-    
   }
-}
-export const confirmResetPassword =(userData,navigate)=>async (dispatch)=>{
-  try {
-    const { data } = await api.post(`/password-reset/confirm/`,userData);
-    console.log(data);
-    dispatch({ type: "RESET_PASSWORD_SUCCESS", payload: data });
-
-    navigate('/');
-
-  } catch (error) {
-     dispatch({
-      type: "FORGOT_PASSWORD_FAIL",
-      payload: error.response,
-    });
-    
-  }
-}
-
+};
+export const confirmResetPassword =
+  (userData, navigate) => async (dispatch) => {
+    try {
+      const { data } = await api.post(`/password-reset/confirm/`, userData);
+      console.log(data);
+      dispatch({ type: "RESET_PASSWORD_SUCCESS", payload: data });
+      dispatch(logout());
+      navigate("/");
+    } catch (error) {
+      dispatch({
+        type: "FORGOT_PASSWORD_FAIL",
+        payload: error.response,
+      });
+    }
+  };
 
 export const getUser = () => async (dispatch) => {
   try {
@@ -127,16 +125,16 @@ export const postEnquiry = (bannerform) => async (dispatch) => {
   try {
     // const {data} = await api.post(`/enquiry/`,bannerform);
     console.log(bannerform);
-//     const formData = {
-//       pin_code: bannerform.pin_code,
-//       phone_number: bannerform.phone_number,
-//       bill_amount : bannerform.bill_amount
+    //     const formData = {
+    //       pin_code: bannerform.pin_code,
+    //       phone_number: bannerform.phone_number,
+    //       bill_amount : bannerform.bill_amount
 
-// ,
-//       // Add other fields as needed
-//     };
-//     console.log(formData);
-    const { data } = await api.post("/enquiry/",bannerform);
+    // ,
+    //       // Add other fields as needed
+    //     };
+    //     console.log(formData);
+    const { data } = await api.post("/enquiry/", bannerform);
 
     console.log(data);
     dispatch({ type: POST_ENQUIRY_SUCCESS, payload: data.message });
@@ -146,6 +144,24 @@ export const postEnquiry = (bannerform) => async (dispatch) => {
       type: POST_ENQUIRY_FAIL,
       payload: error.response?.data?.non_field_errors,
     });
+  }
+};
+
+
+
+export const logout = (navigate) => async (dispatch) => {
+  try {
+    await api.delete("/login/");
+    localStorage.clear();
+    dispatch({ type: "LOGOUT_SUCCESS" });
+    navigate("/login");
+    window.location.reload();
+  } catch (error) {
+    dispatch({
+      type: "LOGOUT_FAIL",
+      payload: error.response.data.non_field_errors,
+    });
+    console.log(error);
   }
 };
 

@@ -68,7 +68,7 @@ export const registerUserReducer = (state = { user: {} }, action) => {
       return {
         ...state,
         user: null,
-        error:null
+        error: null,
       };
     default:
       return state;
@@ -97,14 +97,14 @@ export const completeRegisterUserReducer = (state = { user: {} }, action) => {
       return {
         ...state,
         loading: false,
-        user:null,
+        user: null,
         err: action.payload,
       };
-      case "REGISTER_COMPLETE_USER_CLEAR":   
+    case "REGISTER_COMPLETE_USER_CLEAR":
       return {
         ...state,
         user: null,
-        err:null
+        err: null,
       };
     default:
       return state;
@@ -130,6 +130,33 @@ export const getUserReducer = (state = { user: {} }, action) => {
         user: action.payload,
       };
     case "GET_USER_FAIL":
+      return {
+        ...state,
+        loading: false,
+        isAuthenticated: false,
+        user: null,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export const LogoutReducer = (state = { user: {} }, action) => {
+  switch (action.type) {
+    case "LOGOUT_REQUEST":
+      return {
+        loading: true,
+        isAuthenticated: true,
+      };
+    case "LOGOUT_SUCCESS":
+      return {
+        ...state,
+        loading: false,
+        isAuthenticated: false,
+        user: null,
+      };
+    case "LOGOUT_FAIL":
       return {
         ...state,
         loading: false,

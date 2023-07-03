@@ -7,9 +7,11 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
 const NavLinks = (props) => {
-  const { user } = useSelector((state) => state.getUser);
-  const userl = JSON.parse(localStorage.getItem("user"));
-  console.log(userl);
+  // const {isAuthenticated} = useSelector((state) => state.loginUser);
+  // const { user } = useSelector((state) => state.getUser);
+
+  // const userl = JSON.parse(localStorage.getItem("user"));
+  // console.log(userl.first_name);
   const [isScrolled, setIsScrolled] = useState(false);
   // const {}
   const location = useLocation();
@@ -31,10 +33,10 @@ const NavLinks = (props) => {
     { name: "Services", url: "/services/d1" },
     // { name: "My Bookings", url: "/mybookings" },
     // { name: "About Us", url: "/about" },
-    // {
-    //   name: user ? `Hello ${user.first_name}` : "Login",
-    //   url: user ? "/profile" : "/login",
-    // },
+    {
+      name: props.data.Login.login ? `Hello ${props.data.User.user}` : "Login",
+      url: props.data.Login.login ? "/profile" : "/login",
+    },
   ];
 
   const animateFrom = { opacity: 0, y: 50 };
@@ -46,7 +48,8 @@ const NavLinks = (props) => {
         className={`NavLinks ${
           location.pathname === "/login" ||
           location.pathname === "/forgot" ||
-          location.pathname === "/reset" 
+          location.pathname === "/reset" ||
+          location.pathname === "/profile"
             ? " loginlink"
             : isScrolled
             ? "scrolled1"
@@ -72,7 +75,6 @@ const NavLinks = (props) => {
             {<FaUserAlt className="ProfileLogo" />}
           </Link>
         </motion.li> */}
-        
       </motion.ul>
     </Fragment>
   );

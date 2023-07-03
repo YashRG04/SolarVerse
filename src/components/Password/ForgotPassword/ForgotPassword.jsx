@@ -41,7 +41,7 @@ function ForgotPassword() {
     }
     if(user === "OTP Sent,Ensure email or phone number is registered")
     {
-       alert.success("Reset Password OTP Sent to your Email");
+       alert.success("Reset Password OTP Sent to your Email and phone number");
         setTimeout(() => {
         dispatch({ type: "REGISTER_COMPLETE_USER_CLEAR" });
       }, 2000);
@@ -56,10 +56,10 @@ function ForgotPassword() {
       <div className="Cushion"></div>
       <div className="NewFormContainer">
         <div className="ForgotPasswordForm FormCard">
-          <Link to="/">
+        <Link to="/">
             <div className="FormLogoContainer">
-              <img className="FormLogo" src={logo} alt="MeriElectricity Logo" />
-              <h3 className="FormLogoText">MeriElectricity</h3>
+              <img className="FormLogo" src={logo} alt="Thriible" />
+              {/* <h3 className="FormLogoText">Thriible</h3> */}
             </div>
           </Link>
           <h3 className="FormHeading">Forgot Password</h3>
@@ -74,7 +74,7 @@ function ForgotPassword() {
               marginRight: "1rem",
             }}
           >
-            Enter your MeriElectricity email address so we can reset your
+            Enter your Thribble email address so we can reset your
             password.
           </p>
           <form className="FormInputContainer" onSubmit={forgotSubmit}>

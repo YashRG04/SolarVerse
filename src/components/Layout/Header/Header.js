@@ -5,7 +5,7 @@ import "./Header.css";
 import NavLinks from "./NavLinks";
 
 const Header = (props) => {
-  const location=useLocation();
+  const location = useLocation();
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -36,7 +36,10 @@ const Header = (props) => {
     <Fragment>
       <div
         className={`NavContainer${
-          isLoginPage || location.pathname === "/forgot" || location.pathname === "/reset" 
+          isLoginPage ||
+          location.pathname === "/forgot" ||
+          location.pathname === "/reset" ||
+          location.pathname === "/profile"
             ? " loginbg"
             : scrolled
             ? " scrolled"
