@@ -4,7 +4,7 @@ export const DomesticServicesData = [
     name: "Full Plant Checkup",
     subtitle: "Thrive On Sustainability",
     image:
-      "https://res.cloudinary.com/yashrg04/image/upload/v1688382639/Solarverse/illustration1_hqffwb.png",
+      "https://res.cloudinary.com/yashrg04/image/upload/v1688383247/Solarverse/illustration1_1_etngs7.png",
 
     description:
       "Maximizing the energy output of your solar panel system is crucial in ensuring that you're getting the most out of your investment. That's why a full plant checkup is an essential service that every solar panel owner should consider. At THRIIBLE, we provide a comprehensive full plant checkup that identifies and addresses any solar system issues before they become major problems. Our professional services include a detailed inspection of the solar panel's angle, checking of inverters generation, ACDB and DCDB Box, earthing, wiring, and mounting structures. Our highly trained technicians use advanced equipment to ensure that every aspect of your solar panel system is functioning optimally. We understand that even the smallest issue can impact the performance of your solar panel system, and that's why we take a thorough approach to identify any signs of wear and tear, damage, malfunctioning components, or any loose connections or wiring faults. Regular full plant checkups are also essential in extending the lifespan of your solar panel system. By identifying and addressing issues early on, you can avoid costly repairs or replacements down the line. With THRIIBLE, you can rest assured that your solar panel system is in good hands. We offer top-quality services that are designed to maximize your system's energy production and save you money in the long run. Don't let low generation issues impact the performance of your solar panel system. Book a full plant checkup with THRIIBLE today and experience the benefits of a fully optimized solar panel system.",
@@ -37,7 +37,7 @@ export const DomesticServicesData = [
     name: "Low Generation Issue",
     subtitle: "Thrive On Sustainability",
     image:
-      "https://res.cloudinary.com/yashrg04/image/upload/v1680269448/Solarverse/generation_issue_gtove1-removebg-preview_v8fmwt.png",
+      "https://res.cloudinary.com/yashrg04/image/upload/v1688383256/Solarverse/illustration1-2_1_jrp9s6.png",
     points: {
       first:
         "Maximize solar panel output with Thriible's customized solutions. We identify root causes like shading, aging issues & others",
@@ -70,7 +70,7 @@ export const DomesticServicesData = [
     name: "Structure Issue",
     subtitle: "Thrive On Sustainability",
     image:
-      "https://res.cloudinary.com/yashrg04/image/upload/v1680269534/Solarverse/structure_issue_ia0uir-removebg-preview_ol7tuf.png",
+      "https://res.cloudinary.com/yashrg04/image/upload/v1688383258/Solarverse/illustration1-3_1_si9ny9.png",
     points: {
       first:
         "Experience the highest level of solar panel system optimization with Thriible's industry-leading professionals. Maximize your energy production today",
@@ -102,7 +102,7 @@ export const DomesticServicesData = [
     name: "Other Issue",
     subtitle: "Thrive On Sustainability",
     image:
-      "https://res.cloudinary.com/yashrg04/image/upload/v1680269687/Solarverse/My_project_mlhj1c.png",
+      "https://res.cloudinary.com/yashrg04/image/upload/v1688383258/Solarverse/illustration1-1_1_txjeem.png",
     points: {
       first:
         "Customized solutions for performance issues in solar panel systems at Thriible.",

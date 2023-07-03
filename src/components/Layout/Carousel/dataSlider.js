@@ -6,7 +6,7 @@ const dataSlider = [
     title: "Lorem ipsum",
     subTitle: "Lorem",
     // url: "https://example04.my.canva.site/solarverse-ui/images/6d4ebd8415a9d763d8b2c87d93024807.jpg",
-    url: "https://www.solarsquare.in/img/new/r1.webp",
+    url: "https://res.cloudinary.com/yashrg04/image/upload/v1688383683/Solarverse/Frame_11_ojtwql.png",
 
     heading: "SolarVersa",
   },
@@ -14,7 +14,7 @@ const dataSlider = [
     id: 1,
     title: "Lorem ipsum",
     subTitle: "Lorem",
-    url: "https://www.solarsquare.in/img/new/r2.webp",
+    url: "https://res.cloudinary.com/yashrg04/image/upload/v1688383683/Solarverse/Frame_14_y1tmge.png",
     heading: "Hello peter2",
   },
   {
@@ -35,7 +35,7 @@ const dataSlider = [
     id: 4,
     title: "Lorem ipsum",
     subTitle: "Lorem",
-    url: "https://e0.pxfuel.com/wallpapers/517/856/desktop-wallpaper-solar-panels.jpg",
+    url: "https://res.cloudinary.com/yashrg04/image/upload/v1688383683/Solarverse/Frame_12_xqtdy0.png",
     heading: "Hello peter5",
   },
 ];
