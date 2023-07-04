@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../service/actions/userAction";
 import { useAlert } from "react-alert";
 import profileicon from "../../assets/images/profileicon.png";
+import { Helmet } from "react-helmet";
 
 const Profile = (props) => {
   const navigate = useNavigate();
@@ -34,8 +35,15 @@ const Profile = (props) => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Hello User</title>
+        <meta name="description" content="Profile" />
+      </Helmet>
       <div className="ProfileContainer" id="top">
         <div className="Cushion"></div>
+        <h1 className="ProfileHeading">
+          Welcome <span>{first_name}</span>
+        </h1>
         <div className="ProfileMainContainer">
           <div className="LeftProfile">
             <img src={profileicon} alt="Profile" className="ProfileImage" />

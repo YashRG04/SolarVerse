@@ -5,6 +5,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useAlert } from "react-alert";
 import { confirmResetPassword } from "../../../service/actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 const ResetPassword = () => {
   const alert = useAlert();
@@ -57,6 +58,10 @@ const ResetPassword = () => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title> Thriible Reset Password</title>
+        <meta name="description" content="thriible Reset Password" />
+      </Helmet>
       <div className="Cushion"></div>
       <div className="NewFormContainer">
         <div className="ResetPasswordForm FormCard">

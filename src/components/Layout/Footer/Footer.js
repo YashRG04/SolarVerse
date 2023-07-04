@@ -12,7 +12,7 @@ const Footer = (props) => {
   const links = [
     { name: "Home", url: "/" },
     
-    { name: "Services", url: "/services" },
+    { name: "Services", url: "/services/d1" },
     // { name: "My Bookings", url: "/bookings" },
     {
       name: props.data.Login.login ? `Hello ${props.data.User.user}` : "Login",
@@ -102,7 +102,7 @@ const Footer = (props) => {
                   </a>
                 </div>
               </li>
-              <li className="RightFooterItem">
+              <li className="RightFooterItem tr">
                 <div className="RightFooterElement">
                   <IoLocationSharp className="RightFooterIcon LocationIcon" />
                   <a

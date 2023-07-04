@@ -30,7 +30,7 @@ const ServiceContent = (props) => {
           {props.content.split(" ").length > 100 && (
             <button
               onClick={toggleShowFullDescription}
-              className="BackToPasswordLoginButton"
+              className="readmore"
             >
               {showFullDescription ? "Read less" : "Read more"}
             </button>

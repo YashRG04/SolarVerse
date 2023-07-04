@@ -9,7 +9,7 @@
   padding-top: 1.5rem;
 }
 
-.ServiceContentHeading{
+.ServiceContentHeading {
   margin-top: 2rem;
   margin-bottom: 2rem;
   justify-content: center;
@@ -27,7 +27,6 @@
   font-weight: 600;
 }
 
-
 .ServiceContentText {
   font-family: "Belleza", sans-serif;
   font-size: 1.15rem;
@@ -44,6 +43,23 @@
 .ListContainer {
   display: flex;
   justify-content: center;
+}
+
+.readmore {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #29b03b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.readmore:hover {
+  /* important */
+  background-color: transparent!important;
+  color: #29b03b!important;
+  border: none!important;
 }
 
 @media screen and (max-width: 768px) {

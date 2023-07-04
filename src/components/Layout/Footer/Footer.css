@@ -173,6 +173,10 @@
   text-transform: capitalize;
 }
 
+.tr{
+  margin-left: 1.1rem;
+}
+
 .Telephone {
   font-family: "montserrat", sans-serif;
   font-size: 1rem;
@@ -183,7 +187,7 @@
 }
 
 .LocationIcon {
-  font-size: 4.5rem;
+  font-size: 3.8rem;
 }
 
 .RightFooterDescription:hover {
@@ -266,7 +270,11 @@
   }
 
   .LocationIcon{
-    font-size: 4.2rem;
+    font-size: 3.9rem!important;
+  }
+
+  .tr{
+    margin-left: 1.1rem;
   }
 }
 

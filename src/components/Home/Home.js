@@ -16,10 +16,17 @@ import GoSolarW from "./GoSolar/GoSolarW";
 import WhatContainer from "./WhatWeDo/WhatContainer";
 import BannerForm2 from "../Layout/Carousel/Banner/BannerForm2";
 import BannerForm from "../Layout/Carousel/Banner/BannerForm";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
+  // React helmet
+
   return (
     <Fragment>
+      <Helmet>
+        <title>Thriible</title>
+        <meta name="Thriible" content="solar" />
+      </Helmet>
       <div className="Container" id="top">
         <div className="MainContainer">
           <div className="BannerContainer">

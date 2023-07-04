@@ -8,6 +8,7 @@ import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { TokenService } from "../../../service/TokenService";
 import "./Login.css";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const alert = useAlert();
@@ -102,6 +103,10 @@ const Login = () => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Thriible Login</title>
+        <meta name="Login" content="Thriible Login" />
+      </Helmet>
       <div className="Cushion"></div>
       <div className="NewFormContainer">
         <div className="LoginForm FormCard">

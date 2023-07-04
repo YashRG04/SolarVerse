@@ -1,10 +1,8 @@
 /* The hero image */
 .hero-image {
-  
-
   /* get background image url from reactjs file */
-  
- background-image: linear - gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+  background-image: linear - gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
   /* Set a specific height */
   height: 30rem;
@@ -29,6 +27,7 @@
   .hero-text {
     top: 50%;
     left: 50%;
+    width: 100%;
   }
 }
 
@@ -47,6 +46,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .hero-image {
+    background-image: linear -
+      gradient(rgba(0, 0, 0, 0, 1), rgba(0, 0, 0, 0, 1));
+    background-position-x: 75%;
+    background-position-y: bottom;
+  }
   .hero-text h1 {
     font-size: 2rem;
   }
@@ -55,4 +60,3 @@
     font-size: 1.5rem;
   }
 }
-    

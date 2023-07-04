@@ -36,6 +36,7 @@ import Login from "./components/Login/accountbox/Login";
 import ResetPassword from "./components/Password/ResetPassword/ResetPassword";
 import { TokenService } from "./service/TokenService";
 import Profile from "./components/Profile/Profile";
+import Error from "./components/Layout/404ERROR/Error";
 
 function App() {
   // const { isAuthenticated } = useSelector((state) => state.loginUser);
@@ -59,7 +60,6 @@ function App() {
   const User = useSelector((state) => state.getUser);
 
   console.log("Valid: " + valid);
-
 
   const user = User.user.first_name;
   // prevent from showing null in console
@@ -90,14 +90,22 @@ function App() {
         {/* <Route path="/login" element={<AccountBox />} /> */}
         <Route path="/forgot" element={<ForgotPassword />} />
         <Route path="/reset" element={<ResetPassword />} />
-        <Route path="/mybookings" element={<MyBooking />} />
-        <Route path="/booking" element={<Details />} />
-        <Route path="/subscription" element={<Subscription />} />
-        <Route path="/shipping" element={<Shipping />} />
-        <Route path="/confirm" element={<Confirm />} />
+
+        {/* <Route path="/mybookings" element={<MyBooking />} /> */}
+        {/* <Route path="/booking" element={<Details />} /> */}
+        {/* <Route path="/subscription" element={<Subscription />} /> */}
+        {/* <Route path="/shipping" element={<Shipping />} /> */}
+        {/* <Route path="/confirm" element={<Confirm />} /> */}
+
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile data={{User:{User}}} />} />
+        <Route
+          path="/profile"
+          element={<Profile data={{ User: { User } }} />}
+        />
+
+        {/* 404 ERROR */}
+        <Route path="*" element={<Error />} />
       </Routes>
 
       <Footer data={{ User: { user }, Login: { login } }} />

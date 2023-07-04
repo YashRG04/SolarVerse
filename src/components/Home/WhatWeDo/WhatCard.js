@@ -30,7 +30,7 @@ const WhatCard = ({ name, id, description, image }) => {
           {description.split(" ").length > 21 && (
             <button
               onClick={toggleShowFullDescription}
-              className="BackToPasswordLoginButton"
+              className="readmore"
             >
               {showFullDescription ? "Read less" : "Read more"}
             </button>

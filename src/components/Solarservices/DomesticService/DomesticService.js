@@ -9,6 +9,7 @@ import Servicebg from "../../../assets/images/servicebg.png";
 import SolarPoint from "../../../assets/images/solarpoint.png";
 import ServiceBanner from "../ServiceBanner";
 import ServiceContent from "../ServiceContent";
+import { Helmet } from "react-helmet";
 
 const DomesticService = () => {
   // get the service id from the url
@@ -25,6 +26,10 @@ const DomesticService = () => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Thriible | {serviceData.name}</title>
+        <meta name="Thriible" content="solar" />
+      </Helmet>
       <div className="ServiceConatiner" id="top">
         {/* <div className="Cushion"></div> */}
         <div className="ServiceBanner">
@@ -83,7 +88,10 @@ const DomesticService = () => {
                   </h1>
                   <img
                     className="ServiceRightCardImage"
-                    src={serviceData.image}
+                    src={
+                      DomesticServices.filter(({ id }) => id === serviceId)[0]
+                        .image
+                    }
                   ></img>
                   <ul className="ServiceRightCardList">
                     {serviceData.points2.map((point) => {

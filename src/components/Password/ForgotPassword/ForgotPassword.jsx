@@ -6,6 +6,7 @@ import logo from "../../../assets/images/logo.jpg";
 import { useAlert } from "react-alert";
 // import forgotPasswordA from '../../service/actions/useActions'
 import {forgotPasswordA} from '../../../service/actions/userAction'
+import { Helmet } from "react-helmet";
 
 function ForgotPassword() {
   const [forgotEmail, setForgotEmail] = useState("");
@@ -53,6 +54,10 @@ function ForgotPassword() {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Thriible Forgot Password</title>
+        <meta name="forgot" content="Forgot Password" />
+      </Helmet>
       <div className="Cushion"></div>
       <div className="NewFormContainer">
         <div className="ForgotPasswordForm FormCard">
@@ -74,7 +79,7 @@ function ForgotPassword() {
               marginRight: "1rem",
             }}
           >
-            Enter your Thribble email address so we can reset your
+            Enter your Thriible email address so we can reset your
             password.
           </p>
           <form className="FormInputContainer" onSubmit={forgotSubmit}>

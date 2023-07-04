@@ -100,6 +100,9 @@ export const confirmResetPassword =
       dispatch({ type: "RESET_PASSWORD_SUCCESS", payload: data });
       dispatch(logout());
       navigate("/");
+      // wait for 1 second
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      window.location.reload();
     } catch (error) {
       dispatch({
         type: "FORGOT_PASSWORD_FAIL",
