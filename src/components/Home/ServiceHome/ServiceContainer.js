@@ -49,7 +49,7 @@ const ServiceContainer = () => {
 
   return (
     <Fragment>
-      <div className="ServiceContainer" data-aos="slide-left">
+      <div className="ServiceContainer" >
         <div className="DomesticService">
           <h1 className="offerTitle">Services Being Offered</h1>
 

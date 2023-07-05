@@ -1,8 +1,17 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ServiceBanner.css";
+import { useAlert } from "react-alert";
 
 const ServiceBanner = (props) => {
+
+  const navigate=useNavigate();
+  const alert=useAlert();
+
+  const bookNow =()=>{
+    alert.success('Please submit enquiry form!');
+    navigate('/');
+  }
   return (
     <Fragment>
       <div
@@ -14,9 +23,9 @@ const ServiceBanner = (props) => {
         <div className="hero-text">
           <h1>{props.heading}</h1>
           <div className="ButtonContainer">
-            <Link className="Purchase" to="/">
+            <button className="Purchase"onClick={bookNow}>
               PURCHASE PLAN
-            </Link>
+            </button>
           </div>
         </div>
       </div>
