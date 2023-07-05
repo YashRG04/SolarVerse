@@ -98,7 +98,7 @@ export const confirmResetPassword =
       const { data } = await api.post(`/password-reset/confirm/`, userData);
       console.log(data);
       dispatch({ type: "RESET_PASSWORD_SUCCESS", payload: data });
-      dispatch(logout());
+      // dispatch(logout());
       navigate("/");
       // wait for 1 second
       await new Promise((resolve) => setTimeout(resolve, 1000));

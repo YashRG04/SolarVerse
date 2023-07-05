@@ -36,9 +36,9 @@ const GoSolar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+  // useEffect(() => {
+  //   Aos.init({ duration: 2000 });
+  // }, []);
 
   const Point = [
     {
@@ -68,7 +68,7 @@ const GoSolar = () => {
   ];
 
   return (
-    <div className="GoSolarContainer" data-aos="slide-left">
+    <div className="GoSolarContainer">
       <h1 className="offerTitle">Why Go Solar?</h1>
       <hr className="GoUnderline" />
 

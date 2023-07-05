@@ -55,9 +55,9 @@ const Profile = (props) => {
           </div>
           <div className="Partition"></div>
           <div className="RightProfile">
-            <Link to="/forgot" className="ForgotPassword">
+            {/* <Link to="/forgot" className="ForgotPassword">
               Reset Password
-            </Link>
+            </Link> */}
             <button onClick={handleLogout} className="LogOut">
               Logout
             </button>

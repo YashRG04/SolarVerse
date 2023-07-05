@@ -3,17 +3,21 @@ import "./DomestiService.css";
 import ServiceCard from "../../Home/ServiceHome/ServiceCard";
 import { DomesticServices } from "../../../assets/data/DomesticServices";
 import { DomesticServicesData } from "../../../assets/data/DomesticServiceData";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GiSolarPower } from "react-icons/gi";
 import Servicebg from "../../../assets/images/servicebg.png";
 import SolarPoint from "../../../assets/images/solarpoint.png";
 import ServiceBanner from "../ServiceBanner";
 import ServiceContent from "../ServiceContent";
 import { Helmet } from "react-helmet";
+import { useAlert } from "react-alert";
+
 
 const DomesticService = () => {
   // get the service id from the url
   const serviceId = window.location.pathname.split("/")[2];
+    const alert = useAlert();
+    const navigate=useNavigate();
 
   const servicelink = `/services/${serviceId}`;
 
@@ -21,6 +25,11 @@ const DomesticService = () => {
   const serviceData = DomesticServicesData.filter(
     (service) => service.id === serviceId
   )[0];
+
+  const bookNow =()=>{
+    alert.success('Please submit enquiry form!');
+    navigate('/');
+  }
 
   const temp = DomesticServices.filter(({ id }) => id === serviceId)[0];
 
@@ -114,9 +123,9 @@ const DomesticService = () => {
                     })}
                   </ul>
                   <div className="ButtonContainer">
-                    <Link className="Purchase RightCardButton" to="/">
+                    <button className="Purchase RightCardButton" onClick={bookNow}>
                       BOOK NOW
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>

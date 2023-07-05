@@ -11,10 +11,15 @@ import {
   registerComplete,
 } from "../../../service/actions/userAction";
 import { Helmet } from "react-helmet";
+import { TokenService } from "../../../service/TokenService";
+
 
 const SignUp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+    const access_token = TokenService.getAccessToken();
+   
 
   const { error, loading, isRegistered, user } = useSelector(
     (state) => state.registerUser
@@ -91,6 +96,9 @@ const SignUp = () => {
         dispatch({ type: "REGISTER_USER_CLEAR" });
       }, 2000);
     }
+     if (access_token) {
+      navigate("/");
+    }
     if (err) {
       alert.error(err.statusText);
       setTimeout(() => {
@@ -112,7 +120,7 @@ const SignUp = () => {
     if (isRegistered) {
       alert.success("Registration Successful");
     }
-  }, [error, alert, isRegistered, user, dispatch, err]);
+  }, [error, alert, isRegistered, user, dispatch, err,access_token]);
 
   // useEffect(() => {
   //   setFormData(initialState);

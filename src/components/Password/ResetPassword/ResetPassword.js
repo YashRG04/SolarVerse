@@ -5,12 +5,14 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useAlert } from "react-alert";
 import { confirmResetPassword } from "../../../service/actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
+import { TokenService } from '../../../service/TokenService'
 import { Helmet } from "react-helmet";
 
 const ResetPassword = () => {
   const alert = useAlert();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+   const access_token = TokenService.getAccessToken();
   const { err, user } = useSelector((state) => state.registerComplete);
 
   const initialState = {
@@ -51,6 +53,11 @@ const ResetPassword = () => {
       }, 2000);
       setFormData(initialState);
     }
+
+     if (access_token) {
+      navigate("/");
+    }
+
   }, [err, alert, dispatch, user]);
 
   const [showPassword, setShowPassword] = useState(false);

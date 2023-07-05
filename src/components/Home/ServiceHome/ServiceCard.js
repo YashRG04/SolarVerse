@@ -5,9 +5,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const ServiceCard = ({ name, id, description, image }) => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+  // useEffect(() => {
+  //   Aos.init({ duration: 2000 });
+  // }, []);
 
   const idLink = `/services/${id}`;
 

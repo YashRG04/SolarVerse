@@ -7,12 +7,15 @@ import { useAlert } from "react-alert";
 // import forgotPasswordA from '../../service/actions/useActions'
 import {forgotPasswordA} from '../../../service/actions/userAction'
 import { Helmet } from "react-helmet";
+import { TokenService } from '../../../service/TokenService'
 
 function ForgotPassword() {
   const [forgotEmail, setForgotEmail] = useState("");
   const alert = useAlert();
   const navigate = useNavigate();
   const dispatch=useDispatch();
+  const access_token = TokenService.getAccessToken();
+  
    const{err,user}=useSelector((state)=>state.registerComplete);
 
   
@@ -42,10 +45,13 @@ function ForgotPassword() {
     }
     if(user === "OTP Sent,Ensure email or phone number is registered")
     {
-       alert.success("Reset Password OTP Sent to your Email and phone number");
+       alert.success("Reset Password OTP Sent");
         setTimeout(() => {
         dispatch({ type: "REGISTER_COMPLETE_USER_CLEAR" });
       }, 2000);
+    }
+    if (access_token) {
+      navigate("/");
     }
 
   },[err,alert,dispatch,user])
