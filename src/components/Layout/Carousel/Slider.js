@@ -36,7 +36,7 @@ export default function Slider() {
       setSlideIndex((prevCounter) =>
         prevCounter == dataSlider.length ? 1 : prevCounter + 1
       );
-    }, 1000000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, []);
